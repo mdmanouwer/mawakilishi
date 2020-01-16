@@ -1,0 +1,23 @@
+uuid: addb4cf2-3273-4537-b000-abfd0c94bcf9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: UDj09-x7pelozusC-_JLywMcAF_F_Dy5x3WkUvpS5eY
+id: node.field_video_embed
+field_name: field_video_embed
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

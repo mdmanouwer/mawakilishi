@@ -1,0 +1,15 @@
+; $Id$
+name = Auto Opengraph
+description = Manages creation of opengraph tags for facebook.
+package = Facebook
+dependencies[] = token
+dependencies[] = imagecache
+dependencies[] = ctools
+core = 6.x
+
+; Information added by drupal.org packaging script on 2013-09-30
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "auto_opengraph"
+datestamp = "1380554969"
+

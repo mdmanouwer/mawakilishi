@@ -1,0 +1,34 @@
+uuid: 2f2e6760-4d91-4405-9c44-0d425fe45aab
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.most_popular_this_month_mobile
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'category-wrap grid-content'
+id: views_block__most_popular_this_month_mobile_block_1
+theme: mobile
+region: content
+weight: -13
+provider: null
+plugin: 'views_block:most_popular_this_month_mobile-block_1'
+settings:
+  id: 'views_block:most_popular_this_month_mobile-block_1'
+  label: 'MOST POPULAR THIS WEEK'
+  provider: views
+  label_display: visible
+  views_label: 'MOST POPULAR THIS WEEK'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

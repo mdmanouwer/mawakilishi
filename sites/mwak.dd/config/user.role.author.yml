@@ -1,0 +1,28 @@
+uuid: 9b815a96-f97c-471b-9d53-ffa7743aac0d
+langcode: en
+status: true
+dependencies: {  }
+id: author
+label: Author
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer menu'
+  - 'create article content'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'post comments'
+  - 'search content'
+  - 'skip CAPTCHA'
+  - 'use advanced search'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view own unpublished content'
+  - 'view post access counter'
+  - 'view the administration theme'

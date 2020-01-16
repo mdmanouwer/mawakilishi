@@ -1,0 +1,32 @@
+uuid: be9d33fb-62a8-4357-8d27-8e3fb469fbdf
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilishii
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishii_menuad
+theme: mwakilishii
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:a48286df-8e48-40e1-bdde-844b2ccd4b01'
+settings:
+  id: 'block_content:a48286df-8e48-40e1-bdde-844b2ccd4b01'
+  label: 'menu ad'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/diaspora-news.php\r\n/kenya-news.php\r\n/world-news.php\r\n/immigration-news.php\r\n/business-news.php\r\n/entertainment-news.php\r\n/real-estate-news.php\r\n/lifestyle.php\r\n/sports-news.php\r\n/blogs.php\r\n/obituaries.php\r\n/classifieds.php\r\n/glossary\r\n/hot-topics.php"
+    negate: false
+    context_mapping: {  }

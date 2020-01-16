@@ -1,0 +1,53 @@
+; $Id: whatnext.info,v 1.5 2007/07/01 23:27:32 goba Exp $
+name = Galapagos v2.0 for Drupal 6.x
+description = Fixed width Newspaper theme by DrupalShark.com (default).
+version = VERSION
+core = 6.x
+engine = phptemplate
+stylesheets[all][] = style.css
+stylesheets[print][] = print.css
+stylesheets[all][] = advanced_profile.css
+
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[rs_top_left] = RS Top Left
+regions[rs_top_right] = RS Top Right
+regions[rs_middle_left] = RS Middle Left
+regions[rs_middle_right] = RS Middle Right
+regions[rs_bottom_left] = RS Bottom Left
+regions[rs_bottom_right] = RS Bottom Right
+regions[right_sidebar_bottom] = Right Sidebar Bottom
+regions[content] = Content
+regions[header_wrapper]=Header Wrapper
+regions[header_left] = Header Left
+regions[header_right]=Header Right
+regions[banner_top_right] = Banner Top Right
+regions[footer] = Footer
+regions[primary] = Primary Links
+regions[secondary] = Secondary Links
+regions[banners_header] = Banners Header
+regions[contenttop] = Content Top
+regions[contentbottom] = Content Bottom
+regions[popularvideos] = Popular Videos
+regions[bottomads] = Bottom Ads
+regions[feature1] = Feature 1
+regions[feature2] = Feature 2
+regions[feature3] = Feature 3
+regions[feature4] = Feature 4
+regions[column_1] = Column 1
+regions[column_2] = Column 2
+regions[bottom_sidebar] = Bottom Sidebar
+regions[custom1] = Custom Block 1
+regions[custom2] = Custom Block 2
+regions[custom3] = Custom Block 3
+regions[custom4] = Custom Block 4
+regions[custom5] = Custom Block 5
+regions[dynamic] = Dynamic Display Block
+regions[footer_links] = Footer Links
+regions[footerads] = Footer Ads
+regions[top_banner] = Top Banner 468 x 60
+
+; Information added by drupal.org packaging script on 2008-05-13
+version = "6.0"
+project = "drupal"
+datestamp = "1202913006"

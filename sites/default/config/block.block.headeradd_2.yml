@@ -1,0 +1,29 @@
+uuid: e4747501-a4e9-4f92-85d7-6cb306a318cd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cf569ebd-237a-4b66-a36a-2c60de6a93df'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: headeradd_2
+theme: mobile
+region: header_top
+weight: -17
+provider: null
+plugin: 'block_content:cf569ebd-237a-4b66-a36a-2c60de6a93df'
+settings:
+  id: 'block_content:cf569ebd-237a-4b66-a36a-2c60de6a93df'
+  label: 'Header Ad'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

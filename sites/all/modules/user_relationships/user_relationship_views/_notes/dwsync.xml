@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="user_relationship_views.info" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="user_relationship_views.module" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="user_relationship_views.views.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="user_relationship_views.views_default.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="views_handler_field_user_relationships_name.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="views_handler_field_user_relationships_oneway.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="views_handler_field_user_relationships_requestee.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="views_handler_field_user_relationships_requester.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="views_handler_field_user_relationships_status.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="views_handler_field_user_relationships_status_link.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="views_handler_filter_user_relationships_status.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+<file name="views_handler_filter_user_relationships_type.inc" local="129187576800000000" remote="129187576800000000" testing="0" />
+</dwsync>

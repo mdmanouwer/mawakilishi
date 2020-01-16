@@ -1,0 +1,44 @@
+uuid: 3f49f1ff-554b-4ac7-8fa7-921a49dbb70a
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.all_news
+  module:
+    - block_class
+    - ctools
+    - node
+    - views
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishi_all_news_block
+theme: mwakilishi
+region: breadcrumb
+weight: -17
+provider: null
+plugin: 'views_block:all_news-block_2'
+settings:
+  id: 'views_block:all_news-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

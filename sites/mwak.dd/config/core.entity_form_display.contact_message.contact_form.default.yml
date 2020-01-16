@@ -1,0 +1,76 @@
+uuid: e7d0b21a-b329-4372-b7f9-63957f56a574
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact_form
+    - field.field.contact_message.contact_form.field_attachfile
+    - field.field.contact_message.contact_form.field_contact_message
+    - field.field.contact_message.contact_form.field_contmessagetitle
+    - field.field.contact_message.contact_form.field_e_mail
+    - field.field.contact_message.contact_form.field_first_name
+    - field.field.contact_message.contact_form.field_lastname
+    - field.field.contact_message.contact_form.field_tel
+  module:
+    - file
+    - text
+id: contact_message.contact_form.default
+targetEntityType: contact_message
+bundle: contact_form
+mode: default
+content:
+  copy:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_attachfile:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_contact_message:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_tel:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  mail:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  preview:
+    weight: 40
+    region: content
+  subject:
+    type: string_textfield
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_contmessagetitle: true
+  field_e_mail: true
+  field_first_name: true
+  field_lastname: true
+  message: true

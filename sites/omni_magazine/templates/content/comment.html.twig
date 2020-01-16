@@ -1,0 +1,37 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<div{{ attributes.addClass('comment js-comment') }}>   
+  <div class="meta clearfix">
+    {{ user_picture }}
+    <span class="author">{{ author }}</span> • 
+    <span class="date">{{ created }}</span>
+    <span class="date-short"></span>
+    <mark class="hidden" data-comment-timestamp="{{ new_indicator_timestamp }}"><span class="fa fa-bolt"></span></mark>
+    {% if content.links %}
+      {{ content.links }}
+    {% endif %}
+  </div>
+  <div class="arrow"><span class="fa fa-caret-up"></span></div>  
+  <div class="content">
+    {% if title %}
+      {{ title_prefix }}
+      <h4 class="title">{{ title }}</h3>
+      {{ title_suffix }}
+    {% endif %}
+    {{ content|without('links') }}
+  </div>
+</div>

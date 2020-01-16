@@ -1,0 +1,14 @@
+uuid: 604617e9-06c6-4185-b73c-0ff78d41200f
+langcode: en
+status: true
+dependencies: {  }
+name: frontpage_thumbs
+label: 'Frontpage Thumbs (200x140)'
+effects:
+  6f70223f-afaf-4219-af47-c1f9cebf8179:
+    uuid: 6f70223f-afaf-4219-af47-c1f9cebf8179
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 217
+      height: 144

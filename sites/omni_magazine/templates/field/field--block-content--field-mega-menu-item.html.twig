@@ -1,0 +1,44 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% for item in items %}  
+  {% set block = item.content['#block_content'] %}
+  {% set style = block.field_mega_menu_element_style.value %}
+  {% set size = block.field_mega_menu_element_item|length %}
+  {% set url = block.field_url.uri %}
+  {% set title = block.field_url.title %}  
+
+  {% if style =='col_1_s1' or style =='col_2_s1' %}
+    <li class="fix-width">
+  {% else %}
+    <li>
+  {% endif %} 
+    <a href="{{ url }}">{{ title }}</a>
+    {% if size > 0 and size == style|slice(4,1) %}
+      <ul class="mega-menu {{ style }}">
+        {{ item.content.field_mega_menu_element_item }} 
+        {% if item.content.field_mega_menu_element_edge %}
+          <li class="edge-menu">{{ item.content.field_mega_menu_element_edge }}</li>
+        {% endif %} 
+      </ul> 
+    {% endif %} 
+    {% if size == 0 and item.content.field_mega_menu_element_edge|render %}
+      <ul class="mega-menu">
+        <li class="edge-menu edge-menu-only">{{ item.content.field_mega_menu_element_edge }}</li>
+      </ul> 
+    {% endif %} 
+  </li>
+{% endfor %}

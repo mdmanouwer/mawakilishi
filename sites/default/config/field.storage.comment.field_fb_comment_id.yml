@@ -1,0 +1,21 @@
+uuid: 30c3af9f-085a-4964-b6a6-0b1cbf9a98fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+id: comment.field_fb_comment_id
+field_name: field_fb_comment_id
+entity_type: comment
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

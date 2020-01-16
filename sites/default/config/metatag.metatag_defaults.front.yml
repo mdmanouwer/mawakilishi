@@ -1,0 +1,26 @@
+uuid: 47bf3a80-d21c-4970-9b40-b53132563455
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yBqw6UD3j0MM1yoDSVDif7nw4SNdoS2e385nw--3ysk
+id: front
+label: 'Front page'
+tags:
+  referrer: origin
+  description: 'Kenya Diaspora News Leader'
+  title: 'Mwakilishi.com | Kenya Diaspora News Leader'
+  shortlink: '[site:url]'
+  canonical_url: '[site:url]'
+  image_src: 'http://www.mwakilishi.com/MwakilishiLogo.png'
+  abstract: 'Kenya Diaspora News Leader'
+  google_plus_image: 'http://www.mwakilishi.com/mwakilish_logo.png'
+  og_site_name: 'Mwakilishi.com | Kenya Diaspora News Leader'
+  og_url: '[site:url]'
+  og_image_secure_url: 'http://www.mwakilishi.com/MwakilishiLogo.png'
+  og_description: 'Kenya Diaspora News Leader!'
+  og_image_type: image/png
+  og_title: 'Mwakilishi.com | Kenya Diaspora News Leader'
+  og_image_url: 'http://www.mwakilishi.com/MwakilishiLogo.png'
+  og_image: 'http://www.mwakilishi.com/MwakilishiLogo.png'
+  twitter_cards_type: summary

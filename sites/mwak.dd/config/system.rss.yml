@@ -1,0 +1,6 @@
+channel:
+  description: ''
+items:
+  limit: 30
+  view_mode: teaser
+langcode: en

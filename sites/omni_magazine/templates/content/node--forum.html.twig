@@ -1,0 +1,35 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+
+<article class="node forum full clearfix">  
+  <div class="meta clearfix">
+    {{ author_picture }}
+    <div class="detail">
+      <span class="author">{{ author_name }}</span> • 
+      <span class="date">{{ date }}</span> • 
+      <span class="terms">{{ content.taxonomy_forums }}</span>
+    </div>
+  </div>
+
+  <div class="content clearfix">
+    {{ content|without('comment_forum', 'links', 'taxonomy_forums') }}
+  </div> 
+  {% if content.links %}
+    {{ content.links }}
+  {% endif %}
+</article>
+{{ content.comment_forum }}

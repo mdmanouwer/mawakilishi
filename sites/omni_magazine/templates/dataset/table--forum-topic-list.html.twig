@@ -1,0 +1,78 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<table id="forum-topic">
+  {% if caption %}
+    <caption>{{ caption }}</caption>
+  {% endif %}
+
+  {% for colgroup in colgroups %}
+    {% if colgroup.cols %}
+      <colgroup{{ colgroup.attributes }}>
+        {% for col in colgroup.cols %}
+          <col{{ col.attributes }} />
+        {% endfor %}
+      </colgroup>
+    {% else %}
+      <colgroup{{ colgroup.attributes }} />
+    {% endif %}
+  {% endfor %}
+
+  {% if header %}
+    <thead>
+      <tr>
+        {% for cell in header %}
+          <{{ cell.tag }}{{ cell.attributes }}>
+            {{- cell.content -}}
+          </{{ cell.tag }}>
+        {% endfor %}
+      </tr>
+    </thead>
+  {% endif %}
+
+  {% if rows %}
+    <tbody>
+      {% for row in rows %}
+        <tr class="{{ cycle(['even', 'odd'], loop.index0) }}">
+          {% for cell in row.cells %}
+            <{{ cell.tag }}{{ cell.attributes }}>
+              {{- cell.content -}}
+            </{{ cell.tag }}>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  {% elseif empty %}
+    <tbody>
+      <tr>
+        <td colspan="{{ header_columns }}">{{ empty }}</td>
+      </tr>
+    </tbody>
+  {% endif %}
+  {% if footer %}
+    <tfoot>
+      {% for row in footer %}
+        <tr{{ row.attributes }}>
+          {% for cell in row.cells %}
+            <{{ cell.tag }}{{ cell.attributes }}>
+              {{- cell.content -}}
+            </{{ cell.tag }}>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tfoot>
+  {% endif %}
+</table>

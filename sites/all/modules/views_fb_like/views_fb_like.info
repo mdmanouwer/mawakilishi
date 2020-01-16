@@ -1,0 +1,15 @@
+name = Views FB Like Integration
+description = Exposes FB Like counts to views.
+package = Views
+core = 6.x
+php = 5.2.0
+
+dependencies[] = views
+dependencies[] = views_periodic_execution
+
+; Information added by drupal.org packaging script on 2012-01-05
+version = "6.x-1.2"
+core = "6.x"
+project = "views_fb_like"
+datestamp = "1325750153"
+

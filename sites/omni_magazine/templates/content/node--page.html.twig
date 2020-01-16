@@ -1,0 +1,53 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+
+{% if not page %}
+
+  <article class="node basic teaser contextual-region clearfix">
+    <header>
+      {{ title_prefix }}
+        <h2 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+      {{ title_suffix }}
+      {% if display_submitted %}
+        <div class="meta">
+          <span class="author">{{ 'Author'|t }}: {{ author_name }}</span> /
+          <span class="date">{{ 'Date'|t }}: {{ date }}</span>     
+        </div>
+      {% endif %}
+    </header>    
+    <div class="content">
+      {{ content|without('comment', 'links') }}
+    </div>    
+    <div class="more-link"><a href="{{ url }}">{{ 'read more ...'|t }}</a></div>
+  </article>
+
+{% else %}
+
+  <article class="node basic full clearfix">
+    {% if display_submitted %}
+      <div class="meta">
+        <span class="author">{{ 'Author'|t }}: {{ author_name }}</span> /
+        <span class="date">{{ 'Date'|t }}: {{ date }}</span>     
+      </div>
+    {% endif %}
+    <div class="content clearfix">
+      {{ content|without('comment', 'links') }}
+    </div>
+  </article>
+  {{ content.comment }}
+
+{% endif %}

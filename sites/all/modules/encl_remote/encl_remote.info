@@ -1,0 +1,12 @@
+name = "RSS Remote Enclosure"
+description = "Allows RSS feeds to include enclosure elements with files stored on a remote server."
+
+package = "Syndication"
+core = "6.x"
+
+; Information added by drupal.org packaging script on 2011-10-27
+version = "6.x-1.1"
+core = "6.x"
+project = "encl_remote"
+datestamp = "1319744132"
+

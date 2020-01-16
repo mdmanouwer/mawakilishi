@@ -1,0 +1,8 @@
+uuid: 54085f9f-f9d9-4e83-b714-1f3ab5598e98
+langcode: en
+status: true
+dependencies: {  }
+id: sub-menu
+label: 'LATEST NEWS category'
+description: 'news category list'
+locked: false

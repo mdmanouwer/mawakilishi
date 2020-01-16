@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Omni theme.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+function omni_magazine_preprocess_html(&$variables) {
+
+  if (!empty($variables['page']['sidebar_secondary']) && !empty($variables['page']['sidebar_tertiary'])) {
+    $variables['attributes']['class'][] = 'two-sidebars';
+  }
+  elseif (!empty($variables['page']['sidebar_secondary'])) {
+    $variables['attributes']['class'][] = 'sidebar-secondary';
+  }
+  elseif (!empty($variables['page']['sidebar_tertiary'])) {
+    $variables['attributes']['class'][] = 'sidebar-tertiary';
+  }
+  else {
+    $variables['attributes']['class'][] = 'no-sidebars';
+  }
+}
+
+function omni_magazine_preprocess_page(&$variables) {
+   
+  $variables['omni_header'] = theme_get_setting('omni_header', 'omni_magazine');
+  $variables['omni_header_search'] = theme_get_setting('omni_header_search', 'omni_magazine');
+  $variables['omni_menu'] = theme_get_setting('omni_menu', 'omni_magazine');
+  $variables['omni_layout'] = theme_get_setting('omni_layout', 'omni_magazine');
+
+  $variables['spotlight'] = count(array_filter(array($variables['page']['spotlight_one'], $variables['page']['spotlight_two'], $variables['page']['spotlight_three'])));
+  $variables['content_top'] = count(array_filter(array($variables['page']['content_top_left'], $variables['page']['content_top_right'])));
+  $variables['content_bottom'] = count(array_filter(array($variables['page']['content_bottom_left'], $variables['page']['content_bottom_right'])));
+  $variables['main_edge'] = count(array_filter(array($variables['page']['quick_link'], $variables['page']['newsflash'])));
+  $variables['main_top'] = count(array_filter(array($variables['page']['main_top_one'], $variables['page']['main_top_two'], $variables['page']['main_top_three'], $variables['page']['main_top_four'])));
+  $variables['main_bottom'] = count(array_filter(array($variables['page']['main_bottom_one'], $variables['page']['main_bottom_two'], $variables['page']['main_bottom_three'], $variables['page']['main_bottom_four'])));
+  $variables['footer'] = count(array_filter(array($variables['page']['footer_one'], $variables['page']['footer_two'], $variables['page']['footer_three'], $variables['page']['footer_four'])));
+
+}
+
+function omni_magazine_preprocess_block(&$variables) {
+
+  $block = entity_load('block', $variables['elements']['#id']);
+  $variables['block_region'] = $block->get('region');  
+
+  if (isset($variables['elements']['content']['#block_content'])) {
+  
+    $variables['block_content'] = $variables['elements']['content']['#block_content'];
+       
+    if ($variables['block_content']->bundle()=='block') {
+    
+      $tabs = $variables['elements']['content']['#block_content']->field_block_merging;    
+
+      if (isset($tabs)) {
+        $tab_list ='';
+        $first = true;
+
+        foreach($tabs as $tab){
+
+          $block = entity_load('block', $tab->target_id);
+
+          if ( $first ) {
+            $tab_list = $tab_list.'<li class="active">'.$block->label().'</li>';
+            $first = false;
+          } else {            
+            $tab_list = $tab_list.'<li>'.$block->label().'</li>';
+          }
+        }    
+
+        $variables['block_tab_nav'] = '<ul class="tab_nav">'.$tab_list.'</ul>';
+      }
+    }
+    
+    if ( $variables['block_content']->bundle()=='showcase' ){
+    
+      $data_slick = "";
+      $data_slick_pager = "";
+      
+      $showcase_type = $variables['block_content']->field_showcase_type->value;
+      $effect_fade = $variables['block_content']->field_showcase_fade->value;
+      $effect_auto = $variables['block_content']->field_showcase_autoplay->value;
+      $effect_speed = $variables['block_content']->field_showcase_autoplay_speed->value;
+
+      if ($effect_fade==true) {
+        $data_slick = $data_slick."\"fade\": true, ";
+      }
+
+      if ($effect_auto==true) {
+        $data_slick = $data_slick."\"autoplay\": true, ";
+      }
+
+      if (!empty($effect_speed)) {
+        $data_slick = $data_slick."\"autoplaySpeed\": ".$effect_speed.", ";
+      }    
+
+      if (($showcase_type=='thumbnail')||($showcase_type=='playlist')||($showcase_type=='gallery')) {
+        $image_show = $variables['block_content']->field_showcase_show->value;
+        $image_scroll  = $variables['block_content']->field_showcase_scroll->value;
+
+        $data_slick_pager = "\"slidesToShow\": ".$image_show.", ";
+        $data_slick_pager = $data_slick_pager."\"slidesToScroll\": ".$image_scroll.", ";
+
+        $variables['data_slick_pager'] = " data-slick='{".substr($data_slick_pager, 0, -2)."}'";
+      }
+
+      if ($showcase_type=='gallery') {
+        if ($image_show > 3) {
+          $data_slick = $data_slick.$data_slick_pager."\"responsive\": [{ \"breakpoint\": 1439, \"settings\": { \"slidesToShow\":".($image_show-1).", \"slidesToScroll\": 1 }}, { \"breakpoint\": 1199, \"settings\": { \"slidesToShow\": ".($image_show-2)." }}, { \"breakpoint\": 1024, \"settings\": { \"slidesToShow\": 2}}, { \"breakpoint\": 640, \"settings\": { \"slidesToShow\": 1}}]";
+        } elseif ($image_show == 3) {
+          $data_slick = $data_slick.$data_slick_pager."\"responsive\": [{ \"breakpoint\": 1439, \"settings\": { \"slidesToShow\": 2, \"slidesToScroll\": 1 }}, { \"breakpoint\": 640, \"settings\": { \"slidesToShow\": 1}}]";
+        } elseif ($image_show == 2) {
+          $data_slick = $data_slick.$data_slick_pager."\"responsive\": [{ \"breakpoint\": 640, \"settings\": { \"slidesToShow\": 1}}]";
+        } else {
+          $data_slick = substr($data_slick.$data_slick_pager, 0, -2);
+        }
+
+        $variables['data_slick'] = " data-slick='{".$data_slick."}'";      
+
+      } else {
+        $variables['data_slick'] = " data-slick='{".substr($data_slick, 0, -2)."}'";
+      } 
+    }    
+  }
+}
+
+function omni_magazine_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $form['keys']['#title'] = '<span class="fa fa-search"></span>';
+    $form['keys']['#title_display'] = 'before';
+    $form['keys']['#attributes']['placeholder'] = t('Search');
+    $form['actions']['submit']['#value'] = t('');
+  }
+}
+
+function omni_magazine_form_search_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_form') {  
+    $form['basic']['keys']['#title'] = '<span class="fa fa-search"></span>';
+    $form['basic']['keys']['#attributes']['placeholder'] = t('Search...');
+    $form['basic']['submit']['#value'] = t('');
+  }
+}
+
+function omni_magazine_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if ($variables['element']['#form_id'] == 'search_block_form') {
+    $suggestions[] = 'form__search_block_form';
+  }
+}
+
+function omni_magazine_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__custom__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}

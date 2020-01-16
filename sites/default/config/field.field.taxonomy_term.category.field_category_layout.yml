@@ -1,0 +1,21 @@
+uuid: 92ec72a3-2e15-4e5f-9f18-24dcdc7d4164
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_category_layout
+    - taxonomy.vocabulary.category
+id: taxonomy_term.category.field_category_layout
+field_name: field_category_layout
+entity_type: taxonomy_term
+bundle: category
+label: 'Category Layout'
+description: "Enter layout display for category page. Support list, grid, masonry. Default layout = list if empty.\r\n"
+required: false
+translatable: false
+default_value:
+  -
+    value: list
+default_value_callback: ''
+settings: {  }
+field_type: string

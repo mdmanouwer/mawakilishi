@@ -1,0 +1,26 @@
+uuid: fbd211e1-8e02-4f09-85c1-8cce4c2d98f8
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: banner
+theme: mwakilish
+region: content_bottom
+weight: -4
+provider: null
+plugin: 'block_content:0f3b8233-412d-4135-a56b-6e61dbab8ad9'
+settings:
+  id: 'block_content:0f3b8233-412d-4135-a56b-6e61dbab8ad9'
+  label: Banner
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

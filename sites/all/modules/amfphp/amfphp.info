@@ -1,0 +1,9 @@
+; $Id: amfphp.info,v 1.4 2007/06/18 23:50:47 dww Exp $
+name = AMFPHP
+description = Provides an AMFPHP server.
+package = Services - servers
+dependencies[] = services
+core = 6.x
+
+
+

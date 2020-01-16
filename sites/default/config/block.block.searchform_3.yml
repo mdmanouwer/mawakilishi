@@ -1,0 +1,24 @@
+uuid: de2e327c-1cfd-4d03-88e9-9a836f791d09
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - search
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: searchform_3
+theme: mobile
+region: footer_bottom
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility: {  }

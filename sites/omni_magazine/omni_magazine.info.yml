@@ -1,0 +1,64 @@
+name: Omni Magazine
+type: theme
+description: ''
+package: Custom
+version: 8.x-1.0
+core: 8.x
+
+libraries:
+  - core/normalize
+  - omni_magazine/slick
+  - omni_magazine/smartmenu
+  - omni_magazine/global-styling
+  - omni_magazine/global-script
+  
+regions:
+  site_info: 'Site Info'
+  header_left: 'Header left'
+  header_right: 'Header right'
+
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  
+  highlighted: Highlighted  
+  breadcrumb: Breadcrumb
+  search: 'Search'
+  quick_link: 'Quick link'
+  newsflash: 'Newsflash'
+  social_media: 'Social media'
+
+  showcase_main: 'Showcase main'
+  showcase_spotlight: 'Showcase spotlight'
+  showcase_content: 'Showcase content'
+
+  spotlight_one: 'Spotlight one'
+  spotlight_two: 'Spotlight two'
+  spotlight_three: 'Spotlight three'
+
+  content_top_left: 'Content top left'
+  content_top_right: 'Content top right'
+  content: Content  
+  content_bottom_left: 'Content bottom left'
+  content_bottom_right: 'Content bottom right'
+  
+  sidebar_secondary: 'Sidebar secondary'
+  sidebar_tertiary: 'Sidebar tertiary'
+
+  main_top_one: 'Main top one'
+  main_top_two: 'Main top two'
+  main_top_three: 'Main top three'
+  main_top_four: 'Main top four'
+  
+  main_bottom_one: 'Main bottom one'
+  main_bottom_two: 'Main bottom two'
+  main_bottom_three: 'Main bottom three'
+  main_bottom_four: 'Main bottom four'
+
+  footer_one: 'Footer one'
+  footer_two: 'Footer two'
+  footer_three: 'Footer three'
+  footer_four: 'Footer four'
+  closure: 'Closure'
+  usable: 'Usable'

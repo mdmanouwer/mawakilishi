@@ -1,0 +1,33 @@
+uuid: 21dafce0-cf64-4c70-a031-29860ad2a4e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.announcements-submenu
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: announcements
+theme: mwakilish
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:announcements-submenu'
+settings:
+  id: 'system_menu_block:announcements-submenu'
+  label: ANNOUNCEMENTS
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 1
+visibility:
+  request_path:
+    id: request_path
+    pages: "/obituaries.php\r\n/meetings\r\n/events.php\r\n/frundraisings.php\r\n/Preweddings"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,46 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% for item in items %}  
+  {% set block = item.content['#block_content'] %}
+  {% set url = block.field_url.uri %}  
+  <div>
+    <div class="slide"> 
+      <div class="inner clearfix">
+        {% if item.content.field_image %}
+          <div class="image-default">
+            {{ item.content.field_image }}     
+          </div>
+        {% endif %}
+        <div class="content">          
+          {% if url %}
+            <h4 class="title"><a href="{{ url }}" target="_blank">{{ item.content.field_title }}</a></h4>
+          {% else %}
+            <h4 class="title">{{ item.content.field_title }}</h4>
+          {% endif %}
+          
+          <div class="meta">                            
+            <span class="author">{{ item.content.field_author }} / </span>            
+            <span class="date">{{ item.content.field_date }}</span>                   
+          </div>          
+        </div>
+        {% if item.content.field_section %}                
+          {{ item.content.field_section }}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endfor %}

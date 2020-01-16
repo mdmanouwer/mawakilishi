@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the encl_remote module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function encl_remote_install() {
+  // Create tables.
+  drupal_install_schema('encl_remotes');
+
+  $encl_remote_mime_type_extensions = array(
+    'mp3' => 'audio/mpeg',
+    'wmv' => 'video/x-ms-wmv',
+    'mov' => 'video/quicktime',
+    'mpg' => 'video/mpeg',
+    'torrent' => 'application/x-bittorrent'
+  );
+
+  variable_set('encl_remote_mime_type_extensions', $encl_remote_mime_type_extensions);
+}
+
+/**
+ * Implements hook_schema().
+ */
+function encl_remotes_schema() {
+  $schema['encl_remotes'] = array(
+    'fields' => array(
+      'rid'       => array('type' => 'serial', 'unsigned' => TRUE, 'not null' => TRUE),
+      'nid'       => array('type' => 'int',    'unsigned' => TRUE, 'not null' => TRUE, 'default' => 0),
+      'url'       => array('type' => 'varchar', 'not null' => TRUE, 'default' => '', 'length' => 255),
+      'mime_type' => array('type' => 'varchar', 'not null' => TRUE, 'default' => '', 'length' => 32),
+      'size'      => array('type' => 'int',     'not null' => FALSE, 'default' => NULL, 'size' => 'big'),
+      'link_text' => array('type' => 'varchar', 'not null' => FALSE, 'default' => NULL, 'length' => 255)
+    ),
+    'indexes' => array('nid' => array('nid')),
+    'primary key' => array('rid'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function encl_remote_uninstall() {
+  drupal_uninstall_schema('encl_remotes');
+  variable_del('encl_remote_mime_type_extensions');
+}

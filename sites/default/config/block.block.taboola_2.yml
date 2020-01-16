@@ -1,0 +1,38 @@
+uuid: 2c6c9a6e-b439-4af5-a4c4-cfa73dbcc83b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7912d16e-7eb3-4fa7-9ee1-59e71a39fee7'
+  module:
+    - block_class
+    - block_content
+    - ctools
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: taboola_2
+theme: mwakilishi
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:7912d16e-7eb3-4fa7-9ee1-59e71a39fee7'
+settings:
+  id: 'block_content:7912d16e-7eb3-4fa7-9ee1-59e71a39fee7'
+  label: Taboola
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

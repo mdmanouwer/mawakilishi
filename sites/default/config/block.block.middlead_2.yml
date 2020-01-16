@@ -1,0 +1,35 @@
+uuid: 1dc515ea-95c3-400e-a50e-7f522eee5a12
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:72aa22b7-a7ea-43ed-9719-70e9cb8dcaf2'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: middlead_2
+theme: mwakilishi
+region: content
+weight: -22
+provider: null
+plugin: 'block_content:72aa22b7-a7ea-43ed-9719-70e9cb8dcaf2'
+settings:
+  id: 'block_content:72aa22b7-a7ea-43ed-9719-70e9cb8dcaf2'
+  label: 'Middle Ad'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

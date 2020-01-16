@@ -1,0 +1,33 @@
+uuid: 1a87a7a5-f334-44ff-86b2-e7e00dd141bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.categories
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilishii
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishii_categories
+theme: mwakilishii
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:categories'
+settings:
+  id: 'system_menu_block:categories'
+  label: Categories
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/news\r\n/diaspora-news.php\r\n/kenya-news.php\r\n/world-news.php\r\n/immigration-news.php\r\n/business-news.php\r\n/entertainment-news.php\r\n/real-estate-news.php\r\n/lifestyle.php\r\n/sports-news.php\r\n/sports-news\r\n/obituaries.php\r\n/meetings\r\n/events.php\r\n/frundraisings.php\r\n/Preweddings\r\n/2017-kenya-general-election-results-live"
+    negate: true
+    context_mapping: {  }

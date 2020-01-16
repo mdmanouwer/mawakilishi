@@ -1,0 +1,8 @@
+uuid: 7fc5a966-78fd-42c7-a03c-aaca4dde37b1
+langcode: en
+status: true
+dependencies: {  }
+id: mobile_date
+label: 'mobile date'
+locked: false
+pattern: 'F j, Y, g:i a'

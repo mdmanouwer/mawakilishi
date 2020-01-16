@@ -1,0 +1,109 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+
+{% if not page %}
+
+  <article class="node blog teaser contextual-region clearfix">
+    
+    <div class="meta alter clearfix">
+      {% if content.links %}
+        <div class="share">{{ content.addtoany }}</div>
+        {{ content.links }}
+      {% endif %}
+    </div>
+    
+    <div class="content clearfix">
+      <header>
+        {% if display_submitted %}
+          {{ author_picture }}        
+          <div class="date">
+            <span class="author">{{ author_name }}</span> • 
+            <span class="month">{{ createdtime|date("F d") }}</span> •
+            <span class="year">{{ createdtime|date("Y") }}</span>
+          </div>
+        {% endif %}
+        {{ title_prefix }}
+        <h2 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>        
+        {{ title_suffix }}
+      </header>      
+      
+      {% if content.field_image %}
+        <div class="image-default">
+          {{ content.field_image }}
+        </div>
+      {% endif %}      
+      {{ content|without('comment', 'links', 'field_tags', 'field_image', 'addtoany') }}      
+      <div class="more-link"><a href="{{ url }}">{{ 'Continue reading ...'|t }}</a></div>    
+    </div>
+  </article>
+
+{% else %}
+
+  <article class="node blog full clearfix">
+    
+    <div class="meta alter">
+      {{ author_picture }}
+      {% if content.links %}
+        <div class="share">{{ content.addtoany }}</div>        
+        {{ content.links }}
+      {% endif %}
+      {% if node.field_tags.value is not empty %}
+        <div class="terms"><span class="fa fa-tags"></span> {{ 'Tags'|t }}: {{ content.field_tags }}</div>
+      {% endif %}
+    </div>
+    
+    <div class="content clearfix">
+      <header>
+        <div class="comment-count">
+          {% if comment-count == 0 or comment-count == 1 %}
+            {{comment-count}} {{ 'comment'|t }}
+          {% else %}
+            {{comment-count}} {{ 'comments'|t }}
+          {% endif %}          
+        </div>
+        <div class="date">
+          <span class="author">{{ author_name }}</span> • 
+          <span class="month">{{ createdtime|date("F d") }}</span> •
+          <span class="year">{{ createdtime|date("Y") }}</span>
+        </div>
+        <h1 class="title">{{ label }}</h1>
+        <div class="meta">
+          {{ author_picture }}
+          {% if content.addtoany %}
+            <div id="share">{{ content.addtoany }}</div>
+          {% endif %}
+          {% if content.links %}            
+            {{ content.links }}
+          {% endif %}
+          {% if node.field_tags.value is not empty %}
+            <div class="terms"><span class="fa fa-tags"></span> {{ 'Tags'|t }}: {{ content.field_tags }}</div>
+          {% endif %}
+        </div>      
+      </header>     
+
+      {% if content.field_image %}
+        <div class="image-default">
+          {{ content.field_image }}
+        </div>
+      {% endif %}    
+      {{ content|without('comment', 'links', 'field_tags', 'field_image', 'addtoany') }}
+    </div>
+  </article>
+  {{ content.comment }}
+
+{% endif %}
+

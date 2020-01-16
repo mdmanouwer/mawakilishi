@@ -1,0 +1,74 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% set forum_only = true %}
+
+{% for child_id, forum in forums %}
+  {% if forum.is_container %}      
+    {% set forum_only = false %}
+  {% endif %}
+{% endfor %}
+
+<table id="forum-overview">
+  <colgroup>
+    <col style="width: 65%">
+    <col style="width: 15%">
+    <col style="width: 10%">
+    <col style="width: 10%">
+  </colgroup>
+  <thead>
+    <tr {% if forum_only == true %}class="forum-only odd"{% endif %}>
+      <th>{{ 'Forum'|t }}</th>
+      <th>{{ 'Last post'|t }}</th>
+      <th>{{ 'Topics'|t }}</th>
+      <th>{{ 'Posts'|t }}</th>      
+    </tr>
+  </thead>
+  <tbody>
+  {% for child_id, forum in forums %}
+    <tr class="{% if forum_only == true %}forum-only {% endif %}{{ forum.zebra }}">
+      {% if forum.is_container == true %}
+        <td class="container{% if forum.depth > 0 %} indent indent-{{forum.depth}}{% endif %}" colspan="4">    
+          <div>          
+            <div class="name">{% if forum.depth > 0 %}<span class="fa fa-arrow-circle-o-right">{% else %}<span class="fa fa-arrow-circle-o-down">{% endif %}</span><a href="{{ forum.link }}">{{ forum.label }}</a></div>
+            {% if forum.description.value %}
+              <div class="description"><em>{{ forum.description.value }}</em></div>
+            {% endif %}
+          </div>
+        </td>
+      {% else %}
+        <td class="forum{% if forum.depth > 0 %} indent indent-{{forum.depth}}{% endif %}">  
+          <div>          
+            <div class="name">{% if forum.new_topics == true %}<span class="fa fa-folder-open">{% else %}<span class="fa fa-folder-open-o">{% endif %}</span><a href="{{ forum.link }}">{{ forum.label }}</a></div>
+            {% if forum.description.value %}
+              <div class="description"><em>{{ forum.description.value }}</em></div>
+            {% endif %}
+          </div>
+        </td>
+        <td class="last-reply">{{ forum.last_reply }}</td>
+        <td class="topics">
+          {{ forum.num_topics }}
+          {% if forum.new_topics == true %}
+            <br />
+            <a href="{{ forum.new_url }}">{{ forum.new_text }}</a>
+          {% endif %}
+        </td>
+        <td class="posts">{{ forum.num_posts }}</td>
+      {% endif %}      
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,307 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% set run = false %}
+{% set type = '' %}
+{% for item in items if run == false %}
+  {% set block = item.content['#block_content'] %}
+  {% set type = block.field_showcase_type.value %}
+  {% set run = true %}
+{% endfor %}
+
+{% macro highlight_list(item) %}
+  {% set block = item.content['#block_content'] %}
+  {% set url = block.field_url.uri %} 
+  {% set image %}{{ item.content.field_image|raw }}{% endset %}
+
+  <li style="{{ background_image(image) }}">           
+    <div class="content">
+      <div class="meta">          
+        {% if item.content.field_section %}
+          {{ item.content.field_section }}
+          <span class="author with-section"><em>{{'By'|t}}</em> <span class="name">{{ item.content.field_author }}</span></span>
+        {% else %}
+          <span class="author"><em>{{'By'|t}}</em> <span class="name">{{ item.content.field_author }}</span></span>
+        {% endif %}
+        <span class="date"><em>{{ item.content.field_date }}</em></span>                   
+      </div>
+      {% if url %}
+        <h4 class="title"><a href="{{ url }}" target="_blank">{{ item.content.field_title }}</a></h4>
+      {% else %}
+        <h4 class="title">{{ item.content.field_title }}</h4>
+      {% endif %}      
+      <a class="link" href="{{ url }}" target="_blank"></a>
+    </div>
+  </li>
+{% endmacro %}
+
+{% if type != 'highlight' %}
+
+  {% for item in items %}  
+    {% set block = item.content['#block_content'] %}
+    {% set url = block.field_url.uri %}  
+
+    {% if type == 'newsflash' %}
+      <div>
+        <div class="slide clearfix">  
+          <div class="content">
+            <div class="inner clearfix">
+              <div class="meta">
+                <span class="date">{{ item.content.field_date }}</span>
+                <span class="author"> / {{ item.content.field_author }} - </span>                                 
+              </div>
+              {% if url %}
+                <h4 class="title"><a href="{{ url }}" target="_blank">{{ item.content.field_title }}</a></h4>
+              {% else %}
+                <h4 class="title">{{ item.content.field_title }}</h4>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>  
+    {% elseif type == 'gallery' %}
+      <div>
+        <div class="slide clearfix">        
+          {% if item.content.field_image %}
+            <div class="image-default">
+              {% if url %}
+                <a href="{{ url }}" target="_blank">{{ item.content.field_image }}</a>
+              {% else %}
+                {{ item.content.field_image }}
+              {% endif %}        
+            </div>
+          {% endif %}     
+
+          <div class="content">
+            <div class="meta">
+              {% if item.content.field_section %}                
+                {{ item.content.field_section }}
+              {% endif %}
+              <span class="author"><em>{{'By'|t}}</em> <span class="name">{{ item.content.field_author }}</span>
+              <span class="date"><em>{{ item.content.field_date }}</em></span>
+            </div>
+            {% if url %}
+              <h4 class="title"><a href="{{ url }}" target="_blank">{{ item.content.field_title }}</a></h4>
+            {% else %}
+              <h4 class="title">{{ item.content.field_title }}</h4>
+            {% endif %}
+            <a class="link" href="{{ url }}" target="_blank"></a>
+          </div>        
+        </div>
+      </div>
+    {% else %}
+      <div>
+        <div class="slide clearfix">        
+          {% if item.content.field_image %}
+            <div class="image-default">
+              {% if url %}
+                <a href="{{ url }}" target="_blank">{{ item.content.field_image }}</a>
+              {% else %}
+                {{ item.content.field_image }}
+              {% endif %}        
+            </div>
+          {% endif %}
+
+          <div class="content">
+            <div class="inner clearfix">
+              <div class="meta">
+                {% if item.content.field_section %}                
+                  {{ item.content.field_section }}
+                {% endif %}
+                <span class="author">{{'By'|t}} {{ item.content.field_author }} / </span>                            
+                <span class="date">{{ item.content.field_date }}</span>                   
+              </div>
+
+              {% if url %}
+                <h4 class="title"><a href="{{ url }}" target="_blank">{{ item.content.field_title }}</a></h4>
+              {% else %}
+                <h4 class="title">{{ item.content.field_title }}</h4>
+              {% endif %}
+
+              {% if item.content.field_caption %}
+                <div class="caption">
+                  {{ item.content.field_caption }}
+                </div>
+              {% endif %}  
+            </div>
+          </div>
+        </div>
+      </div> 
+    {% endif %}
+  {% endfor %}
+
+{% else %}
+
+  {% set count = items|length %}
+  {% set column_one = '' %}
+  {% set column_two = '' %}
+  {% set column_three = '' %}
+
+  {% if count == 1 %} 
+
+    {% for item in items %}
+      {% set column_one %}
+        {{ _self.highlight_list(item) }}
+      {% endset %}      
+    {% endfor %}
+  
+  {% elseif count == 2 %} 
+    
+    {% for item in items %}      
+      {% if loop.index == 1 %}
+        {% set column_one %}
+          {{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}      
+      {% if loop.index == 2 %}
+        {% set column_two %}
+          {{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+    {% endfor %}
+
+  {% elseif count == 3 %} 
+    
+    {% for item in items %}      
+      {% if loop.index == 1 %}
+        {% set column_one %}
+          {{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}      
+      {% if loop.index == 2 %}
+        {% set column_two %}
+          {{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+      {% if loop.index == 3 %}
+        {% set column_two %}
+          {{column_two}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+    {% endfor %}
+
+  {% elseif count == 4 %} 
+    
+    {% for item in items %}      
+      {% if loop.index == 1 %}
+        {% set column_one %}
+          {{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}      
+      {% if loop.index == 2 %}
+        {% set column_two %}
+          {{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+      {% if loop.index >= 3 %}
+        {% set column_three %}
+          {{column_three}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+    {% endfor %}
+
+  {% elseif count == 5 %} 
+    
+    {% for item in items %}      
+      {% if loop.index == 1 %}
+        {% set column_one %}
+          {{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}      
+      {% if loop.index == 2 or loop.index == 3 %}
+        {% set column_two %}
+          {{column_two}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+      {% if loop.index >= 4 %}
+        {% set column_three %}
+          {{column_three}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+    {% endfor %}
+
+  {% elseif count == 6 %} 
+    
+    {% for item in items %}       
+      {% if loop.index <= 2 %}
+        {% set column_one %}
+          {{column_one}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}      
+      {% if loop.index == 3 or loop.index == 4 %}
+        {% set column_two %}
+          {{column_two}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+      {% if loop.index >= 5 %}
+        {% set column_three %}
+          {{column_three}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+    {% endfor %}
+
+  {% elseif count == 7 or count == 8 %} 
+    
+    {% for item in items %}      
+      {% if loop.index <= 2 %}
+        {% set column_one %}
+          {{column_one}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}      
+      {% if loop.index >= 3 and loop.index <= 5 %}
+        {% set column_two %}
+          {{column_two}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+      {% if loop.index >= 6 %}
+        {% set column_three %}
+          {{column_three}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+    {% endfor %}
+
+  {% elseif count == 9 %} 
+    
+    {% for item in items %}      
+      {% if loop.index <= 3 %}
+        {% set column_one %}
+          {{column_one}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}      
+      {% if loop.index >= 4 and loop.index <= 6 %}
+        {% set column_two %}
+          {{column_two}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+      {% if loop.index >= 7 %}
+        {% set column_three %}
+          {{column_three}}{{ _self.highlight_list(item) }}
+        {% endset %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+  {% endif %}
+
+  <div class="inner size-{{ count }} clearfix">
+    <div class="column first"><ul>{{ column_one|raw }}</ul></div>    
+    {% if column_two !='' %}
+    <div class="column second"><ul>{{ column_two|raw }}</ul></div>
+    {% endif %}    
+    {% if column_three !='' %}
+    <div class="column third"><ul>{{ column_three|raw }}</ul></div>
+    {% endif %}    
+  </div>
+{% endif %}

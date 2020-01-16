@@ -1,0 +1,20 @@
+uuid: 780fc63d-58f1-4946-bb5f-e9facec4ea21
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - mwakilish
+id: mwakilish_powered
+theme: mwakilish
+region: content
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

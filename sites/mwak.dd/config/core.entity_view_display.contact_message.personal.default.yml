@@ -1,0 +1,30 @@
+uuid: 2e77372d-56dd-492b-86f3-3a8ed6f14876
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.field.contact_message.personal.field_firstname
+  module:
+    - text
+id: contact_message.personal.default
+targetEntityType: contact_message
+bundle: personal
+mode: default
+content:
+  field_firstname:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  message:
+    type: string
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

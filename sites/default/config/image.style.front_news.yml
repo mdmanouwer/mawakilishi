@@ -1,0 +1,14 @@
+uuid: 9a348cc9-824a-45d4-ba52-68a79ab1bed1
+langcode: en
+status: true
+dependencies: {  }
+name: front_news
+label: 'Front News'
+effects:
+  2ea1648d-5112-4ff4-b089-5a8d6036c1ea:
+    uuid: 2ea1648d-5112-4ff4-b089-5a8d6036c1ea
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 520
+      height: 315

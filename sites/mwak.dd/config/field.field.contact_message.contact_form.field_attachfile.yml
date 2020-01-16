@@ -1,0 +1,27 @@
+uuid: 47e31123-cf88-4107-b30e-95f11348def6
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact_form
+    - field.storage.contact_message.field_attachfile
+  module:
+    - file
+id: contact_message.contact_form.field_attachfile
+field_name: field_attachfile
+entity_type: contact_message
+bundle: contact_form
+label: 'Attach File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt jpg png gif jpeg doc docx pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

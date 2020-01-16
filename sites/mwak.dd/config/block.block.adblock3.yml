@@ -1,0 +1,35 @@
+uuid: 291a7c22-2478-40de-b843-665a058706a7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e3fcd4f9-3cbe-463d-8105-7227693fa1c1'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: 'ad-wrapping imageWrap'
+id: adblock3
+theme: mwakilish
+region: sidebar_second
+weight: -39
+provider: null
+plugin: 'block_content:e3fcd4f9-3cbe-463d-8105-7227693fa1c1'
+settings:
+  id: 'block_content:e3fcd4f9-3cbe-463d-8105-7227693fa1c1'
+  label: 'Ad block 3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /2017-kenya-general-election-results-live
+    negate: true
+    context_mapping: {  }

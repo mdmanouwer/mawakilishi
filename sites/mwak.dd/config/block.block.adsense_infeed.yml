@@ -1,0 +1,29 @@
+uuid: 962bdd09-d37c-4c08-8890-6ace4f465b59
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:8f5b9f66-7f01-4fe0-8b62-ed05b392e1c1'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: adsense_infeed
+theme: mwakilish
+region: content
+weight: -18
+provider: null
+plugin: 'block_content:8f5b9f66-7f01-4fe0-8b62-ed05b392e1c1'
+settings:
+  id: 'block_content:8f5b9f66-7f01-4fe0-8b62-ed05b392e1c1'
+  label: Adsense_InFeed
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,14 @@
+uuid: 3e783272-8477-409a-ade5-a5ae591ff2e8
+langcode: en
+status: true
+dependencies: {  }
+name: small
+label: 'Small (75x75)'
+effects:
+  4d7c6aef-de46-4fa9-ae83-9bf783f40656:
+    uuid: 4d7c6aef-de46-4fa9-ae83-9bf783f40656
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 75
+      height: 75

@@ -1,0 +1,41 @@
+global-styling:
+  version: VERSION
+  css:
+    component:
+      css/components/omni.css: {}
+      css/components/omni-menu.css: {}
+      css/components/omni-forum.css: {}
+      css/components/omni-showcase.css: {}
+      css/components/omni-8.css: {}
+      css/components/omni-custom.css: {}
+      css/components/omni-ie9.css: {browsers: { IE: 'if IE 9', '!IE': false }}
+    theme:
+      css/theme/omni-color-dynamic.css: {}
+      css/theme/omni-color-static.css: {}
+      https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900: { type: external }
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css: { type: external }
+      
+global-script:
+  version: VERSION
+  js:
+    js/vendor/jquery.matchheight.min.js: {}
+    js/omni.js: {}
+  dependencies:
+    - core/jquery
+    
+slick:
+  version: VERSION
+  css:
+    component:
+      css/components/slick.css: {}
+      css/components/slick-theme.css: {}
+  js:
+    js/vendor/slick.min.js: {} 
+
+smartmenu:
+  version: VERSION
+  css:
+    component:
+      css/components/sm-core-css.css: {}
+  js:
+    js/vendor/jquery.smartmenus.min.js: {} 

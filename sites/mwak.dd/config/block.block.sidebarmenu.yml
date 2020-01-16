@@ -1,0 +1,33 @@
+uuid: 51ab692c-a81f-4709-b0bd-711f4c0cccb7
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.sidebar-menu
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: sidebarmenu
+theme: mwakilish
+region: help
+weight: -19
+provider: null
+plugin: 'system_menu_block:sidebar-menu'
+settings:
+  id: 'system_menu_block:sidebar-menu'
+  label: 'LATEST NEWS'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: /sports-news
+    negate: false
+    context_mapping: {  }

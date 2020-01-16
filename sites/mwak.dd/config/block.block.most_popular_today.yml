@@ -1,0 +1,34 @@
+uuid: bd05dcd6-63d7-41da-b61d-5a98269819c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: titleWrapping
+id: most_popular_today
+theme: mwakilish
+region: content
+weight: -39
+provider: null
+plugin: 'views_block:post_other-block_1'
+settings:
+  id: 'views_block:post_other-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

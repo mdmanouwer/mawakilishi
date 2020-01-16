@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Omni Magazine theme.
+
+omni_magazine.settings:
+  type: theme_settings
+  label: 'Omni settings'

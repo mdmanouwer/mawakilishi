@@ -1,0 +1,195 @@
+uuid: 4b08121a-5163-4291-b855-a6b83aeef564
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog.body
+    - field.field.node.blog.comment
+    - field.field.node.blog.field_image
+    - field.field.node.blog.field_post_format
+    - field.field.node.blog.field_post_type
+    - field.field.node.blog.field_tags
+    - node.type.blog
+  module:
+    - ds
+    - field_group
+    - image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: true
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_image
+        - group_last_block_right
+        - field_tags
+        - node_post_date
+        - node_title
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 8
+        label: hidden
+        formatter: ds_post_date_short
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: post-date
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: span
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+      node_title:
+        plugin_id: node_title
+        weight: 9
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: ''
+          class: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: title
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  field_group:
+    group_last_block_right:
+      children:
+        - group_time_wrapping
+        - node_title
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: last-block-right
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'last block right'
+    group_time_wrapping:
+      children:
+        - field_tags
+        - node_post_date
+      parent_name: group_last_block_right
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: time-wrapping
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Time wrapping'
+id: node.blog.teaser
+targetEntityType: node
+bundle: blog
+mode: teaser
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: img
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  field_tags:
+    type: entity_reference_label
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  comment: true
+  field_fb_post_id: true
+  field_post_format: true
+  field_post_type: true
+  links: true

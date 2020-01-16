@@ -1,0 +1,34 @@
+uuid: 1696d99e-3210-41f0-b08c-dba917835edf
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.posts_category
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: titleWrapping
+id: views_block__posts_category_block_4_2
+theme: mwakilish
+region: content
+weight: -33
+provider: null
+plugin: 'views_block:posts_category-block_4'
+settings:
+  id: 'views_block:posts_category-block_4'
+  label: 'POPULAR BLOGS'
+  provider: views
+  label_display: visible
+  views_label: 'POPULAR BLOGS'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

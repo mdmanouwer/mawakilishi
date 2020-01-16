@@ -1,0 +1,35 @@
+uuid: 3b447b61-8d43-4b23-857b-3b1b22497b8a
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:cc49ad6d-bc17-42d4-9999-95e91a8f27c2'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: electionresults
+theme: mwakilishi
+region: sidebar_second
+weight: -40
+provider: null
+plugin: 'block_content:cc49ad6d-bc17-42d4-9999-95e91a8f27c2'
+settings:
+  id: 'block_content:cc49ad6d-bc17-42d4-9999-95e91a8f27c2'
+  label: 'LIVE: RAILA FILES PETITION AT SUPREME COURT'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /2017-kenya-general-election-results-live
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,43 @@
+uuid: 32f0d20e-1605-4e4f-9a40-c47b7c24281b
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.sub-menu
+  module:
+    - block_class
+    - entity_submenu_block
+    - system
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: mobile_latestnewsentitysubmenublock
+theme: mobile
+region: content
+weight: -4
+provider: null
+plugin: 'entity_submenu_block:sub-menu'
+settings:
+  id: 'entity_submenu_block:sub-menu'
+  label: 'LATEST NEWS aa'
+  provider: entity_submenu_block
+  label_display: visible
+  level: 1
+  depth: 0
+  display_non_entities: 0
+  view_mode_node: full
+  view_mode_aggregator_feed: default
+  view_mode_block_content: default
+  view_mode_comment: default
+  view_mode_contact_message: default
+  view_mode_simplenews_subscriber: default
+  view_mode_taxonomy_term: default
+  view_mode_user: default
+visibility:
+  request_path:
+    id: request_path
+    pages: /sports-news
+    negate: false
+    context_mapping: {  }

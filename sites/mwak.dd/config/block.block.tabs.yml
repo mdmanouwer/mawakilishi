@@ -1,0 +1,25 @@
+uuid: 3fe422da-ff5d-4b76-8a2f-53b1bd022894
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: tabs
+theme: mobile
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

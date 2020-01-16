@@ -1,0 +1,34 @@
+uuid: e70cb82b-b218-4cf2-97ae-6b902bd26300
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: list-content-line
+id: views_block__post_other_block_11
+theme: mobile
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:post_other-block_11'
+settings:
+  id: 'views_block:post_other-block_11'
+  label: 'HOT TOPICS'
+  provider: views
+  label_display: '0'
+  views_label: 'HOT TOPICS'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

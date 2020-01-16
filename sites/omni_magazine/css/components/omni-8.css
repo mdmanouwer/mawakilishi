@@ -1,0 +1,351 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* TABLE OF CONTENT
+------------------------------------------------------------------  
+
+- MAIN
+
+- NODE
+
+- VIEWS
+
+- SEARCH
+
+- PROFILE
+
+----------------------------------------------------------------*/
+
+/* MAIN 
+/* REGION 
+----------------------------------------------------------------*/
+.status-message {
+  font-family: 'Roboto', Arial, Helvetica, Sans-Serif;
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0.9375rem 1.25rem;
+  margin-bottom: 1.25rem;
+  clear: both;
+}
+
+/* Content 
+---------------------------------*/
+#content .block > .inner {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.content-tab ul {
+  font-size: 0;
+  margin: 0;
+}
+
+.content-tab li {
+  display: inline;
+  padding: 0;
+  margin: 0;  
+}
+
+.content-tab a {
+  display: inline-block;
+  font-family: 'Roboto', Arial, Helvetica, Sans-Serif;
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0.9375rem 1.25rem;
+  line-height: 1;
+}
+
+.content-action {
+  padding-bottom: 1.25rem;
+}
+
+/* Pager 
+---------------------------------*/
+.pager ul {
+  font-family: 'Roboto', Arial, Helvetica, Sans-Serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1;
+  margin: 0.625rem 0;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+}
+
+.pager ul li {
+  float: left;
+  padding: 0 !important;
+  margin: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  text-transform: uppercase;
+}
+
+.pager ul li:last-child {
+  border-right: none;
+}
+
+.pager ul li.pager-current,
+.pager ul li a {
+  display: inline-block;
+  padding: 0.5rem 0.75rem !important;
+}
+
+#content .pager ul {
+  float: right;
+}
+
+.pager ul li.pager__item,
+.pager ul li.pager__item--first,
+.pager ul li.pager__item--last {
+  display: none;
+}
+
+@media only screen and (min-width: 40.0625em) { 
+  
+  .pager ul li.pager__item,
+  .pager ul li.pager__item--first,
+  .pager ul li.pager__item--last {
+    display: inline;
+  }
+}
+
+/* NODE 
+/* REGION 
+----------------------------------------------------------------*/
+/* Basic Page 
+---------------------------------*/
+.basic .meta {
+  text-transform: uppercase;
+  padding-bottom: 1.25rem;
+}
+
+.basic .meta > span {
+  padding: 0 0.625rem;
+}
+
+.basic .meta span.author {
+  padding-left: 0;
+}
+
+.basic.full .meta {
+  padding-top: 1.25rem;
+}
+
+/* Blog 
+---------------------------------*/
+.blog .meta {
+  font-weight: normal;
+}
+
+.blog .meta .share {
+  padding: 0.625rem 0;
+  text-align: center;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.blog.teaser .meta .share {
+  text-align: right;
+}
+
+.node-type-blog .content-tab {
+
+}
+
+@media only screen and (min-width: 40.0625em) { 
+
+  .node-type-blog .content-tab {
+     margin-left: 20%;
+  }    
+}
+
+@media only screen and (min-width: 64.0625em) and (max-width: 90em) {
+
+  .node-type-blog.two-sidebars .content-tab {
+     margin-left: 0;
+  } 
+}
+
+/* Forum 
+---------------------------------*/
+#forum table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#forum .description {
+  font-size: 0.9em;
+  margin: 0.5em;
+}
+
+#forum-topic .forum__title div > span {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+#forum-topic .fa {
+  float: left;
+  font-size: 1rem;  
+  vertical-align: top;
+  padding-top: 0.9375rem;
+}
+
+.forum__title, .forum__replies, .forum__last-reply {
+  font-size: 1rem;
+}
+
+.forum__replies, .forum__last-reply {
+  text-align: center;
+}
+
+/* Comment 
+---------------------------------*/
+.comment mark {
+  color: inherit;
+  background-color: transparent;
+}
+
+.comment .links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;  
+}
+
+.comment .links li.comment-forbidden a {
+  padding: 0 0.5em;  
+}
+
+/* VIEWS
+/* REGION 
+----------------------------------------------------------------*/
+/* Page and Block View
+---------------------------------*/
+.page-page-grid #content,
+.page-page-category #content,
+.page-page-category-grid #content {
+  padding: 0;
+  background-color: transparent;    
+}
+
+.page-page-category-grid #content {
+  margin-bottom: 0;  
+}
+
+/* block grid
+---------------*/
+.page-block-block-grid .inner {
+  padding: 0;
+  margin: 0;
+  background-color: transparent !important;
+}
+
+.page-block-block-grid h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.page-block-block-grid .meta {
+  position: static;
+  font-weight: normal;
+  text-transform: none;
+  padding: 0.625rem 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+#menu-primary .page-block-block-grid > .inner {
+  padding: 1.25rem 1.25rem 0 1.25rem;
+}
+
+/* block category
+---------------*/
+.page-block-block-category > .inner {
+  padding: 0; 
+}
+
+.page-block-block-category h3.title {
+  line-height: 1;
+  padding: 0.9375rem 1.25rem; 
+  margin: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+@media only screen and (min-width: 75.0625em) {   
+
+  .block.page-block-block-category .three-column .column {
+    width: 33.33333%;
+  }
+  
+  .block.page-block-block-category .three-column .column.second {
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+
+  .block.page-block-block-category .three-column .column.last {
+    display: block;
+  }
+}
+
+/* block category grid
+---------------*/
+.block.page-block-block-category-grid > .inner {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+/* SEARCH
+/* REGION 
+----------------------------------------------------------------*/
+#header-left .search-form  .form-item,
+#menu-primary #search-block-form  .form-item {
+  margin: 0;
+}
+
+input[type="search"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; /* 2 */
+  box-sizing: border-box;
+}
+
+/* PROFILE
+/* REGION 
+----------------------------------------------------------------*/
+.user-form #edit-user-picture-wrapper,
+.user-form details {
+  margin: 1.25rem 0;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.user-form details summary {
+  padding: 0.625rem;
+}
+
+.user-form #edit-user-picture-wrapper .form-item,
+.user-form details .form-item {
+  padding: 0 1.25rem;
+}
+
+details select,
+fieldset input {
+  box-sizing: border-box;
+}

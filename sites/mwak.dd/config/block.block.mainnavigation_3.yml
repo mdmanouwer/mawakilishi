@@ -1,0 +1,28 @@
+uuid: 0e16c556-376e-4894-9471-1d7708a80307
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: mainnavigation_3
+theme: mwakilishi
+region: header_nav
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

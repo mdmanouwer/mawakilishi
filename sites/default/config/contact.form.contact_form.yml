@@ -1,0 +1,12 @@
+uuid: 6a38ec1c-8f00-452c-9e9b-66f0f6583f5e
+langcode: en
+status: true
+dependencies: {  }
+id: contact_form
+label: 'CONTACT US/SUBMIT CONTENT'
+recipients:
+  - info@mwakilishi.com
+reply: info@mwakilishi.com
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

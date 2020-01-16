@@ -1,0 +1,22 @@
+uuid: 5d8fd165-9121-4209-b23e-6d9189bd6696
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: article_paths
+label: content_paths
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:field_post_category]/[node:created:html_date]/[node:title]'
+selection_criteria:
+  759f69d5-a81d-4dad-964d-0f6d8c39a693:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 759f69d5-a81d-4dad-964d-0f6d8c39a693
+selection_logic: and
+weight: -5
+relationships: {  }

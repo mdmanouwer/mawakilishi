@@ -1,0 +1,34 @@
+uuid: 8ab7c288-a14e-4af2-948a-ab0a06359178
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'category-wrap list-content'
+id: views_block__post_other_block_6_2
+theme: mobile
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:post_other-block_6'
+settings:
+  id: 'views_block:post_other-block_6'
+  label: NOTICEBOARD
+  provider: views
+  label_display: '0'
+  views_label: NOTICEBOARD
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implementation of hook_install()
+ */
+function ___drupal_php_strict_suppress_install() {
+
+  // Add a very negative number to try and ensure our module is loaded first.
+  db_query("UPDATE {system} SET weight = -100000 WHERE name = '___drupal_php_strict_suppress'");
+  drupal_set_message ("Strict messages should now be suppressed.");
+}

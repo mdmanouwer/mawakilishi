@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="ARC2_RemoteStore.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_Store.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreAskQueryHandler.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreAtomLoader.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreCBJSONLoader.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreConstructQueryHandler.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreDeleteQueryHandler.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreDescribeQueryHandler.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreDumpQueryHandler.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreDumper.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreEndpoint.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreHelper.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreInsertQueryHandler.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreLoadQueryHandler.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreQueryHandler.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreRDFXMLLoader.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreRSSLoader.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreSGAJSONLoader.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreSPOGLoader.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreSelectQueryHandler.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreSemHTMLLoader.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreTableManager.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+<file name="ARC2_StoreTurtleLoader.php" local="129211873200000000" remote="129211873200000000" testing="0" />
+</dwsync>

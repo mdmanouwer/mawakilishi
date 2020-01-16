@@ -1,0 +1,30 @@
+uuid: ce327627-1163-44fc-84c5-ac2d88b61211
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.website_contact_
+    - field.field.contact_message.website_contact_.field_file
+  module:
+    - file
+id: contact_message.website_contact_.default
+targetEntityType: contact_message
+bundle: website_contact_
+mode: default
+content:
+  field_file:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  message:
+    type: string
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

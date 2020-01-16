@@ -1,0 +1,28 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{{ title_prefix }}
+<h3{{ title_attributes }}>
+  <a href="{{ url }}">{{ title }}</a>
+</h3>
+{{ title_suffix }}
+{% if info %}
+  <div class="meta">{{ info }}</div>
+{% endif %}
+{% if snippet %}
+  <p{{ content_attributes }}>{{ snippet }}</p>
+{% endif %}
+

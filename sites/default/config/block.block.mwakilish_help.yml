@@ -1,0 +1,20 @@
+uuid: bb099392-76bd-467f-b901-b5fc705ad2c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - mwakilish
+id: mwakilish_help
+theme: mwakilish
+region: content
+weight: -27
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

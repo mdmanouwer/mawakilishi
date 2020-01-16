@@ -1,0 +1,31 @@
+uuid: c46bf2a6-edec-43d1-8044-ab5b2180223d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilish_local_tasks
+theme: mwakilish
+region: content
+weight: -29
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

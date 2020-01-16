@@ -1,0 +1,14 @@
+uuid: 8e217960-6e97-4379-ad8b-b92f6d6ae716
+langcode: en
+status: true
+dependencies: {  }
+name: thumbnail_front_slider
+label: 'Thumbnail Front Slider'
+effects:
+  eaff0fdb-3783-42db-b62e-c1c6427ee2cb:
+    uuid: eaff0fdb-3783-42db-b62e-c1c6427ee2cb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 118
+      height: 90

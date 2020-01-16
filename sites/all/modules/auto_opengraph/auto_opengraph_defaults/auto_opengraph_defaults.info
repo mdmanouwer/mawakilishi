@@ -1,0 +1,12 @@
+; $Id$
+name = Auto Opengraph Defaults
+description = Default opengraph tag settings for use by Auto Opengraph
+package = Facebook
+dependencies[] = auto_opengraph
+core = 6.x
+; Information added by drupal.org packaging script on 2013-09-30
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "auto_opengraph"
+datestamp = "1380554969"
+

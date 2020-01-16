@@ -1,0 +1,694 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* TABLE OF CONTENT
+------------------------------------------------------------------	
+
+- PRIMARY MENU 
+
+- PRIMARY LIST MENU
+
+- PRIMARY MEGA MENU
+
+- EDGE MENU 
+
+- SECONDARY MENU
+
+- QUICK LINK
+
+- CLOSURE MENU
+
+----------------------------------------------------------------*/
+
+/* PRIMARY MENU 
+/* REGION
+----------------------------------------------------------------*/
+#menu-primary > .inner {
+  position: relative;
+}
+
+#menu-primary .sub-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3.125rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+#menu-primary .sub-arrow:before {
+  font-family: FontAwesome;
+  font-size: 0.875rem;
+  content: "\f078";
+}
+
+#menu-primary a.highlighted .sub-arrow:before {
+  content: "\f00d";
+}
+
+#menu-primary.list-style #primary-mega,
+#menu-primary.mega-style #primary-list {
+  display: none;
+}
+
+.menu-button {  
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 0.8125rem 1.25rem;
+  line-height: 1rem;
+}
+
+@media only screen and (min-width: 64.0625em) {
+    
+  #menu-primary a {
+    white-space: nowrap;
+  }
+
+  #menu-primary ul a {
+    white-space: normal;
+  }
+      
+  #menu-primary a.has-submenu {
+    padding-right: 1.875rem !important;
+  }
+  
+  #menu-primary .sub-arrow { 
+    width: 1.875rem;
+    background-color: transparent !important;
+  }
+  
+  #menu-primary .sub-arrow:before { 
+    content: "\f0d7" !important; 
+  }
+
+  #menu-primary ul ul .sub-arrow:before {
+    content: "\f0da" !important;
+  }
+  
+  .menu-button,
+  #menu-primary.hybrid-style #primary-list {
+    display: none !important;
+  }
+}
+
+/* Compact Header Style
+---------------------------------*/
+.compact-width  #menu-primary > .inner {  
+  position: static;
+}
+
+.compact-width .menu-button {  
+  position: absolute;
+  right: 2.5rem;
+  top: 0.625rem;
+}
+
+@media only screen and (min-width: 64.0625em) {
+  
+  .compact-width #menu-primary {
+    float: left;
+    width: 51.25em;
+  }
+}
+
+@media only screen and (min-width: 90.0625em) {
+  
+  .compact-width #menu-primary {
+    width: 62.5em;
+  }
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* PRIMARY LIST MENU
+/* REGION 
+----------------------------------------------------------------*/
+#primary-list {
+  font-family: 'Roboto', Arial, Helvetica, Sans-Serif;
+  margin: 0;
+  list-style: none; 
+}
+
+#primary-list.collapsed {
+  display: none;
+}
+
+#primary-list li {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+#primary-list a {
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.125rem;
+  padding: 1rem 1.25rem; 
+}
+
+#primary-list ul a {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
+#primary-list ul a {
+  border-left: 10px solid transparent;
+}
+
+#primary-list ul ul a {
+  border-left: 20px solid transparent;
+}
+
+#primary-list ul ul ul a {
+  border-left: 30px solid transparent;
+}
+
+@media only screen and (min-width: 64.0625em) {
+
+  #primary-list.collapsed {
+    display: block;
+  }  
+
+  #primary-list > li {
+    float: left;
+  }
+  
+  #primary-list ul {
+    position: absolute;
+    min-width: 12.5rem !important; 
+    z-index: 9;
+  }
+  
+  #primary-list .sm-nowrap > li > a, 
+  #primary-list .sm-nowrap > li > :not(ul) a {
+    white-space: nowrap;
+  }
+  
+  #primary-list ul a {
+    border: 0 !important;
+  } 
+    
+  #primary-list > li,
+  #primary-list ul > li:first-child {
+    border-top: 0;
+  } 
+}
+
+/* Compact Header Style
+---------------------------------*/
+@media only screen and (min-width: 64.0625em) {
+
+  .compact-width #primary-list > li > a {
+    padding: 1.9375rem 1.25rem;
+  }
+  
+  .compact-width #primary-list > li > a .sub-arrow {
+    height: 5rem;
+    line-height: 5rem;
+  }
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* PRIMARY MEGA MENU
+/* REGION 
+----------------------------------------------------------------*/
+/* Main Level
+---------------------------------*/
+#primary-mega {
+  font-family: 'Roboto', Arial, Helvetica, Sans-Serif;
+  margin: 0;
+  list-style: none; 
+}
+
+#primary-mega.collapsed {
+  display: none;
+}
+
+#primary-mega > li {
+  position: static !important;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+#primary-mega > li.fix-width {
+  position: relative !important;
+}
+
+#primary-mega > li > a {
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.125rem;
+  padding: 1rem 1.25rem;
+}
+
+/* Sublevel
+---------------------------------*/
+#primary-mega ul.mega-menu {
+  margin-left: 0 !important;
+	right: 0 !important;
+	width: auto !important;
+	max-width: none !important;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  z-index: 9;
+}
+
+.mega-menu > li {
+  float: left;
+}
+
+.mega-menu .block > .inner {
+  margin: 0;
+  background-color: transparent;
+}
+
+.mega-menu .block .contextual-links-wrapper,
+.mega-menu .contextual {
+  display: none;
+}
+
+.mega-menu .block h3.title {
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;  
+  padding: 0 0.9375rem;
+  margin-bottom: 1.25rem;
+  border-left-width: 5px;
+  border-left-style: solid;
+}
+
+.mega-menu .block ul {
+  display: block;
+}
+
+.mega-menu .block li {
+  display: list-item;
+}
+
+.mega-menu .block a {
+  display: inline;
+}
+
+.mega-menu nav ul li {
+  list-style: square inside none;
+  padding: 0.625rem 0;
+  margin: 0; 
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.mega-menu nav ul li a {
+  padding: 0.625rem 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 64em) {
+  
+  #primary-mega ul.mega-menu,
+  #primary-mega .sub-arrow {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 64.0625em) {
+
+  #primary-mega.collapsed {
+    display: block;
+  }  
+
+  #primary-mega > li {
+    float: left;
+  }
+  
+  #primary-mega ul.mega-menu {
+    position: absolute;
+    width: 100%; 
+  }
+    
+  #primary-mega ul li > a {
+    border: 0 !important;
+  }   
+  
+  #primary-mega li {
+    border-top: 0;
+  }   
+}
+
+/* layout
+----------------*/
+.mega-menu.col_1_s1 {
+  min-width: 18.75rem !important;
+}
+
+.mega-menu.col_1_s1 > li,
+.mega-menu.col_1_s2 > li {
+  width: 100%;
+}
+
+.mega-menu.col_2_s1 {
+  min-width: 37.5rem !important;
+}
+
+.mega-menu.col_2_s1 > li,
+.mega-menu.col_2_s2 > li {
+  width: 50%;
+}
+
+.mega-menu.col_2_s3 > li.col-1 {
+  width: 20%;
+}
+
+.mega-menu.col_2_s3 > li.col-2 {
+  width: 80%;
+}
+
+.mega-menu.col_3_s1 > li,
+.mega-menu.col_3_s2 > li,
+.mega-menu.col_3_s3 > li,
+.mega-menu.col_3_s4 > li,
+.mega-menu.col_4_s1 > li,
+.mega-menu.col_4_s2 > li,
+.mega-menu.col_4_s3 > li,
+.mega-menu.col_4_s4 > li,
+.mega-menu.col_5_s1 > li {
+  width: 33.33333%;
+}
+
+@media only screen and (min-width: 64.0625em) {  
+  
+  .mega-menu.col_4_s1 > li.col-4,
+  .mega-menu.col_4_s2 > li.col-4,
+  .mega-menu.col_4_s3 > li.col-4,
+  .mega-menu.col_4_s4 > li.col-4,
+  .mega-menu.col_5_s1 > li.col-4,
+  .mega-menu.col_5_s1 > li.col-5 {
+    display: none;
+  } 
+}
+
+@media only screen and (min-width: 75.0625em) { 
+  
+  .mega-menu.col_3_s2 > li,
+  .mega-menu.col_3_s4 > li {
+    width: 25%;
+  }
+
+  .mega-menu.col_3_s2 > li.col-1,
+  .mega-menu.col_3_s4 > li.col-2 {
+    width: 50%;
+  }
+
+  .mega-menu.col_3_s3 > li {
+    width: 40%;
+  }
+
+  .mega-menu.col_3_s3 > li.col-1 {
+    width: 20%;
+  }
+  
+  .mega-menu.col_4_s1 > li {
+    width: 25%;
+  }
+  
+  .mega-menu.col_4_s2 > li,
+  .mega-menu.col_4_s4 > li {
+    width: 20%;
+  }
+
+  .mega-menu.col_4_s2 > li.col-1,
+  .mega-menu.col_4_s4 > li.col-4 {
+    width: 40%;
+  }
+
+  .mega-menu.col_4_s3 > li {
+    width: 28%;
+  }
+
+  .mega-menu.col_4_s3 > li.col-1 {
+    width: 16%;
+  }
+  
+  .mega-menu.col_5_s1 > li {
+    width: 25%;
+  }
+  
+  .mega-menu.col_4_s1 > li.col-4,
+  .mega-menu.col_4_s2 > li.col-4,
+  .mega-menu.col_4_s3 > li.col-4,
+  .mega-menu.col_4_s4 > li.col-4,
+  .mega-menu.col_5_s1 > li.col-4 {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 90.0625em) { 
+  
+  .mega-menu.col_5_s1 > li {
+    width: 20%;
+  }
+  
+  .mega-menu.col_5_s1 > li.col-5 {
+    display: block;
+  }
+}
+
+/* Compact Header Style
+---------------------------------*/
+@media only screen and (min-width: 64.0625em) {
+  
+  .compact-width #primary-mega > li > a {
+    padding: 1.9375rem 1.25rem;
+  }
+
+  .compact-width #primary-mega > li > a .sub-arrow {
+    height: 5rem;
+    line-height: 5rem;
+  }
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* EDGE MENU 
+/* REGION 
+----------------------------------------------------------------*/
+.edge-menu {
+  clear: both;
+  width: 100% !important;
+}
+
+.edge-menu .block > .inner {
+  padding: 0;
+}
+
+.edge-menu .title {
+  display: none
+}
+
+.edge-menu nav {
+  padding: 0 1.25rem;
+}
+
+.edge-menu nav ul {
+  display: block;
+}
+
+.edge-menu nav ul li {
+  display: list-item;
+  float: left;
+  list-style: square outside none;
+  padding: 0;
+  margin: 0 0.625rem 0 1.25rem;
+  border: 0;
+}
+
+.edge-menu nav ul li a {
+  display: inline-block !important;
+  padding: 1.1875rem 0.625rem 0.875rem 0.625rem ;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.edge-menu.edge-menu-only nav ul li a {
+  padding-top: 0.875rem;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* SYSTEM MENU
+/* REGION 
+----------------------------------------------------------------*/
+.block-system-menu ul {
+  margin: 0;
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+.block-system-menu ul li {
+  font-size: 0.9375rem;
+  padding: 0.625rem 0;
+  margin: 0;
+  list-style-image: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+/* SECONDARY MENU
+/* REGION 
+----------------------------------------------------------------*/
+#menu-secondary {
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+#menu-secondary nav > ul {
+  display: none;
+  float: right;
+  list-style: none; 
+  height: 2.5rem;
+  margin: 0 0.3125rem 0 0;
+}
+
+#menu-secondary nav > ul li {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+#menu-secondary nav > ul li a {
+  display: block;
+  font-family: 'Roboto', Arial, Helvetica, Sans-Serif;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  padding: 0.75rem 0.9375rem;
+}
+
+@media only screen and (min-width: 64.0625em) { 
+ 
+  #menu-secondary nav > ul {
+    display: block;
+  }
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* QUICK LINK
+/* REGION 
+----------------------------------------------------------------*/
+#quick-link {
+  display: none;
+  float: left;
+  width: 100%;
+  padding: 0 1.25rem;
+}
+
+#quick-link h3.title,
+#quick-link nav ul {
+  float: left;
+  font-family: 'Roboto', Arial, Helvetica, Sans-Serif;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  padding: 0;
+  margin-left: 0;
+}
+
+#quick-link h3.title {
+  font-weight: bold;
+  padding-right: 1.25rem;
+  margin-bottom: 0;
+}
+
+#quick-link nav ul li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+
+#quick-link nav ul li:last-child {
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+#quick-link nav ul li a {
+  display: block;
+  padding: 0 0.9375rem;
+}
+
+@media only screen and (min-width: 40.0625em) { 
+  
+  #quick-link {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 90.0625em) { 
+  
+  .col-2 #quick-link {
+    width: 50%;
+  }
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* CLOSURE MENU 
+/* REGION 
+----------------------------------------------------------------*/
+#closure nav ul {
+  font-size: 0.625rem;
+  line-height: 1;
+  text-transform: uppercase;
+  padding-top: 0.3125rem;
+  margin: 0;
+}
+
+#closure nav ul li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+#closure nav ul li a {
+  display: block;
+  padding: 0 0.9375rem;
+}
+
+#closure nav ul li:first-child a {
+  padding-left: 0;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/

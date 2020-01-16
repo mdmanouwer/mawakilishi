@@ -1,0 +1,24 @@
+uuid: 3ac860c3-62a5-40b3-8e40-bb120acc29c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - search
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: search-wrapping
+id: searchform
+theme: mwakilish
+region: footer_middle
+weight: -17
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,33 @@
+uuid: 3524d00a-b1cc-4bbc-8967-89ac75d32f18
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sub-menu
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: news_nav
+theme: mwakilish
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:sub-menu'
+settings:
+  id: 'system_menu_block:sub-menu'
+  label: 'LATEST NEWS'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/news\r\n/diaspora-news.php\r\n/kenya-news.php\r\n/world-news.php\r\n/immigration-news.php\r\n/business-news.php\r\n/entertainment-news.php\r\n/real-estate-news.php\r\n/lifestyle.php\r\n/sports-news.php\r\n/sports-news"
+    negate: false
+    context_mapping: {  }

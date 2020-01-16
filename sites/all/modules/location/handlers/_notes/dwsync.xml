@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="location_handler_argument_location_country.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_argument_location_province.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_argument_location_proximity.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_field_location_address.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_field_location_country.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_field_location_distance.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_field_location_province.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_field_location_street.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_filter_location_country.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_filter_location_province.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_handler_sort_location_distance.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_views_handler_field_coordinates.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_views_handler_field_latitude.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_views_handler_field_longitude.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_views_handler_filter_proximity.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+</dwsync>

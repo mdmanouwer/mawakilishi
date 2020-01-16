@@ -1,0 +1,29 @@
+uuid: 7bf32511-f71d-414d-98fc-cd14800717b0
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:e8a1a6bc-9212-4b71-a4ed-d6fdb0bd8f8f'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: googlematchedcontent
+theme: mwakilish
+region: sidebar_second
+weight: -37
+provider: null
+plugin: 'block_content:e8a1a6bc-9212-4b71-a4ed-d6fdb0bd8f8f'
+settings:
+  id: 'block_content:e8a1a6bc-9212-4b71-a4ed-d6fdb0bd8f8f'
+  label: 'Google Matched Content'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

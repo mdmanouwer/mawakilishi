@@ -1,0 +1,27 @@
+uuid: d0aa6b73-11c7-47bd-8a9f-6f3dab86d896
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: sitebranding3
+theme: mwakilishi
+region: footer
+weight: -17
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

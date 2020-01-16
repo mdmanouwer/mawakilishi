@@ -1,0 +1,26 @@
+uuid: e31a3c87-ef98-4daa-8836-76f2a7a8216b
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishi_banner
+theme: mwakilishi
+region: content_bottom
+weight: -4
+provider: null
+plugin: 'block_content:0f3b8233-412d-4135-a56b-6e61dbab8ad9'
+settings:
+  id: 'block_content:0f3b8233-412d-4135-a56b-6e61dbab8ad9'
+  label: Banner
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 0d54a74d-57f1-4ede-828d-e1828fca59a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: block
+id: mobile_branding
+theme: mobile
+region: header
+weight: -16
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 365c6eb0-8a52-498d-a483-1a26e82d05be
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mwakilish
+id: mwakilish_messages
+theme: mwakilish
+region: highlighted
+weight: -24
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

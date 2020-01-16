@@ -1,0 +1,40 @@
+uuid: b3de0dbb-c5e4-42b8-bc08-0873e4ced2ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.video
+  module:
+    - image
+_core:
+  default_config_hash: _IJQOUG10xFfr0MnJgt7TySq-agVxB6MBgkO15xgDu0
+id: node.video.field_image
+field_name: field_image
+entity_type: node
+bundle: video
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: video
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

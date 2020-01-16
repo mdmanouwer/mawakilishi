@@ -1,0 +1,8 @@
+uuid: 3b998185-1f5a-471b-a44c-6852575e8293
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar-menu
+label: 'LATEST NEWS'
+description: ''
+locked: false

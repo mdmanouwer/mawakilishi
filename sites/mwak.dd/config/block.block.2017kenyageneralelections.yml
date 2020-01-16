@@ -1,0 +1,29 @@
+uuid: 1df28e64-9579-4aa3-ba41-da4889f3b966
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:31b07848-2598-4154-b5d1-933f503343a5'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: 2017kenyageneralelections
+theme: mobile
+region: header_top
+weight: -16
+provider: null
+plugin: 'block_content:31b07848-2598-4154-b5d1-933f503343a5'
+settings:
+  id: 'block_content:31b07848-2598-4154-b5d1-933f503343a5'
+  label: 'LIVE: RAILA FILES PETITION AT SUPREME COURT'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

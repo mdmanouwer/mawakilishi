@@ -1,0 +1,28 @@
+uuid: 46ac9e20-5372-4bab-99e6-63546edf0791
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: mobile_footermenu
+theme: mobile
+region: header_bottom
+weight: -3
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

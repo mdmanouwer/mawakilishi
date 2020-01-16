@@ -1,0 +1,34 @@
+uuid: 950bcc03-8cb2-4558-a593-c4d2301933b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.posts_category_latest_news
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'gray-block author_news_1'
+id: views_block__posts_category_latest_news_block_18
+theme: mobile
+region: content_bottom
+weight: -14
+provider: null
+plugin: 'views_block:posts_category_latest_news-block_18'
+settings:
+  id: 'views_block:posts_category_latest_news-block_18'
+  label: 'IRUNGU THAIRU, WRITER/EDITOR | JTHAIRU@MWAKILISHI.COM'
+  provider: views
+  label_display: visible
+  views_label: 'IRUNGU THAIRU, WRITER/EDITOR | JTHAIRU@MWAKILISHI.COM'
+  items_per_page: '10'
+visibility:
+  request_path:
+    id: request_path
+    pages: /about-us
+    negate: false
+    context_mapping: {  }

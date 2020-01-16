@@ -1,0 +1,311 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<div id="page">  
+  <header id="main-header" class="{{ omni_header }}">
+    {% if page.secondary_menu or page.social_media %}
+      <div id="menu-secondary">
+        <div class="inner wrapper clearfix">           
+          <div id="sign">
+            {% if logged_in %}
+              <a class="sign-out" title="Sign Out" href="{{ base_path }}user/logout"><span class="fa fa-sign-out"></span></a>
+            {% else %}
+              <a class="sign-in" title="Sign In" href="{{ base_path }}user"><span class="fa fa-user"></span></a>          
+              <a class="sign-up" title="Sign Up" href="{{ base_path }}user/register"><span class="fa fa-pencil"></span></a>  
+            {% endif %}        
+          </div>         
+          {{ page.secondary_menu }}   
+          <div id="social-media">
+            {{ page.social_media }}
+          </div>
+        </div>
+      </div> 
+    {% endif %}
+    <div id="header">
+      <div class="inner wrapper clearfix">
+        <div id="site-info">        
+          {% if page.site_info %}          
+            {{ page.site_info }}
+          {% endif %}
+        </div>        
+        {% if omni_header=='compact-width' %}
+          {% if page.primary_menu %}
+            <div id="menu-primary" class="{{ omni_menu }}">
+              <div class="inner clearfix">
+                {% if omni_menu=='mega-style' %}
+                  <a href="#" class="menu-button mega collapsed"><span class="fa fa-bars"></span></a>
+                {% else %}
+                  <a href="#" class="menu-button list collapsed"><span class="fa fa-bars"></span></a>                  
+                {% endif %}                
+                {{ page.primary_menu }}
+                {% if page.search %}          
+                  {{ page.search }}
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% else %}         
+          {% if omni_header_search=='yes' %}
+            <div id="header-left" class="with-search">
+              {% if page.header_left %}              
+                {{ page.header_left }}                  
+              {% endif %}
+            </div>
+          {% else %}
+            <div id="header-left">
+              {% if page.header_left %}              
+                {{ page.header_left }}                  
+              {% endif %}
+            </div>
+          {% endif %}         
+          <div id="header-right">
+            {% if page.header_right %}
+              {{ page.header_right }}
+            {% endif %}
+          </div>        
+        {% endif %} 
+      </div>
+    </div>
+    {% if omni_header!='compact-width' and page.primary_menu %}
+      <div id="menu-primary" class="{{ omni_menu }}">
+        <div class="inner wrapper clearfix">
+          {% if omni_menu=='mega-style' %}
+            <a href="#" class="menu-button mega collapsed"><span class="fa fa-bars"></span></a>
+          {% else %}
+            <a href="#" class="menu-button list collapsed"><span class="fa fa-bars"></span></a>                  
+          {% endif %}   
+          {{ page.primary_menu }}
+          {% if page.search %}          
+            {{ page.search }}
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}    
+  </header> 
+
+  <div id="main">
+    <div class="inner wrapper clearfix"> 
+      {% if main_edge >=1 or page.highlighted %}
+        <div id="main-edge" class="col-{{ main_edge }}">
+          <div class="inner clearfix">
+            {% if page.quick_link %}
+              <div id="quick-link">
+                {{ page.quick_link }}
+              </div>
+            {% endif %} 
+            {% if page.newsflash %}
+              <div id="newsflash">
+                {{ page.newsflash }}
+              </div>
+            {% endif %}
+            {% if page.highlighted %}
+              {{ page.highlighted }}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %} 
+      {% if page.showcase_main %}
+        <div id="main-showcase">
+          {{ page.showcase_main }}
+        </div>
+      {% endif %}  
+      {% if main_top >=1 %}
+        <div id="main-top" class="col-{{ main_top }}">
+          <div class="inner container clearfix">
+            {% if page.main_top_one %}
+              <div class="column">
+                {{ page.main_top_one }}
+              </div>
+            {% endif %}
+            {% if page.main_top_two %}
+              <div class="column">
+                {{ page.main_top_two }}
+              </div>
+            {% endif %}
+            {% if page.main_top_three %}
+              <div class="column">
+                {{ page.main_top_three }}
+              </div>
+            {% endif %}
+            {% if page.main_top_four %}
+              <div class="column">
+                {{ page.main_top_four }}
+              </div>
+            {% endif %}
+          </div>
+        </div> 
+      {% endif %}      
+      
+      <div id="main-middle" class="{{ omni_layout }}">
+        <div class="inner container clearfix">
+          <div id="primary-secondary" class="clearfix">
+            {% if page.showcase_spotlight or spotlight >=1 %}
+              <div id="spotlight">
+                {% if page.showcase_spotlight %}
+                  <div id="spotlight-showcase">              
+                    {{ page.showcase_spotlight }}              
+                  </div>
+                {% endif %}
+                {% if spotlight >=1 %}
+                  <div id="spotlight-bottom" class="col-{{ spotlight }}">
+                    <div class="inner container clearfix">
+                      {% if page.spotlight_one %}
+                        <div class="column">
+                          {{ page.spotlight_one }}
+                        </div>
+                      {% endif %}
+                      {% if page.spotlight_two %}
+                        <div class="column">
+                          {{ page.spotlight_two }}
+                        </div>
+                      {% endif %}
+                      {% if page.spotlight_three %}
+                        <div class="column">
+                          {{ page.spotlight_three }}
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div> 
+                {% endif %}
+              </div>
+            {% endif %}
+            <div id="primary">
+              {% if page.breadcrumb %}
+                <div id="breadcrumb">{{ page.breadcrumb }}</div>
+              {% endif %}              
+              {% if page.showcase_content %}
+                <div id="content-showcase">
+                  {{ page.showcase_content }}
+                </div>
+              {% endif %}
+              {% if content_top >=1 %}
+                <div id="content-top" class="col-{{ content_top }}">
+                  <div class="inner container clearfix">
+                    {% if page.content_top_left %}
+                      <div class="column">
+                        {{ page.content_top_left }}
+                      </div>
+                    {% endif %}
+                    {% if page.content_top_right %}
+                      <div class="column">
+                        {{ page.content_top_right }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div> 
+              {% endif %}
+              <div id="content" class="clearfix">
+                {{ page.content }}
+              </div>
+              {% if content_bottom >=1 %}
+                <div id="content-bottom" class="col-{{ content_bottom }}">
+                  <div class="inner container clearfix">
+                    {% if page.content_bottom_left %}
+                      <div class="column">
+                        {{ page.content_bottom_left }}
+                      </div>
+                    {% endif %}
+                    {% if page.content_bottom_right %}
+                      <div class="column">
+                        {{ page.content_bottom_right }}
+                      </div>
+                    {% endif %}
+                  </div>
+                </div> 
+              {% endif %}                  
+            </div>                        
+            {% if page.sidebar_secondary %}
+              <div id="secondary" class="sidebar">
+                {{ page.sidebar_secondary }}
+              </div>
+            {% endif %}
+          </div>
+          {% if page.sidebar_tertiary %}
+            <div id="tertiary" class="sidebar">
+              {{ page.sidebar_tertiary }}
+            </div>
+          {% endif %}
+        </div>
+      </div>   
+      
+      {% if main_bottom >=1 %}
+        <div id="main-bottom" class="col-{{ main_bottom }}">
+          <div class="inner container clearfix">
+            {% if page.main_bottom_one %}
+              <div class="column">
+                {{ page.main_bottom_one }}
+              </div>
+            {% endif %}
+            {% if page.main_bottom_two %}
+              <div class="column">
+                {{ page.main_bottom_two }}
+              </div>
+            {% endif %}
+            {% if page.main_bottom_three %}
+              <div class="column">
+                {{ page.main_bottom_three }}
+              </div>
+            {% endif %}
+            {% if page.main_bottom_four %}
+              <div class="column">
+                {{ page.main_bottom_four }}
+              </div>
+            {% endif %}
+          </div>
+        </div> 
+      {% endif %}
+    </div>
+  </div> 
+  
+  <footer id="main-footer">
+    {% if footer >=1 %}
+      <div class="inner wrapper">      
+        <div id="footer" class="col-{{ footer }}"> 
+          <div class="inner container clearfix">
+            {% if page.footer_one %}
+              <div class="column">
+                {{ page.footer_one }}
+              </div>
+            {% endif %}
+            {% if page.footer_two %}
+              <div class="column">
+                {{ page.footer_two }}
+              </div>
+            {% endif %}
+            {% if page.footer_three %}
+              <div class="column">
+                {{ page.footer_three }}
+              </div>
+            {% endif %}
+            {% if page.footer_four %}
+              <div class="column">
+                {{ page.footer_four }}
+              </div>
+            {% endif %}  
+          </div>
+        </div>      
+      </div>
+    {% endif %}
+    <div id="closure">
+      <div class="inner wrapper clearfix">
+        <div id="design-by">
+          <small><a href="http://www.esors.com" title="Drupal theme">Drupal theme by esors</a></small>
+        </div>
+        {{ page.closure }}
+      </div>
+    </div>
+  </footer>
+</div>

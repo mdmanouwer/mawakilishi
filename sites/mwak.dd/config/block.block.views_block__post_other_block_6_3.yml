@@ -1,0 +1,28 @@
+uuid: b240e3df-f3a0-4e61-9138-3996240c11d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - block_class
+    - views
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__post_other_block_6_3
+theme: mwakilishi
+region: top_content
+weight: 0
+provider: null
+plugin: 'views_block:post_other-block_6'
+settings:
+  id: 'views_block:post_other-block_6'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

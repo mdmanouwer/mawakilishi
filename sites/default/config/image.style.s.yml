@@ -1,0 +1,14 @@
+uuid: ce14445c-815c-4d4d-a963-429cc8a82948
+langcode: en
+status: true
+dependencies: {  }
+name: s
+label: 's (220x150)'
+effects:
+  5b440ae3-935f-4ec6-b0d2-ecba843d5e36:
+    uuid: 5b440ae3-935f-4ec6-b0d2-ecba843d5e36
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 220
+      height: 150

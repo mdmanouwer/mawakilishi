@@ -1,0 +1,35 @@
+uuid: d5f500c9-5502-4334-85fb-ef5fb650b7d7
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.author_articles
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__author_articles_block_1
+theme: mwakilishi
+region: content
+weight: -20
+provider: null
+plugin: 'views_block:author_articles-block_1'
+settings:
+  id: 'views_block:author_articles-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/users/*\r\n/user/*"
+    negate: false
+    context_mapping: {  }

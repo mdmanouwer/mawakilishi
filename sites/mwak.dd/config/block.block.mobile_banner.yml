@@ -1,0 +1,32 @@
+uuid: 15b4393e-ef6f-4d8f-a373-97166f340ea0
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: mobile_banner
+theme: mobile
+region: content_bottom
+weight: -11
+provider: null
+plugin: 'block_content:0f3b8233-412d-4135-a56b-6e61dbab8ad9'
+settings:
+  id: 'block_content:0f3b8233-412d-4135-a56b-6e61dbab8ad9'
+  label: Banner
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/contact\r\n/contact/contact_form"
+    negate: false
+    context_mapping: {  }

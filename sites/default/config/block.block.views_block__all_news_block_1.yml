@@ -1,0 +1,34 @@
+uuid: fe25c1f6-27e1-47bb-b092-a5db9993a1eb
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.all_news
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__all_news_block_1
+theme: mwakilishi
+region: content
+weight: -12
+provider: null
+plugin: 'views_block:all_news-block_1'
+settings:
+  id: 'views_block:all_news-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

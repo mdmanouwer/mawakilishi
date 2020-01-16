@@ -1,0 +1,38 @@
+uuid: 41ea455b-964b-40ef-8e53-d34f23affb2d
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:1faf31cc-8fab-4c1e-aae8-51152a4ca26f'
+  module:
+    - block_class
+    - block_content
+    - ctools
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: mobileadsenseinfeed3
+theme: mobile
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:1faf31cc-8fab-4c1e-aae8-51152a4ca26f'
+settings:
+  id: 'block_content:1faf31cc-8fab-4c1e-aae8-51152a4ca26f'
+  label: 'Mobile Adsense InFeed3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      blog: blog
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

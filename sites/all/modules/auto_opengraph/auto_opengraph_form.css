@@ -1,0 +1,25 @@
+/* $Id$ */
+
+.auto_opengraph_element .form-item {
+  margin: 0 0 4px;
+  padding: 0;
+}
+
+.auto_opengraph_element .form-item label {
+  float:left;
+  min-width:126px;
+  text-align:right;
+  margin-right:6px;
+}
+
+.auto-opengraph-tokenhelp {
+  background: none repeat scroll 0 0 white;
+  border: 5px solid;
+  bottom: 0;
+  height: 100%;
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+  width: 380px;
+  z-index: 100;
+}

@@ -1,0 +1,45 @@
+uuid: a691e73a-8301-44e9-8767-11693e5b046c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c5236bf0-391b-4fcc-978e-b275dbaab9cf'
+  module:
+    - block_class
+    - block_content
+    - ctools
+    - node
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishi_breadcrumbsblogpage
+theme: mwakilishi
+region: breadcrumb
+weight: -20
+provider: null
+plugin: 'block_content:c5236bf0-391b-4fcc-978e-b275dbaab9cf'
+settings:
+  id: 'block_content:c5236bf0-391b-4fcc-978e-b275dbaab9cf'
+  label: 'Breadcrumbs BLOG PAGE'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

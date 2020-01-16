@@ -1,0 +1,35 @@
+uuid: 93ba435b-c55e-4732-8c1a-8b7d6a796918
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a2ae441d-4c86-4085-9b2a-8988eeddb07f'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: gray-block
+id: contactingus_2
+theme: mobile
+region: content_bottom
+weight: -12
+provider: null
+plugin: 'block_content:a2ae441d-4c86-4085-9b2a-8988eeddb07f'
+settings:
+  id: 'block_content:a2ae441d-4c86-4085-9b2a-8988eeddb07f'
+  label: 'Contacting Us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /privacy-policy
+    negate: false
+    context_mapping: {  }

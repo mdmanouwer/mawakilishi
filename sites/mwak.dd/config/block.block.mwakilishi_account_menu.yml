@@ -1,0 +1,24 @@
+uuid: 5ad5e811-9d3f-4cf8-a63a-2e3596cc2e60
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - mwakilishi
+id: mwakilishi_account_menu
+theme: mwakilishi
+region: content
+weight: -3
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

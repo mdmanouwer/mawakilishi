@@ -1,0 +1,18 @@
+uuid: d59a5807-4a57-40f1-974a-e4c940e60f1a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mwakilish
+id: mwakilish_local_actions
+theme: mwakilish
+region: content
+weight: -26
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

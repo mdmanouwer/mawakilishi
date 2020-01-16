@@ -1,0 +1,29 @@
+uuid: 3b94ced7-ffac-45c4-adb4-daa09dea2497
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:bb9858c4-03e9-4791-b11e-287188180ce5'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: matchedcontent2
+theme: mwakilish
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:bb9858c4-03e9-4791-b11e-287188180ce5'
+settings:
+  id: 'block_content:bb9858c4-03e9-4791-b11e-287188180ce5'
+  label: 'Matched Content 2'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

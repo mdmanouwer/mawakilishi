@@ -1,0 +1,29 @@
+uuid: 3d79de63-20fd-49b3-8cda-3732645bb4d2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d9443698-0669-4aa1-a477-8a31b41c0526'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: fl_mob
+theme: mobile
+region: footer
+weight: -16
+provider: null
+plugin: 'block_content:d9443698-0669-4aa1-a477-8a31b41c0526'
+settings:
+  id: 'block_content:d9443698-0669-4aa1-a477-8a31b41c0526'
+  label: 'footer links [mobile theme]'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

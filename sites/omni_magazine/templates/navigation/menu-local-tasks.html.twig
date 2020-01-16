@@ -1,0 +1,26 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<div class="content-tab">
+  {% if primary %} 
+    <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+    <ul class="primary clearfix">{{ primary }}</ul> 
+  {% endif %}
+  {% if secondary %}  
+    <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+    <ul class="secondary clearfix">{{ secondary }}</ul>
+  {% endif %}
+</div>

@@ -1,0 +1,29 @@
+uuid: 04831da8-fa34-45e5-9f45-01da6b57f37a
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:3c89e5bf-026e-42a3-bbef-bc856e059ae6'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: modal
+id: modal_popup_block
+theme: mwakilish
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:3c89e5bf-026e-42a3-bbef-bc856e059ae6'
+settings:
+  id: 'block_content:3c89e5bf-026e-42a3-bbef-bc856e059ae6'
+  label: 'Follow us on Facebook'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

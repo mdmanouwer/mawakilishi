@@ -1,0 +1,34 @@
+uuid: 0f5faae1-5790-44fa-b5f3-23a5b3986b69
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_grid
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__news_grid_block_announcements
+theme: mwakilishi
+region: content
+weight: -21
+provider: null
+plugin: 'views_block:news_grid-block_announcements'
+settings:
+  id: 'views_block:news_grid-block_announcements'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

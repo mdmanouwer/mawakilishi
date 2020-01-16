@@ -1,0 +1,30 @@
+omni_magazine.small:
+  label: small
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+omni_magazine.medium:
+  label: medium
+  mediaQuery: 'only screen and (min-width: 40.0625em)'
+  weight: 1
+  multipliers:
+    - 1x
+omni_magazine.large:
+  label: large
+  mediaQuery: 'only screen and (min-width: 64.0625em)'
+  weight: 2
+  multipliers:
+    - 1x
+omni_magazine.xlarge:
+  label: xlarge
+  mediaQuery: 'only screen and (min-width: 75.0625em)'
+  weight: 3
+  multipliers:
+    - 1x
+omni_magazine.xxlarge:
+  label: xxlarge
+  mediaQuery: 'only screen and (min-width: 90.0625em)'
+  weight: 4
+  multipliers:
+    - 1x

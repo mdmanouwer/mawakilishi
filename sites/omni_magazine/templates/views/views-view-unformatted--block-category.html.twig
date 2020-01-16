@@ -1,0 +1,337 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% set items = rows|length %}
+
+{% if items >= 3 %}
+
+  <div class="row clearfix"> 
+  
+    {% set column_one = '' %}
+    {% set column_two = '' %}
+    {% set column_three = '' %}
+    
+    {% if items == 3 %}      
+      
+      {% for row in rows %}     
+    
+        {% set column %}
+          {% spaceless %}
+            {{ row.content }}
+          {% endspaceless %}
+        {% endset %}        
+        
+        {% set column = remove_image(column, 'thumbnail') %}
+
+        {% if loop.index==1 %}
+          {% set column_one %}
+             <li class="item-default clearfix">{{ column|raw }}</li>          
+          {% endset %}          
+        {% endif %}
+        
+        {% if loop.index==2 %}
+          {% set column_two %}
+             <li class="item-default clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+        
+        {% if loop.index==3 %}
+          {% set column_three %}
+             <li class="item-default clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+      {% endfor %}
+    
+    {% elseif items == 4 %}
+      
+      {% for row in rows %}     
+    
+        {% set column %}
+          {% spaceless %}
+            {{ row.content }}
+          {% endspaceless %}
+        {% endset %}        
+        
+        {% if loop.index==4 %}
+          {% set column = remove_image(column, 'default') %}
+        {% else %}
+          {% set column = remove_image(column, 'thumbnail') %}
+        {% endif %}        
+
+        {% if loop.index==1 %}
+          {% set column_one %}
+             <li class="item-default clearfix">{{ column|raw }}</li>          
+          {% endset %}          
+        {% endif %}
+        
+        {% if loop.index==2 %}
+          {% set column_two %}
+             <li class="item-default clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+        
+        {% if loop.index==3 %}
+          {% set column_three %}
+             <li class="item-compact clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+        {% if loop.index==4 %}
+          {% set column_three %}
+             {{column_three}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+      {% endfor %}
+    
+    {% elseif items == 5 %}
+    
+      {% for row in rows %}
+    
+        {% set column %}
+          {% spaceless %}
+            {{ row.content }}
+          {% endspaceless %}
+        {% endset %}        
+        
+        {% if loop.index==1 or loop.index==2 %}
+          {% set column = remove_image(column, 'thumbnail') %}
+        {% else %}
+          {% set column = remove_image(column, 'default') %}
+        {% endif %}        
+
+        {% if loop.index==1 %}
+          {% set column_one %}
+             <li class="item-default clearfix">{{ column|raw }}</li>          
+          {% endset %}          
+        {% endif %}
+        
+        {% if loop.index==2 %}
+          {% set column_two %}
+             <li class="item-default clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+        
+        {% if loop.index==3 or loop.index==4 or loop.index==5 %}
+          {% set column_three %}
+             {{column_three}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+      {% endfor %}
+    
+    {% elseif items == 6 %}
+    
+      {% for row in rows %}     
+    
+        {% set column %}
+          {% spaceless %}
+            {{ row.content }}
+          {% endspaceless %}
+        {% endset %}        
+        
+        {% if loop.index==1 or loop.index==6 %}
+          {% set column = remove_image(column, 'thumbnail') %}
+        {% else %}
+          {% set column = remove_image(column, 'default') %}
+        {% endif %}         
+
+        {% if loop.index==1 %}
+          {% set column_one %}
+             <li class="item-default clearfix">{{ column|raw }}</li>          
+          {% endset %}          
+        {% endif %}
+        
+        {% if loop.index==2 or loop.index==3 or loop.index==4 %}
+          {% set column_two %}
+             {{column_two}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+        
+        {% if loop.index==5 %}
+          {% set column_three %}
+             <li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+        {% if loop.index==6 %}
+          {% set column_three %}
+             {{column_three}}<li class="item-compact clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+      {% endfor %}
+    
+    {% elseif items == 7 %}
+    
+      {% for row in rows %}     
+    
+        {% set column %}
+          {% spaceless %}
+            {{ row.content }}
+          {% endspaceless %}
+        {% endset %}        
+        
+        {% if loop.index==1 or loop.index==7 %}
+          {% set column = remove_image(column, 'thumbnail') %}
+        {% else %}
+          {% set column = remove_image(column, 'default') %}
+        {% endif %}         
+
+        {% if loop.index==1 %}
+          {% set column_one %}
+             <li class="item-compact clearfix">{{ column|raw }}</li>          
+          {% endset %}          
+        {% endif %}
+    
+        {% if loop.index==2 %}
+          {% set column_one %}
+             {{column_one}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}          
+        {% endif %}
+        
+        {% if loop.index==3 or loop.index==4 or loop.index==5 %}
+          {% set column_two %}
+             {{column_two}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+        
+        {% if loop.index==6 %}
+          {% set column_three %}
+             <li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+        {% if loop.index==7 %}
+          {% set column_three %}
+             {{column_three}}<li class="item-compact clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+      {% endfor %}
+    
+    {% elseif items == 8 %}
+    
+      {% for row in rows %}     
+    
+        {% set column %}
+          {% spaceless %}
+            {{ row.content }}
+          {% endspaceless %}
+        {% endset %}        
+        
+        {% if loop.index==1 %}
+          {% set column = remove_image(column, 'thumbnail') %}
+          {% set column_one %}
+             <li class="item-compact clearfix">{{ column|raw }}</li>          
+          {% endset %}  
+        {% else %}
+          {% set column = remove_image(column, 'default') %}
+        {% endif %}         
+
+        {% if loop.index==2 %}
+          {% set column_one %}
+             {{column_one}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}          
+        {% endif %}    
+        
+        {% if loop.index==3 or loop.index==4 or loop.index==5 %}
+          {% set column_two %}
+             {{column_two}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+        
+        {% if loop.index>=6 %}
+          {% set column_three %}
+             {{column_three}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+      {% endfor %}
+    
+    {% elseif items == 9 %}  
+    
+      {% for row in rows %}     
+    
+        {% set column %}
+          {% spaceless %}
+            {{ row.content }}
+          {% endspaceless %}
+        {% endset %}     
+       
+        {% set column = remove_image(column, 'default') %}       
+
+        {% if loop.index<=3 %}
+          {% set column_one %}
+             {{column_one}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}          
+        {% endif %}    
+        
+        {% if loop.index==4 or loop.index==5 or loop.index==6 %}
+          {% set column_two %}
+             {{column_two}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+        
+        {% if loop.index>=7 %}
+          {% set column_three %}
+             {{column_three}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+      {% endfor %}     
+    
+    {% else %}  
+    
+      {% for row in rows %}     
+    
+        {% set column %}
+          {% spaceless %}
+            {{ row.content }}
+          {% endspaceless %}
+        {% endset %}     
+       
+        {% set column = remove_image(column, 'default') %}       
+
+        {% if loop.index<=3 %}
+          {% set column_one %}
+             {{column_one}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}          
+        {% endif %}    
+        
+        {% if loop.index==4 or loop.index==5 or loop.index==6 %}
+          {% set column_two %}
+             {{column_two}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+        
+        {% if loop.index>=7 and loop.index<=9 %}
+          {% set column_three %}
+             {{column_three}}<li class="item-thumbnail clearfix">{{ column|raw }}</li>          
+          {% endset %}
+        {% endif %} 
+    
+      {% endfor %}
+    {% endif %} 
+    
+    <div class="column first"><ul class="no-bullet">{{ column_one }}</ul></div>
+    <div class="column second"><ul class="no-bullet">{{ column_two }}</ul></div>
+    <div class="column last"><ul class="no-bullet">{{ column_three }}</ul></div>    
+  </div>
+
+{% endif %}
+

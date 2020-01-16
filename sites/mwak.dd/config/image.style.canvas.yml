@@ -1,0 +1,7 @@
+uuid: 80a33d62-cc92-4d21-9990-fa0791b7aec6
+langcode: en
+status: true
+dependencies: {  }
+name: canvas
+label: canvas
+effects: {  }

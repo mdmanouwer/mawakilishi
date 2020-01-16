@@ -1,0 +1,44 @@
+uuid: 778ed999-280a-4446-a82c-96e8ea883a77
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.hot_topics
+  module:
+    - block_class
+    - ctools
+    - node
+    - views
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: pager_ht
+theme: mwakilishi
+region: breadcrumb
+weight: 0
+provider: null
+plugin: 'views_block:hot_topics-block_1'
+settings:
+  id: 'views_block:hot_topics-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

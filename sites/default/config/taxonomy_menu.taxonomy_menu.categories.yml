@@ -1,0 +1,14 @@
+uuid: 1a1e90f8-4be2-4756-ba07-18e4dfb1350a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.categories
+    - taxonomy.vocabulary.category
+id: categories
+label: Categories
+vocabulary: category
+menu: categories
+expanded: false
+depth: 0
+menu_parent: 'admin:'

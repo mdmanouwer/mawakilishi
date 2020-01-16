@@ -1,0 +1,45 @@
+uuid: c7467a68-a4e3-42c3-85e1-dbd75421d362
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c5236bf0-391b-4fcc-978e-b275dbaab9cf'
+  module:
+    - block_class
+    - block_content
+    - ctools
+    - node
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: breadcrumbsblogpage_2
+theme: mobile
+region: breadcrumb
+weight: 0
+provider: null
+plugin: 'block_content:c5236bf0-391b-4fcc-978e-b275dbaab9cf'
+settings:
+  id: 'block_content:c5236bf0-391b-4fcc-978e-b275dbaab9cf'
+  label: 'Breadcrumbs BLOG PAGE'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,35 @@
+uuid: 777c1660-6487-4855-aa42-af6136429c41
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b8e7f630-484c-4da5-b63a-36d1786da040'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: bg_contact_title
+theme: mwakilish
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:b8e7f630-484c-4da5-b63a-36d1786da040'
+settings:
+  id: 'block_content:b8e7f630-484c-4da5-b63a-36d1786da040'
+  label: 'background contact title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/contact/contact_form\r\n/contact"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,24 @@
+uuid: acbb2c74-42d4-44bd-aa26-ee35f7bbe29d
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - mwakilish
+id: mwakilish_account_menu
+theme: mwakilish
+region: content
+weight: -11
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

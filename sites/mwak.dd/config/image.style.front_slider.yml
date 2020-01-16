@@ -1,0 +1,14 @@
+uuid: e4d019a3-ca61-4584-ac94-392cdc84fe12
+langcode: en
+status: true
+dependencies: {  }
+name: front_slider
+label: 'Front Slider'
+effects:
+  8559562f-e40a-4e7c-aa13-57165f501034:
+    uuid: 8559562f-e40a-4e7c-aa13-57165f501034
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 715
+      height: 405

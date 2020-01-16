@@ -1,0 +1,40 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<ul{{ attributes }}>
+  {%- for key, item in links -%}
+    <li{{ item.attributes.addClass(key|clean_class) }}>
+      {% if item.attributes.class == 'comment-delete' %}
+        <a href="{{ item.link['#url'] }}" title="{{ item.link['#title'] }}"><span class="fa fa-times"></span></a>
+      {% elseif item.attributes.class == 'comment-edit' %}
+        <a href="{{ item.link['#url'] }}" title="{{ item.link['#title'] }}"><span class="fa fa-pencil"></span></a>
+      {% elseif item.attributes.class == 'comment-reply' %}
+        <a href="{{ item.link['#url'] }}" title="{{ item.link['#title'] }}"><span class="fa fa-reply"></span></a>
+      {% elseif item.attributes.class == 'comment-approve' %}
+        <a href="{{ item.link['#url'] }}" title="{{ item.link['#title'] }}"><span class="fa fa-check"></span></a>
+      {% elseif item.attributes.class == 'comment-forbidden' %}
+        <a href="{{ item.text.arguments[':login'] }}" title="Sign In"><span class="fa fa-user"></span></a>          
+        <a href="{{ item.text.arguments[':register'] }}" title="Sign Up"><span class="fa fa-pencil"></span></a>  
+      {% else %}
+        {%- if item.link -%}
+          {{ item.link }}
+        {%- else -%}
+          {{ item.text }}
+        {%- endif -%}
+      {% endif %}  
+    </li>
+  {%- endfor -%}
+</ul>

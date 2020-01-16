@@ -1,0 +1,12 @@
+features:
+   comment_user_picture: true
+   comment_user_verification: true
+   favicon: true
+   logo: true
+   name: true
+   node_user_picture: true
+   slogan: true
+omni_header: compact-width
+omni_header_search: no
+omni_menu: list-style
+omni_layout: pst

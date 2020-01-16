@@ -1,0 +1,34 @@
+uuid: 15312db6-9e6e-490c-b560-40cde274dea5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_posts_mobile
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'category-wrap list-content'
+id: views_block__featured_posts_mobile_block_1
+theme: mobile
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:featured_posts_mobile-block_1'
+settings:
+  id: 'views_block:featured_posts_mobile-block_1'
+  label: 'Featured Posts'
+  provider: views
+  label_display: visible
+  views_label: 'Featured Posts'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

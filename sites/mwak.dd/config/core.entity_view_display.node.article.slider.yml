@@ -1,0 +1,50 @@
+uuid: 03f405c5-dcb7-4a03-b417-161a887ffc07
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.slider
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_image
+    - field.field.node.article.field_post_category
+    - field.field.node.article.field_post_embed
+    - field.field.node.article.field_post_format
+    - field.field.node.article.field_post_gallery
+    - field.field.node.article.field_post_type
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_ticker_date
+    - image.style.large
+    - node.type.article
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: JtAg_-waIt1quMtdDtHIaXJMxvTuSmxW7bWyO6Zd68E
+id: node.article.slider
+targetEntityType: node
+bundle: article
+mode: slider
+content:
+  field_image:
+    type: image
+    weight: 0
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  comment: true
+  field_fb_post_id: true
+  field_post_category: true
+  field_post_embed: true
+  field_post_format: true
+  field_post_gallery: true
+  field_post_type: true
+  field_tags: true
+  field_ticker_date: true
+  links: true

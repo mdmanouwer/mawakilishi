@@ -1,0 +1,34 @@
+uuid: 15b222f8-b28b-4d5a-be25-42558df575df
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recommended_posts_mobile
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'category-wrap list-content'
+id: views_block__recommended_posts_mobile_block_1
+theme: mobile
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:recommended_posts_mobile-block_1'
+settings:
+  id: 'views_block:recommended_posts_mobile-block_1'
+  label: 'Recommended Posts'
+  provider: views
+  label_display: visible
+  views_label: 'Recommended Posts'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

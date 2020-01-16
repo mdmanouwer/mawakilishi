@@ -1,0 +1,38 @@
+uuid: 7e5b45fe-2084-4144-b090-2275f23bf682
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:72aa22b7-a7ea-43ed-9719-70e9cb8dcaf2'
+  module:
+    - block_class
+    - block_content
+    - ctools
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: middlead
+theme: mobile
+region: content
+weight: -18
+provider: null
+plugin: 'block_content:72aa22b7-a7ea-43ed-9719-70e9cb8dcaf2'
+settings:
+  id: 'block_content:72aa22b7-a7ea-43ed-9719-70e9cb8dcaf2'
+  label: 'Middle Addsense InFeed'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      blog: blog
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

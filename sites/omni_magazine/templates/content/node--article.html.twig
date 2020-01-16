@@ -1,0 +1,93 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% if not page %}
+
+  <article class="node article teaser contextual-region clearfix">
+    {% if content.field_section %}     
+      {{ content.field_section }}
+    {% endif %} 
+    <header>
+      {{ title_prefix }}
+        <h2 class="title"><a href="{{ url }}" rel="bookmark">{{ label }}</a></h2>
+      {{ title_suffix }}
+      {% if display_submitted %}
+        <div class="meta">
+          <span class="author">{{ 'Author'|t }}: {{ author_name }}</span> /
+          <span class="date">{{ 'Date'|t }}: {{ date }}</span> 
+          {% if node.field_tags.value is not empty %}
+            / <span class="terms">{{ 'Tags'|t }}: {{ content.field_tags }}</span>
+          {% endif %}         
+        </div>
+      {% endif %}
+    </header>
+    
+    {% if content.field_image %}
+      <div class="image-default">
+        {{ content.field_image }}
+      </div>
+    {% endif %} 
+    
+    <div class="content">
+      {{ content|without('comment', 'links', 'field_section', 'field_tags', 'field_image', 'addtoany') }}
+    </div>
+    
+    <div class="more-link"><a href="{{ url }}">{{ 'read more ...'|t }}</a></div>
+  </article>
+
+{% else %}
+
+  {% if content.addtoany %}
+    <article class="node article full with-share clearfix">
+  {% else %}
+    <article class="node article full clearfix">
+  {% endif %}    
+    <header>
+      {% if content.field_section %}     
+        {{ content.field_section }}
+      {% endif %} 
+      {{ title_prefix }}
+        <h1 class="title">{{ label }}</h1>
+      {{ title_suffix }}
+      {% if display_submitted %}
+        <div class="meta clearfix">
+          {{ author_picture }}
+          <span class="author">{{ 'Author'|t }}: {{ author_name }}</span> /
+          <span class="date">{{ 'Date'|t }}: {{ date }}</span> 
+          {% if node.field_tags.value is not empty %}
+            / <span class="terms">{{ 'Tags'|t }}: {{ content.field_tags }}</span>
+          {% endif %}         
+        </div>
+      {% endif %}
+    </header>
+    {% if content.addtoany %}
+      <div id="share">{{ content.addtoany }}</div>
+    {% endif %} 
+    <div class="content clearfix">
+      {% if content.links %}
+        {{ content.links }}
+      {% endif %}     
+      {% if content.field_image %}
+        <div class="image-default">
+          {{ content.field_image }}
+        </div>
+      {% endif %}       
+      {{ content|without('comment', 'links', 'field_section', 'field_tags', 'field_image', 'addtoany') }}
+    </div>
+  </article>
+  {{ content.comment }}
+
+{% endif %}

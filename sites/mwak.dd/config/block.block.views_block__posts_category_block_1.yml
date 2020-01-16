@@ -1,0 +1,34 @@
+uuid: be0659ed-1f05-4a10-addc-2eaf58f03b8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.posts_category
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: 'imageWrap titleWrapping'
+id: views_block__posts_category_block_1
+theme: mwakilish
+region: content
+weight: -38
+provider: null
+plugin: 'views_block:posts_category-block_1'
+settings:
+  id: 'views_block:posts_category-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

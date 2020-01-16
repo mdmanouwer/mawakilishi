@@ -1,0 +1,87 @@
+uuid: bfb82f0b-1693-4674-86ad-4ae509f1e080
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.blog.body
+    - field.field.node.blog.comment
+    - field.field.node.blog.field_fb_post_id
+    - field.field.node.blog.field_image
+    - field.field.node.blog.field_post_format
+    - field.field.node.blog.field_post_type
+    - field.field.node.blog.field_tags
+    - image.style.large
+    - node.type.blog
+  module:
+    - comment
+    - ds
+    - image
+    - options
+    - text
+    - user
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+  addtoany:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 5
+    label: above
+    settings:
+      pager_id: 0
+      view_mode: default
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_fb_post_id:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: image
+    region: content
+  field_post_format:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_post_type: true
+  field_tags: true

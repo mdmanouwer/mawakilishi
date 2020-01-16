@@ -1,0 +1,8 @@
+uuid: a731e321-6de4-4597-a045-fc5d1864495b
+langcode: en
+status: true
+dependencies: {  }
+id: announcements-submenu
+label: ANNOUNCEMENTS
+description: 'ANNOUNCEMENTS sub-menu'
+locked: false

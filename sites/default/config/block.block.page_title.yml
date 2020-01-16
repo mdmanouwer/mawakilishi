@@ -1,0 +1,29 @@
+uuid: 6ed6f7ad-e48b-4400-9d2f-745b1cbaf073
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: page_title
+theme: mobile
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

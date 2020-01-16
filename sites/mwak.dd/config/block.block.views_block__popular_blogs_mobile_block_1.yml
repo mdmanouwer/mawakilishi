@@ -1,0 +1,34 @@
+uuid: bf3cc2a5-f6c5-448e-976e-aee74063b0b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.popular_blogs_mobile
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'category-wrap list-content'
+id: views_block__popular_blogs_mobile_block_1
+theme: mobile
+region: content
+weight: -12
+provider: null
+plugin: 'views_block:popular_blogs_mobile-block_1'
+settings:
+  id: 'views_block:popular_blogs_mobile-block_1'
+  label: 'Popular Blogs'
+  provider: views
+  label_display: visible
+  views_label: 'Popular Blogs'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

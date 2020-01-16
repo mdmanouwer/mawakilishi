@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="GMAP-MACRO-DICTIONARY.txt" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="LICENSE.txt" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="NOTES.txt" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="README.txt" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="THEMING.txt" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="TODO.txt" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap-view-gmap.tpl.php" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap.css" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap.info" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap.install" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap.module" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap.php" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap.views.inc" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_location.info" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_location.install" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_location.module" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_macro_builder.info" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_macro_builder.install" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_macro_builder.module" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_markerinfo.inc" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_parse_macro.inc" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_plugin_style_gmap.inc" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_polyutil.inc" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_settings_ui.inc" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_taxonomy.info" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_taxonomy.install" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_taxonomy.module" local="129033360000000000" remote="129033360000000000" testing="0" />
+<file name="gmap_taxonomy.views.inc" local="129033360000000000" remote="129033360000000000" testing="0" />
+</dwsync>

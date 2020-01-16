@@ -1,0 +1,14 @@
+; $Id: smsbulk.info,v 1.1 2009/06/26 21:49:03 gunzip Exp $
+name = Sms Bulk Sender
+dependencies[] = views_bulk_operations
+dependencies[] = sms
+description = Send SMS to a contact list using views
+package = SMS Framework
+core = 6.x
+
+; Information added by drupal.org packaging script on 2009-07-07
+version = "6.x-1.1"
+core = "6.x"
+project = "smsbulk"
+datestamp = "1246953389"
+

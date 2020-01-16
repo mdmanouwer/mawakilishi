@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="flag.actions.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag.admin.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag.rules.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag.rules_forms.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag.token.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag.views.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag.views_bookmark.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag.views_convert.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag.views_default.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag_handler_argument_content_id.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag_handler_field_ops.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag_handler_filter_flagged.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag_handler_relationships.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+<file name="flag_plugin_argument_validate_flaggability.inc" local="129187579200000000" remote="129187579200000000" testing="0" />
+</dwsync>

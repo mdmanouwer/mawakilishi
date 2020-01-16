@@ -1,0 +1,34 @@
+uuid: 277877e8-9444-4390-b10e-bf0e7baa1b1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_op_eds_blogs_mobile
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'category-wrap list-content'
+id: views_block__latest_op_eds_blogs_mobile_block_1
+theme: mobile
+region: content
+weight: -15
+provider: null
+plugin: 'views_block:latest_op_eds_blogs_mobile-block_1'
+settings:
+  id: 'views_block:latest_op_eds_blogs_mobile-block_1'
+  label: 'LATEST OP-EDS/BLOGS'
+  provider: views
+  label_display: visible
+  views_label: 'LATEST OP-EDS/BLOGS'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

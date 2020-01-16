@@ -1,0 +1,29 @@
+uuid: 711e45f6-a8cf-4867-a865-074754ebc82c
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:8f5b9f66-7f01-4fe0-8b62-ed05b392e1c1'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mwakilishii
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishii_adsense_infeed2
+theme: mwakilishii
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:8f5b9f66-7f01-4fe0-8b62-ed05b392e1c1'
+settings:
+  id: 'block_content:8f5b9f66-7f01-4fe0-8b62-ed05b392e1c1'
+  label: Adsense_InFeed
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,35 @@
+uuid: cc83bf66-27ec-4afb-99bb-3a0241954d64
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d0100293-49ae-4205-bb0e-a80f29fa5154'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: category-wrap
+id: traffic_2
+theme: mobile
+region: content_bottom
+weight: -15
+provider: null
+plugin: 'block_content:d0100293-49ae-4205-bb0e-a80f29fa5154'
+settings:
+  id: 'block_content:d0100293-49ae-4205-bb0e-a80f29fa5154'
+  label: Traffic
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

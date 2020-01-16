@@ -1,0 +1,29 @@
+uuid: 251ef8a3-c54d-450c-a8f6-a883e7dd07b7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:34d27aae-2594-4ec4-ad57-1add75adae07'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: matchedcontentmobile
+theme: mobile
+region: content_bottom
+weight: -16
+provider: null
+plugin: 'block_content:34d27aae-2594-4ec4-ad57-1add75adae07'
+settings:
+  id: 'block_content:34d27aae-2594-4ec4-ad57-1add75adae07'
+  label: 'Matched Content - Mobile'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

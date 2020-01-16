@@ -1,0 +1,35 @@
+uuid: f35e12d7-fc3f-41c5-bff4-0f7fcb3c67de
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0c760297-832b-4d39-a3e7-04f3abe93f92'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - mwakilishii
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishii_bg_aboutus_title
+theme: mwakilishii
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:0c760297-832b-4d39-a3e7-04f3abe93f92'
+settings:
+  id: 'block_content:0c760297-832b-4d39-a3e7-04f3abe93f92'
+  label: 'background about us title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /about-us
+    negate: false
+    context_mapping: {  }

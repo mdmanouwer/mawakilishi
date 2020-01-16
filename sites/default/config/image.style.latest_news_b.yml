@@ -1,0 +1,14 @@
+uuid: 0778925e-86ba-46c1-8b8b-be9e989b1b8d
+langcode: en
+status: true
+dependencies: {  }
+name: latest_news_b
+label: latest_news_b
+effects:
+  b25e73c1-91a8-46bb-8f27-641abcf1481b:
+    uuid: b25e73c1-91a8-46bb-8f27-641abcf1481b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 210
+      height: 230

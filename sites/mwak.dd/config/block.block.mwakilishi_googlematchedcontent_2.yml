@@ -1,0 +1,38 @@
+uuid: 59ac1eed-60ef-4f68-8678-11c6c37f2a09
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e8a1a6bc-9212-4b71-a4ed-d6fdb0bd8f8f'
+  module:
+    - block_class
+    - block_content
+    - ctools
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishi_googlematchedcontent_2
+theme: mwakilishi
+region: content
+weight: -9
+provider: null
+plugin: 'block_content:e8a1a6bc-9212-4b71-a4ed-d6fdb0bd8f8f'
+settings:
+  id: 'block_content:e8a1a6bc-9212-4b71-a4ed-d6fdb0bd8f8f'
+  label: 'Google Matched Content'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

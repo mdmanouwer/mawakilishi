@@ -1,0 +1,12 @@
+uuid: 5a371845-ea6c-4f38-9892-abf517a0bb0b
+langcode: en
+status: true
+dependencies: {  }
+id: website_contact_
+label: 'website Contact '
+recipients:
+  - info@mwakilishi.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

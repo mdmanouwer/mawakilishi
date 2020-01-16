@@ -1,0 +1,17 @@
+<?php
+
+if (defined ('E_STRICT')) {
+  
+  // We only need to worry about versions of PHP that define the E_STRICT constant.
+  define('D_PREV_EH', set_error_handler('___drupal_php_strict_suppress_eh'));
+}
+
+/**
+ * Our new error handler. Simply call the original.
+ */
+function ___drupal_php_strict_suppress_eh( $errno, $message, $filename, $line, $context ) {
+  if ($errno == E_STRICT) {
+    return;
+  }
+  return call_user_func ( D_PREV_EH, $errno, $message, $filename, $line, $context );
+}

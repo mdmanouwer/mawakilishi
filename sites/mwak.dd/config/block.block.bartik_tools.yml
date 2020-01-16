@@ -1,0 +1,28 @@
+uuid: e67a2668-dbe5-45aa-9dd3-7257b8c1a408
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - block_class
+    - system
+  theme:
+    - bartik
+third_party_settings:
+  block_class:
+    classes: ''
+id: bartik_tools
+theme: bartik
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

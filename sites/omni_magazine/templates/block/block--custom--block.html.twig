@@ -1,0 +1,178 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% if block_content.field_block_merging.value is empty %}
+
+  {% set title_align = block_content.field_title_align.value %}
+  {% set title_border = block_content.field_title_border.value %}
+  {% set title_color = block_content.field_title_color.value %}
+  {% set title_location = block_content.field_title_location.value %}
+  {% set image_align = block_content.field_image_align.value %}
+  {% set body_text_color = block_content.field_body_text_color.value %}
+  {% set body_bg_color = block_content.field_body_bg_color.value %}
+  {% set url = block_content.field_url.uri %}
+
+  {% if url is not empty %}
+
+    {% set link_by = block_content.field_link_by %}
+    {% set link_text = block_content.field_url.title %}
+    {% set link_icon = block_content.field_link_icon.value %}
+    {% set link_icon_position = block_content.field_link_icon_position.value %}
+      
+      {% if link_text is not empty %}
+        {% if link_icon is not empty %}
+          {% if link_icon_position == 'before' %}
+            {% set link_text = '<span class=\"' ~ link_icon ~ ' before\"></span> ' ~ link_text %}
+          {% else %}
+            {% set link_text = link_text ~ ' <span class=\"' ~ link_icon ~ ' after\"></span>' %}
+          {% endif %}
+        {% endif %}      
+      {% else %}
+        {% if link_icon is not empty %}
+          {% if link_icon_position == 'before' %}
+            {% set link_text = '<span class=\"' ~ link_icon ~ ' before\"></span> read more' %}
+          {% else %}
+            {% set link_text = 'read more <span class=\"' ~ link_icon ~ ' after\"></span>' %}
+          {% endif %}
+        {% else %}
+          {% set link_text = 'read more' %}
+        {% endif %}      
+      {% endif %}
+      
+      {% set link_item = '' %}
+      {% for link in link_by %}
+        {% set link_item = link_item~' | '~link.value %}
+      {% endfor %}       
+
+  {% endif %}
+
+  {% if title_color is not empty %} 
+    {% set title_color = 'color:#' ~ title_color ~ '; border-color:#' ~ title_color ~';' %}
+  {% else %}
+    {% set title_color = '' %}
+  {% endif %} 
+
+  {% if body_text_color is not empty %} 
+    {% set body_text_color = 'color:#' ~ body_text_color ~ ';' %}
+  {% else %}
+    {% set body_text_color = '' %}
+  {% endif %} 
+
+  {% if body_bg_color is not empty %} 
+    {% if body_bg_color == 'NCOLOR' %} 
+      {% set body_bg_color = 'background-color: transparent;' %}
+    {% else %}
+      {% set body_bg_color = 'background-color:#' ~ body_bg_color ~ ';' %}
+    {% endif %}
+  {% else %}
+    {% set body_bg_color = '' %}
+  {% endif %} 
+
+  {%
+    set classes = [
+      'block',
+      'block-' ~ configuration.provider|clean_class,
+      'block-' ~ plugin_id|clean_class,
+    ]
+  %}
+
+  <div{{ attributes.addClass(classes) }}>    
+    {% if label and title_location == false %}  
+      {{ title_prefix }}    
+      <h3 class="title{{ ' text-'~title_align }}{% if title_border == true %} with-border{% endif %}" style="{{ title_color }}"{{ title_attributes }}>{{ label }}</h3> 
+      {{ title_suffix }}     
+    {% endif %}    
+    
+    <div class="inner" style="{{ body_text_color~body_bg_color }}">      
+      {% if label and title_location == true %}    
+        {{ title_prefix }}  
+        <h3 class="title{{ ' text-'~title_align }}{% if title_border == true %} with-border{% endif %}" style="{{ title_color }}"{{ title_attributes }}>{{ label }}</h3>   
+        {{ title_suffix }}   
+      {% endif %}            
+
+      {% if content.field_image|render %}
+        <div class="image-{{ image_align }}">
+          {% if url is not empty and ('image' in link_item) %}
+            <a href="{{ url }}" target="_blank">{{ content.field_image }}</a>
+          {% else %}
+            {{ content.field_image }}
+          {% endif %}           
+        </div>
+      {% endif %} 
+      
+      {% block content %}
+        <div class="content clearfix">
+          {{ content|without('field_image') }}
+        </div>
+      {% endblock %}      
+
+      {% if url is not empty %}
+        {% if 'more_link' in link_item %}
+          <a href="{{ url }}" class="more-link" target="_blank">{{ link_text|raw }}</a>
+        {% elseif 'more_button_s1' in link_item %}
+          <a href="{{ url }}" class="button" target="_blank">{{ link_text|raw }}</a>
+        {% elseif 'more_button_s2' in link_item %}
+          <a href="{{ url }}" class="button ghost" target="_blank">{{ link_text|raw }}</a>
+        {% elseif 'more_button_s3' in link_item %}
+          <a href="{{ url }}" class="button ghost plain"{% if body_text_color !='' %} style="{{ body_text_color}} border-{{body_text_color}}" {% endif %} target="_blank">{{ link_text|raw }}</a>
+        {% else %}  
+        {% endif %}
+      {% endif %}
+    
+    </div>
+  </div>
+
+{% else %}
+
+  {% set mergin_type = block_content.field_block_merging_type.value %}
+  
+  <div class="block merging contextual-links-region clearfix">
+    <div class="inner">
+      {{ title_prefix }}
+      {% if label %}      
+        <h3 class="title"{{ title_attributes }}>{{ label }}</h3>      
+      {% endif %}
+      {{ title_suffix }}
+
+      {% if mergin_type =='accordion' %}
+        <div class="content accordion-merging">  
+          <ul class="accordion">
+            {{ content.field_block_merging }}
+          </ul>
+        </div>
+      {% elseif mergin_type =='slider' %}
+        <div class="slider slider-merging">          
+          {{ content.field_block_merging }}          
+        </div>
+      {% elseif mergin_type =='tab' %}
+        <div class="content tab-merging">  
+          {{block_tab_nav|raw}}
+          <ul class="tab_content">
+            {{ content.field_block_merging }}
+          </ul>
+        </div>
+      {% else %}
+        <div class="content alter-merging">         
+          {{block_tab_nav|raw}}
+          <ul class="tab_content">
+            {{ content.field_block_merging }}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>  
+
+{% endif %}

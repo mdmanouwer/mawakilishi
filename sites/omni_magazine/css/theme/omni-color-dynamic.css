@@ -1,0 +1,746 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* TABLE OF CONTENT
+------------------------------------------------------------------	
+
+- BASE COLOR 
+
+- PRIMARY MENU
+
+- SECONDARY MENU
+
+- SEARCH
+
+- FORUM
+
+- GENERAL
+
+- NODE
+
+- BLOCK
+
+- VIEWS
+
+- SYSTEM MENU & EDGE MENU & QUICK LINK
+
+- SHOWCASE
+
+----------------------------------------------------------------*/
+
+/* BASE COLOR 
+/* REGION 
+----------------------------------------------------------------*/
+/* Title
+---------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+}
+
+/* Text
+---------------------------------*/
+body { 
+  color: #686868;
+}
+
+/* Meta Text
+---------------------------------*/
+.meta, .meta a {  
+  color: #999999;
+}
+
+/* Link
+---------------------------------*/
+a {
+  color: #38b1eb;
+}
+
+/* Link Active
+---------------------------------*/
+a:hover, a:focus {
+  color: #f09943 !important; 
+}
+
+/* Border
+---------------------------------*/
+ul.pager, ul.pager li,
+.pager ul, .pager ul li {
+  border-color: #eeeeee;
+}
+
+/* Background
+---------------------------------*/
+body { 
+  background-color: #fafafa; 
+} 
+
+/* Foreground
+---------------------------------*/
+#content {
+  background-color: #ffffff;
+}
+
+/* Header Text
+---------------------------------*/
+#header {
+  color: #f1f1f1;
+}
+
+/* Header Background
+---------------------------------*/
+#header {
+  background-color: #222333;
+}
+
+/* Footer Text
+---------------------------------*/
+#main-footer, 
+#main-footer h3.title,
+#main-footer li a.is-active,
+#main-footer ul.menu li a,
+#main-footer .no-link-color a {
+  color: #676767;
+}
+
+/* Footer Background
+---------------------------------*/
+#main-footer {
+  background-color: #222334;
+}
+
+/* Comment Background
+---------------------------------*/
+#comment .comment-form,
+.comment .content,
+.comment-unpublished {
+  background-color: #f9f9f9;
+}
+
+.comment .arrow .fa {
+  color: #f9f9f9;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* PRIMARY MENU
+/* REGION 
+----------------------------------------------------------------*/
+/* Primary Menu Link
+---------------------------------*/
+#primary-list a,
+#primary-mega > li > a {
+  color: #fcfcfc;
+}
+
+/* Primary Menu Active Link
+---------------------------------*/
+#primary-list li a:hover, 
+#primary-list li a:focus,
+#primary-list li a:active,
+#primary-list li a.highlighted, 
+#primary-list li a.is-active,
+#primary-list li li a,
+#primary-mega > li > a:hover, 
+#primary-mega > li > a:focus,
+#primary-mega > li > a:active,
+#primary-mega > li > a.highlighted,
+#primary-mega > li > a.is-active {
+  color: #fdfdfd !important;
+}
+
+/* Primary Menu Background
+---------------------------------*/
+.full-width #menu-primary,
+.box-width #menu-primary > .inner {
+  background-color: #222335;
+}
+
+/* Primary Menu Active Background
+---------------------------------*/
+#primary-list li a:hover, 
+#primary-list li a:focus,
+#primary-list li a:active,
+#primary-list li a.highlighted, 
+#primary-list li a.is-active,
+#primary-list ul,
+#primary-mega > li > a:hover, 
+#primary-mega > li > a:focus,
+#primary-mega > li > a:active,
+#primary-mega > li > a.highlighted,
+#primary-mega > li > a.is-active {
+  background-color: #38b1ec;
+}
+
+#primary-mega ul.mega-menu,
+.mega-menu .block h3.title {
+  border-color: #38b1ec;
+}
+
+/* Mega Menu Text
+---------------------------------*/
+.mega-menu .block > .inner,
+.mega-menu .block h3.title,
+.mega-menu ul.menu li a,
+.mega-menu .block-views .no-link-color a {
+  color: #666666;
+}
+
+/* Mega Menu Background
+---------------------------------*/
+#primary-mega ul.mega-menu {
+  background-color: #fefefe;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* SECONDARY MENU
+/* REGION 
+----------------------------------------------------------------*/
+/* Secondary Menu Background
+---------------------------------*/
+#menu-secondary {
+  background-color: #000000;
+}
+
+/* Secondary Menu Active Background
+---------------------------------*/
+#menu-secondary nav li a.is-active,
+#sign a {
+  background-color: #222336;
+}
+
+#sign a {
+  color: #38b1eb;  
+}
+
+#sign a:hover {
+  background-color: #f09943;
+}
+
+/* Secondary Menu Link
+---------------------------------*/
+#menu-secondary nav li a,
+#social-media a {
+  color: #696969;
+}
+
+/* Secondary Menu Active Link
+---------------------------------*/
+#menu-secondary nav li a.is-active {
+  color: #f2f2f2;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* SEARCH
+/* REGION 
+----------------------------------------------------------------*/
+#search-block-form,
+#header-left .search-form {	
+  color: #fbfbfb;
+}
+
+#search-block-form label,
+#header-left .search-form label {
+  color: #38b1eb;
+}
+
+#search-block-form label:hover,
+#header-left .search-form label:hover {
+  color: #f09943;
+}
+
+#search-block-form input[type="search"],
+#header-left .search-form input[type="search"] {	
+  background-color: #333444;
+}
+
+#search-block-form input[type="search"]:focus,
+#header-left .search-form input[type="search"]:focus {
+  background-color: #444555;
+}
+
+#search-block-form input:-moz-placeholder {
+  color: #888888;
+}
+
+#search-block-form input::-webkit-input-placeholder {
+  color: #888888;
+}
+
+#search-block-form input:-ms-input-placeholder {
+  color: #888888;
+}
+
+#content .search-form,
+.search-result ol li {
+  border-color: #eeeeee;
+}
+
+@media only screen and (min-width: 64.0625em) {   
+    
+  #header-left .search-form input:-moz-placeholder {
+    color: #888888;
+  }
+
+  #header-left .search-form input::-webkit-input-placeholder {
+    color: #888888;
+  }
+  
+  #header-left .search-form input:-ms-input-placeholder {
+    color: #888888;
+  }
+}
+
+@media only screen and (min-width: 90.0625em) { 
+  
+  #menu-primary #search-block-form input:-moz-placeholder {
+    color: #888888;
+  }
+
+  #menu-primary #search-block-form input::-webkit-input-placeholder {
+    color: #888888;
+  }
+  
+  #menu-primary #search-block-form input:-ms-input-placeholder {
+    color: #888888;
+  } 
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* FORUM
+/* REGION 
+----------------------------------------------------------------*/
+/* Forum Container Text
+---------------------------------*/
+#forum-topic th,
+#forum tr.forum-only th,
+#forum td.container,
+#forum td.container .description,
+.forum.full .meta,
+.forum.full .meta .author,
+.forum.full .meta .date {
+  color: #f3f3f3;
+}
+
+/* Forum Container Link
+---------------------------------*/
+#forum-topic th a,
+#forum td.container a,
+#forum tr.forum-only.odd td a,
+#forum-topic tr.odd .title a,
+.node-type-forum .meta a {
+  color: #f09944;
+}
+
+/* Forum Container Background
+---------------------------------*/
+#forum tr.forum-only th,
+#forum td.container > div,
+.forum.full .detail {
+  background-color: #38b1ed;
+}
+
+@media only screen and (min-width: 40.0625em) {
+  
+  #forum-topic th {
+    background-color: #38b1ed;
+  }
+}
+
+/* Forum Sub-container text
+---------------------------------*/
+#forum td.container.indent > div,
+#forum td.container.indent .description,
+#forum tr.forum-only.odd td,
+#forum tr.forum-only.odd .description,
+#forum-topic tr.odd td {
+  color: #38b1ee;
+}
+
+/* Forum Sub-container Background
+---------------------------------*/
+#forum td.container.indent > div,
+#forum tr.forum-only.odd td,
+#forum-topic tr.odd td,
+.node-type-forum .comment .meta,
+.node-type-forum #comment-box header,
+.block-forum ul li:nth-child(2n+1) {
+  background-color: #e8f8ff;  
+}
+
+/* (MATCHING COLOR)
+---------------------------------*/
+.page-forum #forum,
+.node.forum  {
+  background-color: #ffffff;
+}
+
+.forum.full ul.links {
+  border-color: #eeeeee;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* GENERAL
+/* REGION 
+----------------------------------------------------------------*/
+/* Content 
+---------------------------------*/
+.status-message,
+.content-tab ul.secondary,
+.content-tab ul.primary a.is-active,
+.content-tab ul.primary a:hover {
+  background-color: #ffffff;
+}
+
+.content-tab ul.primary {
+  background-color: #f9f9f9;
+}
+
+/* Form (Matching Color) 
+---------------------------------*/
+input[type="email"], input[type="number"], input[type="search"],
+input[type="tel"], input[type="url"], input[type="password"],
+input[type="text"], textarea, select {  
+  border-color: #eeeeee;
+  background-color: #ffffff;
+}
+
+input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus,
+input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus,
+input[type="text"]:focus, textarea:focus, select:focus {
+  border-color: #38b1eb;
+}
+
+.user-form #edit-user-picture-wrapper,
+.user-form details {
+  border-color: #eeeeee;
+}
+
+/* Button (Matching Color)
+---------------------------------*/
+.button, button, 
+input[type="submit"], input[type="reset"], input[type="button"] {
+  background-color: #f09943;
+}
+
+.button:hover, button:hover,
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover,
+.button:focus, button:focus,
+input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focus {
+  background-color: #38b1eb;
+}
+
+.button.ghost {
+  color: #38b1eb;
+  border-color: #38b1eb;
+}
+
+.button.ghost.plain {
+  color: #686868;
+  border-color: #686868;
+}
+
+.button.ghost:hover {
+  color: #f09943 !important;
+  border-color: #f09943 !important;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* NODE
+/* REGION 
+----------------------------------------------------------------*/
+/* (Matching Color) 
+---------------------------------*/
+ul.links, ul.links a,
+.breadcrumb, .breadcrumb a, #share a,
+#comment-form fieldset {  
+  color: #999999;
+}
+
+.article.teaser h2.title a {
+  color: #333333;
+}
+
+.node.basic.teaser, .node.basic.full ul.links,
+.article.teaser, .article .meta, .article ul.links, 
+.blog ul.links li,
+.blog .meta ul.links li > a,
+.blog .meta.alter ul.links li > a,
+.blog .meta .share,
+#comment header,
+#comment-form fieldset {
+  border-color: #eeeeee;
+}
+
+.blog .meta ul.links li > a:hover {
+  border-color: #f09943;
+}
+
+.article.full, .blog .content,
+#comment-post, #comment-box,
+.node-type-blog #comment .comments,
+.node-type-blog #comment .comment-form {
+  background-color: #ffffff;
+}
+
+.node-type-blog #comment-form input[type="text"],
+.node-type-blog #comment-form textarea {	
+  background-color: #f9f9f9;
+}
+
+.blog .author {
+  color: #38b1eb;
+}
+
+.blog .year {
+  color: #f09943; 
+}
+
+.section a:hover, .section a:focus {
+  background-color: #f09943;
+}
+
+#share a {
+  border-color: #999999;
+}
+
+#share a:hover {
+  background-color: #999999;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* BLOCK
+/* REGION 
+----------------------------------------------------------------*/
+/* (Matching Color) 
+---------------------------------*/
+.block > .inner,
+.slider-merging .slick-prev,
+.slider-merging .slick-next,
+.tab-merging ul.tab_nav li.active,
+.alter-merging ul.tab_nav {
+  background-color: #ffffff;
+}
+
+.block h3.title.with-border,
+.block-system ul li,
+.block-user ul li,
+ul.accordion > li {
+  border-color: #eeeeee;
+}
+
+.accordion-merging h3.title,
+.slider-merging .slick-prev:before,
+.slider-merging .slick-next:before {
+  color: #38b1eb;
+}
+
+.tab-merging ul.tab_nav li,
+.alter-merging ul.tab_nav li:hover,
+.alter-merging ul.tab_nav li.active {
+  background-color: #38b1eb;
+}
+
+.tab-merging ul.tab_nav li:hover,
+.tab-merging ul.tab_nav li.active,
+.alter-merging ul.tab_nav li {
+  color: #f09943;
+}
+
+.alter-merging ul.tab_nav li {
+  background-color: #f9f9f9;
+}
+
+li a.active {
+  color: #333333;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* VIEWS
+/* REGION 
+----------------------------------------------------------------*/
+/* (Matching Color) 
+---------------------------------*/
+.view-page-block .column .inner,
+.pab-category.base .row {
+  background-color: #ffffff;
+}
+
+.vbb-base .comment-count { 
+  color: #686868;
+}
+
+.block-views.no-bg-color li,
+.view-article-block li,
+.view-blog-block li,
+.vab-base.attachment li,
+.vbb-base.attachment li,
+.pab-list article,
+.pab-grid .meta .inner,
+.page-block-block-grid .meta,
+.pab-category header,
+.pab-category li,
+.pab-category.grid.alter .section,
+.page-block-block-category h3.title {
+  border-color: #eeeeee;
+}
+
+.pab-category.base .column {
+  border-color: #eeeeee !important;
+}
+
+.vab-latest .date,
+.vab-comment .date,
+.vbb-latest .date,
+.vbb-comment .date,
+.vab-popular ul li:before,
+.vbb-popular ul li:before {
+  color: #f09943;
+}
+
+.block-views .no-link-color h4 a,
+.vab-popular h4 a,
+.pab-list h2.title a,
+.block-views-blockpage-block-block-grid h4 a,
+.pab-category h4 a {
+  color: #333333;
+}
+
+.view-blog-block .author a {
+  color: #38b1eb;
+}
+
+.pab-category header .description {
+  color: #999999; 
+}
+
+.pab-category.grid.alter .section a {
+  color: #38b1eb !important;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* SYSTEM MENU & EDGE MENU & QUICK LINK
+/* REGION 
+----------------------------------------------------------------*/
+/* (Matching Color)
+---------------------------------*/
+.edge-menu {
+  background-color: #38b1ec;
+}
+
+.edge-menu ul li,
+.edge-menu ul li a {
+  color: #fdfdfd;
+}
+
+#quick-link ul li,
+#quick-link ul li:last-child,
+.block-system-menu ul li {
+  border-color: #eeeeee;
+}
+
+#quick-link ul li a {
+  color: #686868;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/
+
+/* SHOWCASE
+/* REGION 
+----------------------------------------------------------------*/
+/* (Matching Color)
+---------------------------------*/
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before,
+.slick-prev:hover:before, 
+.slick-next:hover:before,
+.showcase-highlight .content:hover h4.title,
+.showcase-gallery .content:hover h4.title,
+.showcase-gallery .content:hover h4.title a,
+.showcase-gallery.default .content:hover .meta,
+.showcase-gallery.default .content:hover .meta a,
+.showcase-gallery .slick-prev:hover:before, 
+.showcase-gallery .slick-next:hover:before {
+  color: #f09943;
+}
+
+.pager-playlist .slick-prev,
+.pager-playlist .slick-next {
+  background-color: #f09943;
+}
+
+.showcase-highlight .content:hover,
+.showcase-gallery.default .content:hover {
+  border-color: #f09943;
+}
+
+.pager-thumbnail .slide:hover h4,
+.pager-thumbnail .slick-current h4,
+.pager-playlist .slide:hover h4,
+.pager-playlist .slick-current h4,
+.showcase-gallery .slick-prev:before,
+.showcase-gallery .slick-next:before {
+  color: #38b1eb;
+}
+
+.pager-thumbnail .slide:hover .image-default,
+.pager-thumbnail .slick-current .image-default,
+.pager-playlist .slide:hover .image-default,
+.pager-playlist .slick-current .image-default {
+  border-color: #38b1eb;
+}
+
+.showcase-gallery.alter h4.title,
+.showcase-gallery.alter h4.title a,
+.showcase-headline h4.title a,
+.slider-newsflash h4.title a {
+  color: #333333;
+}
+
+.slider-headline .slide,
+.alter .subheadline .slide,
+.showcase-gallery.alter .slick-prev,
+.showcase-gallery.alter .slick-next {
+  background-color: #ffffff;
+}
+
+.showcase-headline h3.title,
+.two-sidebars #content-showcase .showcase-headline h3.title {
+  border-color: #333333;
+}
+
+.subheadline .slide {
+  border-color: #eeeeee;
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/

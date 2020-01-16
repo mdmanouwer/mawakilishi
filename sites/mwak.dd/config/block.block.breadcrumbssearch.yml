@@ -1,0 +1,35 @@
+uuid: 1e35c1b7-38e0-40fc-9501-90ed736c2652
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9aeaaa8b-7740-48de-af2a-2da723a45551'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: ''
+id: breadcrumbssearch
+theme: mobile
+region: breadcrumb
+weight: 0
+provider: null
+plugin: 'block_content:9aeaaa8b-7740-48de-af2a-2da723a45551'
+settings:
+  id: 'block_content:9aeaaa8b-7740-48de-af2a-2da723a45551'
+  label: 'Breadcrumbs SEARCH'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search\r\n/search/node"
+    negate: false
+    context_mapping: {  }

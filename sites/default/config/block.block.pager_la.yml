@@ -1,0 +1,44 @@
+uuid: 72f9579c-7a4c-4b6c-816c-235f3c2e6eba
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.posts_category
+  module:
+    - block_class
+    - ctools
+    - node
+    - views
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: pager_la
+theme: mwakilishi
+region: breadcrumb
+weight: 0
+provider: null
+plugin: 'views_block:posts_category-block_23'
+settings:
+  id: 'views_block:posts_category-block_23'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

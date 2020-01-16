@@ -1,0 +1,29 @@
+uuid: ae18273a-d73d-4cae-8875-dea1f8aaf3a9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e3fcd4f9-3cbe-463d-8105-7227693fa1c1'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'ad-wrapping imageWrap'
+id: mobile_adblock3
+theme: mobile
+region: content_bottom
+weight: -17
+provider: null
+plugin: 'block_content:e3fcd4f9-3cbe-463d-8105-7227693fa1c1'
+settings:
+  id: 'block_content:e3fcd4f9-3cbe-463d-8105-7227693fa1c1'
+  label: 'Ad block 3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

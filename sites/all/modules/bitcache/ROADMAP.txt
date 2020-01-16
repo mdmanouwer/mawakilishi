@@ -1,0 +1,12 @@
+
+6.x-1.0-beta3 (April 2009)
+==========================
++ Implement Amazon S3 storage adapter
+- Implement HTTP storage adapter
+- Implement a bitstream index table
+- Implement caching of repository stats
+- Rethink bitstream index listings for large repositories
+- Fix Global Redirect compatibility
+
+6.x-1.0         (May 2009)
+==========================

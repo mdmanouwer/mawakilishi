@@ -1,0 +1,34 @@
+uuid: 177c472f-8f04-4c19-a417-a81e55890c2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news_mobile
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'category-wrap list-content'
+id: views_block__latest_news_mobile_block_1
+theme: mobile
+region: content
+weight: -19
+provider: null
+plugin: 'views_block:latest_news_mobile-block_1'
+settings:
+  id: 'views_block:latest_news_mobile-block_1'
+  label: 'Latest News'
+  provider: views
+  label_display: visible
+  views_label: 'Latest News'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

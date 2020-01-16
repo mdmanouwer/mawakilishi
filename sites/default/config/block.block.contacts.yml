@@ -1,0 +1,29 @@
+uuid: cf44ad83-fbf0-4d55-ac23-4e635cff2220
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:699cfbac-ef8f-488f-9d2e-47ec17abe80c'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: contacts
+theme: mwakilish
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:699cfbac-ef8f-488f-9d2e-47ec17abe80c'
+settings:
+  id: 'block_content:699cfbac-ef8f-488f-9d2e-47ec17abe80c'
+  label: Contacts
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

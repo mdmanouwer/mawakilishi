@@ -1,0 +1,35 @@
+uuid: c8fff712-d661-49ad-bc4f-dda9b39bd050
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9aeaaa8b-7740-48de-af2a-2da723a45551'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - mwakilishi
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishi_breadcrumbs_search
+theme: mwakilishi
+region: breadcrumb
+weight: -19
+provider: null
+plugin: 'block_content:9aeaaa8b-7740-48de-af2a-2da723a45551'
+settings:
+  id: 'block_content:9aeaaa8b-7740-48de-af2a-2da723a45551'
+  label: 'Breadcrumbs SEARCH'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/search\r\n/search/node\r\n"
+    negate: false
+    context_mapping: {  }

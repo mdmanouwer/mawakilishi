@@ -1,0 +1,29 @@
+uuid: 063bee2d-6609-4ed9-a1b8-2cb511982fcc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cf569ebd-237a-4b66-a36a-2c60de6a93df'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - mwakilishii
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilishi_headeradd
+theme: mwakilishi
+region: header_banner
+weight: -13
+provider: null
+plugin: 'block_content:cf569ebd-237a-4b66-a36a-2c60de6a93df'
+settings:
+  id: 'block_content:cf569ebd-237a-4b66-a36a-2c60de6a93df'
+  label: 'header add'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,318 @@
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+
+/* TABLE OF CONTENT
+------------------------------------------------------------------	
+
+- FORUM
+  - Common
+  - Forum Node
+  - Forum Blocks
+  - Media Queries
+
+----------------------------------------------------------------*/
+
+/* FORUM 
+/* REGION 
+----------------------------------------------------------------*/
+/* Common
+---------------------------------*/
+.page-forum #content {
+  padding: 0;
+  background-color: transparent;
+}
+
+.page-forum #forum {
+  padding: 1.25rem;
+}
+
+#forum table {
+  width: 100%;
+}
+
+#forum th {
+  display: none;
+  font-family: 'Roboto', Arial, Helvetica, Sans-Serif;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.25rem 0.625rem;
+  border: none;
+}
+ 
+#forum-overview th:first-child,
+#forum-topic th:nth-child(2) {
+  display: table-cell;
+}
+
+#forum th img {
+  display: none;
+}
+
+#forum tbody { 
+  border: none;
+}
+
+#forum tr {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+#forum td {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+#forum td .name,
+#forum td .title {
+  font-size: 1rem;
+}
+
+#forum .fa {
+  padding-right: 1.25rem;
+}
+
+#forum td.forum {
+  padding: 1.25rem;
+}
+
+#forum .description {
+  display: none;
+  padding-left: 2rem;
+}
+
+#forum td.last-reply,
+#forum td.topics, 
+#forum td.posts,
+#forum td.replies {
+  display: none;
+  text-align: center;
+}
+
+#forum td.last-reply span.date {
+  display: block;
+}
+
+#forum td.indent-1 {
+  padding-left: 1.25rem;
+}
+
+#forum td.indent-2 {
+  padding-left: 2.5rem;
+}
+
+#forum td.indent-3 {
+  padding-left: 3.75rem;
+}
+
+#forum td.indent-4 {
+  padding-left: 5rem;
+}
+
+#forum td.indent-5 {
+  padding-left: 6.25rem;
+}
+
+#forum td.container .name {
+  display: inline-block;
+  margin: 0;
+}
+
+#forum td.container .description {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+#forum td.container > div {
+  padding: 1.25rem;
+  margin-bottom: 0.0625rem;
+  border-radius: 3px;
+}
+
+#forum tr.forum-only th:first-child,
+#forum tr.forum-only.odd td:first-child,
+#forum-topic th:first-child,
+#forum-topic tr.odd td:first-child {
+  border-radius: 3px 0 0 3px; 
+}
+
+#forum tr.forum-only th:last-child,
+#forum tr.forum-only.odd td:last-child,
+#forum-topic th:last-child,
+#forum-topic tr.odd td:last-child { 
+  border-radius: 0 3px 3px 0; 
+}
+
+#forum-topic td {
+  padding: 1.25rem;
+}
+
+#forum-topic .topic .submitted {
+  font-size: 0.75rem;
+  font-style: italic;
+  padding-left: 2.25rem;
+}
+
+/* Forum Node 
+---------------------------------*/
+.node-type-forum #content {
+  padding: 0;
+  background-color: transparent;
+}
+
+.node.forum  {
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 5px;
+}
+
+.forum.full .meta  {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.forum.full .user-picture {
+  float: left;
+}
+
+.forum.full .user-picture img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.forum.full .detail {
+  padding: 1.25rem;
+  margin-left: 5rem;
+  border-radius: 3px;
+}
+
+.forum.full ul.links {
+  display: block;
+  padding-top: 1.25rem;
+  margin: 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.forum.full ul.links li {
+  display: inline;
+  padding: 0.625rem;
+}
+
+/* comment 
+----------------*/
+.node-type-forum .comments {
+  width: 100% !important;  
+}
+
+.node-type-forum .content,
+.node-type-forum .comment .content {
+  padding: 0;
+}
+
+.node-type-forum .comment,
+.node-type-forum .comments > .indented {
+  margin-bottom: 0;
+}
+
+.node-type-forum .comment .meta {
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-radius: 3px;
+}
+
+.node-type-forum .comment .user-picture {
+  padding-left: 0;
+}
+
+.node-type-forum .comment .content,
+.node-type-forum #comment-box form {
+  background-color: transparent; 
+}
+
+.node-type-forum #comment-box header {
+  padding: 1.25rem;
+  margin: 0;
+  border: 0;
+  border-radius: 3px;
+}
+
+.node-type-forum #comment-box h3.title {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin: 0;  
+}
+
+.node-type-forum #comment-box header,
+.node-type-forum #comment-box form {
+  float: none;
+  width: 100%;
+}
+
+/* Forum Blocks 
+---------------------------------*/
+.block-forum ul {
+  margin: 0;  
+  list-style: none;
+}
+
+.block-forum ul li {
+  padding: 0.625rem 1.25rem;
+  margin: 0;
+}
+
+.block-forum .more-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 1.25rem;
+}
+
+/* Media Queries 
+---------------------------------*/
+@media only screen and (min-width: 40.0625em) { 
+  
+  #forum th,
+  #forum td.last-reply,
+  #forum td.topics, 
+  #forum td.posts,
+  #forum td.replies {
+    display: table-cell;
+  }
+  
+  #forum .description {
+    display: inline-block;
+  }
+  
+  .forum.full .user-picture  {
+    padding-left: 1.25rem;
+  }
+  
+  .forum.full .detail  {
+    margin-left: 6.25rem;
+  }
+  
+  .forum.full .content,
+  .node-type-forum .comment .content {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+/* ENDREGION
+----------------------------------------------------------------*/

@@ -1,0 +1,11 @@
+; $Id$
+name = PHP Strict suppress
+description = Module to prevent the printing of strict warnings when using PHP version 5+
+core = 6.x
+
+; Information added by Drupal.org packaging script on 2015-05-22
+version = "6.x-1.0"
+core = "6.x"
+project = "___drupal_php_strict_suppress"
+datestamp = "1432308182"
+

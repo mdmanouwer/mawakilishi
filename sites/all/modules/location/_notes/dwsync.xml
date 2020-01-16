@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="CHANGELOG.txt" local="129229840200000000" remote="129229840200000000" testing="0" />
+<file name="CREDITS.txt" local="129229841400000000" remote="129229841400000000" testing="0" />
+<file name="INSTALL.txt" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="LICENSE.txt" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="TODO-3.txt" local="129229849200000000" remote="129229849200000000" testing="0" />
+<file name="earth.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.admin.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.css" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.georss.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.info" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.install" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.module" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.token.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.tpl.php" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.views.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location.views_default.inc" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_API.txt" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_autocomplete.js" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_distance.tpl.php" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_node.info" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_node.install" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_node.module" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_user.info" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_user.install" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="location_user.module" local="129229848000000000" remote="129229848000000000" testing="0" />
+<file name="locations.tpl.php" local="129229848000000000" remote="129229848000000000" testing="0" />
+</dwsync>

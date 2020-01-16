@@ -1,0 +1,26 @@
+uuid: d1aa5f7b-40f9-437a-818b-89c790222d89
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: subscribe-now
+id: subscribenowfooter
+theme: mwakilish
+region: footer_top
+weight: -18
+provider: null
+plugin: 'block_content:57a94388-2b24-4723-9fcb-2379a84e9d67'
+settings:
+  id: 'block_content:57a94388-2b24-4723-9fcb-2379a84e9d67'
+  label: 'Subscribe now'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

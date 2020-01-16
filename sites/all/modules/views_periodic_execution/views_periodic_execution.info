@@ -1,0 +1,12 @@
+name = Views periodic execution
+package = Views
+description = Allows execution of views at certain time intervals.
+core = 6.x
+php = 5.0
+dependencies[] = views
+; Information added by drupal.org packaging script on 2012-01-04
+version = "6.x-1.3"
+core = "6.x"
+project = "views_periodic_execution"
+datestamp = "1325701849"
+

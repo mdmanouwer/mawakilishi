@@ -1,0 +1,20 @@
+uuid: 573dd0b1-7feb-4be6-be8f-8e0797c26bd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_ticker_date
+field_name: field_ticker_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

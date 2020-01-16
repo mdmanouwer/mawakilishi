@@ -1,0 +1,21 @@
+uuid: d30570f5-d2d0-402b-9d37-0f2c78204cc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ticker_date
+    - node.type.article
+  module:
+    - datetime
+id: node.article.field_ticker_date
+field_name: field_ticker_date
+entity_type: node
+bundle: article
+label: 'Ticker Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

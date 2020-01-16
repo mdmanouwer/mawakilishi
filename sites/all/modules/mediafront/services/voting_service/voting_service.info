@@ -1,0 +1,28 @@
+name = Voting Service
+description = Provides a voting service.
+package = "Services - services"
+dependencies[] = services
+dependencies[] = votingapi
+version = VERSION
+core = 6.x
+
+; Information added by drupal.org packaging script on 2009-08-01
+version = "6.x-1.7"
+core = "6.x"
+project = "dashplayer"
+datestamp = "1249103717"
+
+
+; Information added by drupal.org packaging script on 2010-05-24
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "mediafront"
+datestamp = "1274659909"
+
+
+; Information added by drupal.org packaging script on 2012-02-29
+version = "6.x-1.5"
+core = "6.x"
+project = "mediafront"
+datestamp = "1330482686"
+

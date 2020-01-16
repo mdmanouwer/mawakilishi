@@ -1,0 +1,31 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% if attributes.class == 'hot' %}
+  {% set font_icon = 'fa fa-bomb' %}
+{% elseif attributes.class == 'hot-new' %}
+  {% set font_icon = 'fa fa-fire' %}
+{% elseif attributes.class == 'new' %}
+  {% set font_icon = 'fa fa-file-text' %}
+{% elseif attributes.class == 'default' %}
+  {% set font_icon = 'fa fa-times-circle' %}
+{% elseif attributes.class == 'closed' %}
+  {% set font_icon = 'fa fa-thumb-tack' %}
+{% else %}
+  {% set font_icon = 'fa fa-file-text-o' %}
+{% endif %}
+
+<span class="{{font_icon }}"></span>

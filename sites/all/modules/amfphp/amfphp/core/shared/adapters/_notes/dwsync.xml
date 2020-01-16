@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="RecordSetAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="adodbAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="doctrineAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="fbsqlAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="informixAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="mssqlAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="mysqlAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="mysqliAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="mysqliobjectAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="oci8Adapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="odbcAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="pdoAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="peardbAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="pgsqlAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="plainrecordsetAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="sqliteAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="sqliteobjectAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="zendrowAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+<file name="zendrowsetAdapter.php" local="129024720000000000" remote="129024720000000000" testing="0" />
+</dwsync>

@@ -1,0 +1,36 @@
+uuid: 54f6d676-5f9b-449a-9128-40f9aecace43
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UeWTGHBg1zwqDxLS1zMgss0Ct_o8Hj3BKxjjKUdRLNo
+name: tabs_posts_v1
+label: 'Tabs Posts v1'
+tabs:
+  5fbeca79-4d9e-46de-9055-8518483076a2:
+    uuid: 5fbeca79-4d9e-46de-9055-8518483076a2
+    id: views_tab
+    title: Fashion
+    weight: '1'
+    data:
+      view_name: posts_category
+      view_display: block_1
+      view_arg: ''
+  096b8a10-d9ac-4f84-bb1c-2879fae5f732:
+    uuid: 096b8a10-d9ac-4f84-bb1c-2879fae5f732
+    id: views_tab
+    title: Sport
+    weight: '2'
+    data:
+      view_name: posts_category
+      view_display: block_2
+      view_arg: ''
+  aa42659f-a23f-4132-ae00-b70f33deebcc:
+    uuid: aa42659f-a23f-4132-ae00-b70f33deebcc
+    id: views_tab
+    title: 'Life Style'
+    weight: '3'
+    data:
+      view_name: posts_category
+      view_display: block_3
+      view_arg: ''

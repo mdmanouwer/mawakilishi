@@ -1,0 +1,32 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% set classes %}block block-{{ configuration.provider|clean_class }} {{ plugin_id|clean_class|replace({'views-block':''}) }}{% endset %} 
+
+<div id="{{ attributes.id }}" class="{{ classes }} {{ attributes.class }}">
+  <div class="inner">
+    {{ title_prefix }}
+    {% if label %}
+      <h3 class="title"{{ title_attributes }}>{{ label }}</h3>
+    {% endif %}
+    {{ title_suffix }}
+    {% block content %}
+      <div{{ content_attributes.addClass('content clearfix') }}>
+        {{ content }}
+      </div>
+    {% endblock %}
+  </div>
+</div>

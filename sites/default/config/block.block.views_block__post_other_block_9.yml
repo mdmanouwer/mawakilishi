@@ -1,0 +1,28 @@
+uuid: 5fef4723-b4f3-4197-8eb9-484175b3e953
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - block_class
+    - views
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__post_other_block_9
+theme: mwakilish
+region: footer
+weight: -25
+provider: null
+plugin: 'views_block:post_other-block_9'
+settings:
+  id: 'views_block:post_other-block_9'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '5'
+visibility: {  }

@@ -1,0 +1,34 @@
+uuid: c587c51f-bfae-4612-96aa-4a18a9a61b06
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.posts_category
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: titleWrapping
+id: views_block__posts_category_block_9
+theme: mwakilish
+region: content
+weight: -31
+provider: null
+plugin: 'views_block:posts_category-block_9'
+settings:
+  id: 'views_block:posts_category-block_9'
+  label: 'Featured Posts'
+  provider: views
+  label_display: visible
+  views_label: 'Featured Posts'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

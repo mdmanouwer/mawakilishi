@@ -1,0 +1,105 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ *
+ */
+
+function auto_opengraph_install() {
+  drupal_install_schema('auto_opengraph');
+  if (!$preset = imagecache_preset_by_name('opengraph')) {
+    $preset = imagecache_preset_save(array('presetname' => 'opengraph'));
+    $action = array(
+      'action' => 'auto_opengraph_crop',
+      'presetid' => $preset['presetid'],
+      'data' => array(
+        'aspect' => '3:1',
+        'fit' => 'max',
+        'reversible' => 1,
+      ),
+      'weight' => 0,
+    );
+    imagecache_action_save($action);
+    $action = array(
+      'action' => 'imagecache_scale',
+      'presetid' => $preset['presetid'],
+      'data' => array(
+        'width' => "300",
+        'height' => "300",
+        'upscale' => 0,
+      ),
+      'weight' => 1,
+    );
+    imagecache_action_save($action);
+  }
+}
+
+function auto_opengraph_uninstall() {
+  db_query("DELETE FROM {variable} WHERE name LIKE 'auto_opengraph_%'");
+  drupal_uninstall_schema('auto_opengraph');
+}
+
+function auto_opengraph_schema() {
+  $schema['auto_opengraph_tags'] = array(
+    'description' => 'Table storing opengraph tag definitions.',
+    'export' => array(
+      'key' => 'name',
+      'key name' => 'Name',
+      'primary key' => 'tagid',
+      'identifier' => 'tagdef',
+      'default hook' => 'default_opengraph_tags',
+      'api' => array(
+        'owner' => 'auto_opengraph',
+        'api' => 'auto_opengraph',
+        'minimum_version' => 1,
+        'current_version' => 1,
+      )
+    ),
+    'fields' => array(
+      'tagid' => array(
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'descrription' => 'Primary ID field for the table.  Not used for anything except internal lookups.',
+        'no export' => TRUE,
+      ),
+      'name' => array(
+        'type' => 'varchar',
+        'length' => '255',
+        'description' => 'Unique ID for this object.  Used to identify it programmatically.'
+      ),
+      'value' => array(
+        'description' => 'The value of the variable.',
+        'type' => 'text',
+        'not null' => TRUE,
+        'size' => 'big',
+        'serialize' => TRUE,
+      ),
+    ),
+    'primary key' => array('tagid'),
+    'unique keys' => array(
+      'name' => array('name')
+    )
+  );
+  return $schema;
+}
+
+function auto_opengraph_update_6101() {
+  if (!module_exists('ctools')) {
+    drupal_set_message(t('Auto opengraph has been disabled!  Ctools module is now required.'), 'error');
+    module_disable(array('auto_opengraph'));
+    return FALSE;
+  }
+  drupal_install_schema('auto_opengraph');
+  $q = db_query("SELECT * FROM {variable} WHERE name LIKE 'auto_opengraph_tags__%'");
+  while ($r = db_fetch_object($q)) {
+    if ($r->name != 'auto_opengraph_tags_render__front') {
+      db_query("INSERT INTO {auto_opengraph_tags} (name, value) VALUES ('%s', '%s')",
+              str_replace('auto_opengraph_tags__', '', $r->name),
+              $r->value);
+      variable_del($r->name);
+    }
+  }
+  return array();
+}

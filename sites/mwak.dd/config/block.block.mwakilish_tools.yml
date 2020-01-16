@@ -1,0 +1,28 @@
+uuid: 6d61b404-37ef-49f0-8cda-20ee45e5fd35
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilish_tools
+theme: mwakilish
+region: content
+weight: -9
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

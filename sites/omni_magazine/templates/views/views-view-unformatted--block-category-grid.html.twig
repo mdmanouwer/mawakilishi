@@ -1,0 +1,48 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+<div class="column">
+  <div class="inner">    
+    {% if title %}
+      {{title}}
+    {% endif %}
+
+    {% set column = '' %}
+    {% set row_content = '' %}
+    
+    {% for row in rows %} 
+      {% if loop.index <=5 %}
+        {% set row_content %}
+          {% spaceless %}
+            {{ row.content }}
+          {% endspaceless %}
+        {% endset %}     
+      
+        {% if loop.index==1 %}
+          {% set column %}
+            <li class="item-compact clearfix">{{ remove_image_alter(row_content, 'thumbnail')|raw }}</li>
+          {% endset %} 
+        {% else %}
+          {% set column %}
+           {{ column }}<li class="item-thumbnail clearfix">{{ remove_image_alter(row_content, 'default')|raw }}</li>
+          {% endset %} 
+        {% endif %}  
+      {% endif %}
+    {% endfor %}
+    
+    <ul class="no-bullet">{{ column }}</ul>
+  </div>
+</div>

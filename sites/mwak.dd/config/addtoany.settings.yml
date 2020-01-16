@@ -1,0 +1,10 @@
+buttons_size: 28
+additional_html: "<a class=\"a2a_button a2a_button_facebook a2a_counter\"></a>\r\n<a class=\"a2a_button a2a_button_twitter a2a_counter\"></a>\r\n<a class=\"a2a_button a2a_button_linkedin a2a_counter\"></a>\r\n<a class=\"a2a_button a2a_button_whatsapp a2a_counter\"></a>\r\n"
+additional_css: ''
+additional_js: "a2a_config.templates.email = {\r\n    subject: \"Check this out: ${title}\",\r\n    body: \"Click the link:\\n${link}\"\r\n};"
+universal_button: default
+custom_universal_button: ''
+universal_button_placement: after
+no_3p: false
+_core:
+  default_config_hash: 8aJF-FDdnrk-N2gLGWFQcLZIpuJZA0BE9NtgXTVJfVk

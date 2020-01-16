@@ -1,0 +1,42 @@
+uuid: 117983f8-9fcc-48a2-8dd7-d28470bb32bb
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.post_other
+  module:
+    - block_class
+    - system
+    - user
+    - views
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: views_block__post_other_block_6
+theme: mwakilish
+region: sidebar_second
+weight: -35
+provider: null
+plugin: 'views_block:post_other-block_6'
+settings:
+  id: 'views_block:post_other-block_6'
+  label: 'Hot Topics'
+  provider: views
+  label_display: visible
+  views_label: 'Hot Topics'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

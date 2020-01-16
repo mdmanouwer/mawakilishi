@@ -1,0 +1,34 @@
+uuid: 4fef0d43-8e74-4cbd-8938-1c55ef916ae3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_classifieds_sponsored_content_mobile
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - mobile
+third_party_settings:
+  block_class:
+    classes: 'category-wrap list-content'
+id: views_block__latest_classifieds_sponsored_content_mobile_block_1
+theme: mobile
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:latest_classifieds_sponsored_content_mobile-block_1'
+settings:
+  id: 'views_block:latest_classifieds_sponsored_content_mobile-block_1'
+  label: 'CLASSIFIEDS/SPONSORED CONTENT'
+  provider: views
+  label_display: visible
+  views_label: 'CLASSIFIEDS/SPONSORED CONTENT'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

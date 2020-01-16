@@ -1,0 +1,26 @@
+uuid: 33649e2b-dce5-49ef-a6f5-eac11a0234bd
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: 'ad-wrapping imageWrap'
+id: mwakilish_adblock3
+theme: mwakilish
+region: sidebar_second
+weight: -34
+provider: null
+plugin: 'block_content:ab441be8-a881-4fdf-9ae2-bc49a7bd5b71'
+settings:
+  id: 'block_content:ab441be8-a881-4fdf-9ae2-bc49a7bd5b71'
+  label: 'Ad block 3'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

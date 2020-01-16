@@ -1,0 +1,26 @@
+uuid: 9ed55b62-d162-40cd-affc-ef1a462266f1
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+  theme:
+    - mwakilish
+third_party_settings:
+  block_class:
+    classes: ''
+id: mwakilish_contacts
+theme: mwakilish
+region: footer
+weight: -26
+provider: null
+plugin: 'block_content:249fb630-8b39-4e53-91dc-e3f425c4a4eb'
+settings:
+  id: 'block_content:249fb630-8b39-4e53-91dc-e3f425c4a4eb'
+  label: Contacts
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

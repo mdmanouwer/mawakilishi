@@ -1,0 +1,54 @@
+uuid: b2e95967-8850-46dc-9750-7dd41f0d1835
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.personal
+    - field.field.contact_message.personal.field_firstname
+  module:
+    - text
+id: contact_message.personal.default
+targetEntityType: contact_message
+bundle: personal
+mode: default
+content:
+  copy:
+    weight: 50
+    region: content
+  field_firstname:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  mail:
+    weight: -40
+    region: content
+  message:
+    type: string_textarea
+    weight: 0
+    settings:
+      rows: 12
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: -50
+    region: content
+  preview:
+    weight: 40
+    region: content
+  recipient:
+    weight: -30
+    region: content
+  subject:
+    type: string_textfield
+    weight: -10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

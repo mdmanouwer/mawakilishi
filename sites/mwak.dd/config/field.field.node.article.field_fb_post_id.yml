@@ -1,0 +1,19 @@
+uuid: 9d2d83c7-a9cd-41cf-afe4-28234a494e8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fb_post_id
+    - node.type.article
+id: node.article.field_fb_post_id
+field_name: field_fb_post_id
+entity_type: node
+bundle: article
+label: 'FB post id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

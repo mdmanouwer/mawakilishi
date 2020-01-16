@@ -1,0 +1,78 @@
+{#
+/* COPYRIGHT
+------------------------------------------------------------------  
+  Omni Magazine for Drupal 8.x - Version 1.0                           
+  Copyright (C) 2016 esors.com All Rights Reserved.           
+  @license - Copyrighted Commercial Software                   
+------------------------------------------------------------------  
+  Theme Name: Omni Magazine                                            
+  Author: ESORS                                           
+  Date: 15th February 2016                                        
+  Website: http://www.esors.com/                              
+------------------------------------------------------------------  
+  This file may not be redistributed in whole or   
+  significant part.                                            
+----------------------------------------------------------------*/
+#}
+{% set showcase_type = block_content.field_showcase_type.value %}
+{% set showcase_style = block_content.field_showcase_style.value %}
+
+<div class="block block-showcase showcase-{{ showcase_type }} {{ showcase_style }} clearfix">
+  {% if showcase_type == 'basic' %}
+    <div class="slider slider-basic slider-shared"{{data_slick|raw}}>
+      {{ content.field_showcase_slide }}
+    </div>
+  
+  {% elseif showcase_type == 'thumbnail' %}
+    <div class="slider slider-thumbnail slider-shared"{{data_slick|raw}}>
+      {{ content.field_showcase_slide }}
+    </div>
+    <div class="slider pager-thumbnail"{{data_slick_pager|raw}}>
+      {{ content.field_showcase_thumbnail }}
+    </div>
+  
+  {% elseif showcase_type == 'playlist' %}
+    <div class="slider slider-playlist slider-shared"{{data_slick|raw}}>
+      {{ content.field_showcase_slide }}
+    </div>
+    <h3 class="title">{{ label }}</h3>
+    <div class="slider pager-playlist"{{data_slick_pager|raw}}>
+      {{ content.field_showcase_playlist }}
+    </div>
+  
+  {% elseif showcase_type == 'headline' %}
+    {% if content.field_showcase_subheadline|render %}
+      <div class="slider slider-headline"{{data_slick|raw}}>
+        {{ content.field_showcase_slide }}
+      </div>
+      <div class="subheadline clearfix">
+        <h3 class="title">{{ label }}</h3>      
+        {{ content.field_showcase_subheadline }}
+      </div>     
+    {% else %}
+      <div class="slider slider-headline no-subheadline"{{data_slick|raw}}>
+        {{ content.field_showcase_slide }}
+      </div>
+    {% endif %}
+  
+  {% elseif showcase_type == 'newsflash' %}
+    <span class="fa fa-bell-o"></span>
+    <div class="slider slider-newsflash"{{data_slick|raw}}>      
+      {{ content.field_showcase_slide }}
+    </div>
+  
+  {% elseif showcase_type == 'gallery' %}
+    <div class="inner">
+      {% if label %}
+        <h3 class="title">{{ label }}</h3>
+      {% endif %}      
+      <div class="slider slider-gallery"{{data_slick|raw}}> 
+        {{ content.field_showcase_slide }} 
+      </div>
+    </div>  
+  
+  {% else %} 
+    {{ content.field_showcase_slide }}    
+  {% endif %}
+</div>
+  

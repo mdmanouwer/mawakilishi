@@ -1,0 +1,29 @@
+uuid: 231f5b5c-deec-4623-a113-3941e7e62a81
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - mwakilishii
+third_party_settings:
+  block_class:
+    classes: ''
+id: pagetitle
+theme: mwakilishii
+region: content
+weight: -14
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/blogs.php\r\n/obituaries.php\r\n/classifieds.php\r\n/hot-topics.php\r\n/glossary"
+    negate: true
+    context_mapping: {  }

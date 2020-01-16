@@ -1,0 +1,27 @@
+uuid: 468a5b72-990c-4ba9-8b06-6b2797be2c1f
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'add or remove dislike votes on node'
+  - 'add or remove like votes on comment'
+  - 'add or remove like votes on node'
+  - 'add or remove vote votes on comment'
+  - 'add or remove vote votes on node'
+  - 'administer gavias_customize preview'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'subscribe to newsletters'
+  - 'use advanced search'
+  - 'use text format basic_html'
+  - 'view post access counter'

@@ -1,0 +1,1318 @@
+/* Core Elements */
+
+body {
+  padding: 0;
+  margin:0;
+  text-align: center; /*Centering for IE */
+  line-height: 1.6em;
+  color: #2c3447;
+  background:#336699;
+}
+
+a, a:visited {
+  color: #2a302f;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #2a302f;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5 {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+h2, h3 
+{
+	font-size: 1.2em;
+	text-transform:capitalize;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+/* Main Layout 
+
+This section controls the main layout.   The page width and the width of the left and right sidebars are all controlled here.  Also included are the widths for the blocks/regions which are necessary to make them collapsible via the conditional statements found in includes/block_layout.php.
+
+*/
+
+#page-wrapper { 
+  padding: 0;
+  margin: 0 auto; /* Center on Page */
+  text-align: left; /* Reset text alignment */
+  width: 962px;
+}
+
+#border-wrapper {
+  border: 0px solid #533000;
+}
+
+#middle-wrapper {
+  background: #ffffff url(../images/style3/main-content-bg.png) top repeat-x;
+}
+
+#middle-wrapper-bottom {
+  background: #ffffff url(../images/style3/main-content-bottom-bg.png) bottom repeat-x;
+}
+
+#main-content {
+  float: left;
+  width: 100%;
+  text-align:justify;
+}
+
+#squeeze {
+  padding: 10px;
+}
+
+#main-content-inner {
+}
+
+#main-content-inner-inner {
+  float: left;
+  width: 100%;
+}
+
+#squeeze-2 {
+}
+
+#middle-wrapper .sidebar-left {
+  float: right;
+  z-index: 1;
+  position: relative;
+}
+
+#middle-wrapper .sidebar-right {
+  float: left;
+  z-index: 1;
+  position: relative;
+}
+
+.width100 { width: 99.999%; }
+.width80 { width: 79.999%; }
+.width50 { width: 49.999%; }
+.width40 { width: 39.999%; }
+.width33 { width: 33.333%; }
+.width25 { width: 24.999%; }
+.width20 { width: 19.999%; }
+
+/* Header */
+
+#header-wrapper {
+  height: 80px;
+  background: url(../images/style3/shadow-top.png) bottom no-repeat;
+}
+
+#site-logo, #site-name {
+  float: left;
+}
+
+#site-name a {
+  font-size: 70px;
+  line-height: 50px;
+}
+
+#site-slogan { /* For vertical centering, padding may require adjustment depending on length of slogan */
+  float: left;
+  padding: 25px 0 0 10px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+  color: #ffffff;
+  width: 150px;
+}
+
+#feed-icons {
+  padding: 26px 0;
+  padding-left: 10px;
+  float: right;
+}
+
+#top-banner {
+  float: right;
+  padding-top: 20px;
+  width: 468px;
+  height: 50px;
+}
+
+#top-banner p {
+  padding: 0;
+  margin: 0;
+}
+
+/* Footer and Footer Links */
+
+#footer-links {
+  height: 40px;
+  background: #212325 url(../images/style3/footer-links.png) bottom repeat-x;
+}
+
+#footer-links h2 {
+  display: none;
+}
+
+#footer-links ul {
+  float: left;
+}
+
+#footer-links ul li {
+  display: inline;
+  float: left;
+  padding: 0 10px;
+}
+
+#footer-links ul li a {
+  color: #ffffff;
+  line-height: 40px;
+}
+
+#footer {
+  float:left;
+  display:inline;
+  color:#ffffff;
+  font-size:1.0em;
+  padding:0px 10px 0px 0px;
+}
+
+/* User Login Boxes 
+
+These styles control the user login box that appears below the primary menu.
+
+*/
+
+#user-bar-wrapper {
+  height: 40px;
+  background: #192f41 url(../images/style3/user-bar-bg.png) top repeat-x;
+}
+
+#user-bar {
+  padding-top: 11px;
+  color: #ffffff;
+}
+
+#user-bar a {
+  color: #e9ab59;
+}  
+
+#user-bar label, #user-bar input {
+  float: left;
+  padding: 0 10px 0 10px;
+}
+
+#user-bar li {
+  float: left;
+  padding: 0 10px 0 12px;
+  display: block;
+  background: url(../images/style3/arrow-single-right-green.png) no-repeat left 50%;
+}
+
+#user-bar div.item-list ul {
+  float: right;
+  margin: 0; 
+  padding: 0;
+}
+
+#user-bar .form-item {
+  margin: 0;
+}
+
+#user-bar .form-submit {
+  display: inline;
+  padding: 1px;
+  margin-top: -1px;
+  margin-left: 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+  width: 50px;
+  border: 1px outset;
+  vertical-align:middle;
+}
+
+#user-bar .form-text {
+  display: inline;
+  padding-left: 2px;
+  border: 1px solid #000000;
+  width: 100px;
+}
+
+#user-bar span.form-required {
+  display: none;
+}
+
+#user-bar p {
+  float: left;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  font-size: 1.0em;
+}
+
+/* Search Box and Today's Date
+
+These styles control the search box and the date appearing at the top of the page.
+
+*/
+
+#todays-date {
+  float: right;
+  padding: 10px 0 0 0;
+  font-size: 0.8em;
+  color: #ffffff;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+/* Search Form */
+
+#search-box {
+  margin: 15px 0;
+  float: right;
+  color: #ffffff;
+}
+
+#search {
+  margin: 10px 0;
+}
+
+#search .form-text {
+  background: ffffff;
+  padding: 2px;
+  font-size: 1.0em;
+  font-weight: bold;
+  color: #999999;
+  vertical-align: middle;
+  border: 1px solid #000000;
+  width: 160px;
+}
+
+#search .form-submit {
+  width: 32px;
+  height: 32px;
+  margin-top: 0;
+  background: transparent url(../images/search.png) no-repeat;
+  border: 0px;
+  vertical-align: middle;
+  text-indent: -9000px;
+}
+  
+#search .form-submit:hover {
+}  
+  
+#search .form-item {
+  margin-bottom:0em;
+  margin-top:0em;
+}
+
+
+/* Sidebar Blocks 
+
+For appearance, typography and spacing.  Widths of the sidebars must be changed in the Main Layout section above.
+
+*/
+
+.left-sideblock  .sideblock-inner h2 {
+  font-size: 0.8em;
+  padding: 0 10px;
+  line-height: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #4e8ab9;
+} 
+
+.right-sideblock  .sideblock-inner h2 {
+  font-size: 1.0em;
+  padding: 0 10px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #eeeeee url(../images/style3/right-h2-bg.png) top repeat-x;
+} 
+
+.left-sideblock {
+  margin: 0 0 10px 10px;
+}
+
+.right-sideblock {
+  margin: 10px 10px 0px 0px;
+}
+
+.right-sideblock .sideblock-inner .content 
+{
+ font-size: 0.9em;
+  padding: 10px;
+  background: #dddddd url(../images/style3/right-sidebar-bg.png) top repeat-x;
+}
+
+.left-sideblock .sideblock-inner .content {
+  font-size: 0.9em;
+  padding: 10px;
+  background: #dddddd url(../images/style3/left-sidebar-bg.png) top repeat-x;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Extra Right Regions */
+
+#extra-right-regions {
+  font-size: 1.0em;
+}
+
+#extra-right-regions .userblock {
+  float: left;
+}
+
+#extra-right-regions .block {
+  border: 1px solid #dddddd;
+  margin-bottom: 10px;
+}
+
+#extra-right-regions .userblock-inner {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#extra-right-regions .userblock-inner .content {
+  font-size: 0.8em;
+  padding: 15px;
+  padding-top: 10px;
+  background: #f9f9f9;
+}
+
+#extra-right-regions .userblock-inner h2 {
+  display: block;
+  padding: 0 0 0 10px;
+  font-size: 0.8em;
+  line-height: 25px;
+  color: #111111;
+  background: #dddddd;
+}
+
+
+/* Feature Blocks */
+
+#dynamic-block {
+  margin-bottom: 10px;
+}
+
+#feature-blocks h2 {
+  font-size: 1.0em;
+  color: #ffffff;
+  text-align:center;
+  padding-left:10px;
+}
+
+#feature-blocks {
+  background: #002849 url(../images/style3/features-bg.png) top repeat-x;
+}
+
+.feature-blocks-inner {
+  padding-left: 10px;
+  text-align:left;
+}
+
+.feature {
+  float: left;
+  text-align:left;
+}
+
+.feature-inner {
+  margin: 10px 10px 10px 0;
+  padding: 10px;
+  color: #ffffff;
+  background: #4e8bba url(../images/style3/feature-inner-bg.png) bottom repeat-x;
+  text-align:left;
+}
+
+.feature a {
+  color: #ffffff;
+}
+
+.feature img {
+  margin-right: 10px;
+  float: left;
+  border: 1px solid #ffffff;
+}
+
+.feature .views-field-field-slide-text-value {
+  padding-top: 10px;
+  color: #dddddd;
+}
+
+/* Bottom Columns and Bottom Sidebar */
+
+#columns {
+}
+
+.column {
+  float: left;
+  background: #ffffff url(../images/style3/main-content-bg.png) top repeat-x;
+}
+
+.column h2 {
+  padding: 0 5px 0 40px;
+  margin-top: 10px;
+  font-size: 1.0em;
+  line-height: 2.4em;
+  background: #dddddd url(../images/column.png) 5px 50% no-repeat;
+  color: #333333;
+}
+
+.column-inner {
+  padding: 0 10px 10px 10px;
+}
+
+.column-inner .content {
+  padding-top: 10px;
+  border-bottom: 1px dashed #b3c3bf;
+}
+  
+#bottom-sidebar {
+  float: left;
+  width: 19.999%;
+  color: #f6f6f6;
+  background: #462800 url(../images/style3/bottom-side.png) top repeat-x;
+}
+
+#bottom-sidebar h2 {
+  font-size: 1.0em;
+  line-height: 1.5em;
+}
+
+.bottom-sidebar-inner {
+  padding: 10px;
+}
+
+.bottom-sidebar-inner a {
+  color: #ffffff;
+}
+
+
+.more-link a {
+  background: url(../images/read-more.png) no-repeat scroll right center;
+  padding-right:20px;
+}
+
+/* Custom Blocks */
+
+#custom-blocks {
+  background: #aaaaaa;
+}
+
+.custom-block {
+  float: left;
+}
+
+#custom-blocks .odd {
+  background: #bbbbbb url(../images/style3/odd.png) top repeat-x;
+}
+
+#custom-blocks .even {
+  background: #cccccc url(../images/style3/even.png) top repeat-x;
+}
+
+.custom-block h2 {
+  color: #336699;
+  font-size: 1.0em;
+  padding-bottom: 10px;
+}
+
+.custom-block-inner {
+  padding: 10px;
+}
+
+.custom-block-inner .content {
+  color:#666666;
+  font-size: 0.9em;
+  padding: 10px;
+  background: #ffffff url(../images/style3/in_the_news.png) top repeat-y;
+}
+
+
+/* Primary Menu 
+
+These styles control the dropdown menus that are included in Galapagos.
+
+*/
+
+#primary-links h2 {
+  display:none;
+}
+
+#primary-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 40px;
+  z-index: 100;
+  background: url(../images/style3/primary-bg.png) bottom repeat-x;
+}
+
+#primary-links li a {
+  display: block;
+  padding: 0 10px;
+  font-size: 1.0em;
+  font-weight: bold;
+  color: #cce9ff;
+}
+
+#primary-links li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  list-style: none;
+  background: url(../images/style3/divider.png) right no-repeat;
+}
+
+#primary-links li a:hover, #primary-links li:hover a {
+  padding: 0 10px;
+  color: #ffffff;
+  background: #425462 url(../images/style3/primary-bg-hover.png) bottom repeat-x;
+  text-decoration: none;
+}
+
+#primary-links li:hover, #primary-links li.sfHover {
+  position:static
+}
+
+/* Level Two Primary */
+
+#primary-links li ul {
+  position: absolute;
+  width: 200px;
+  left: -999em;
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  z-index: 100;
+  background: #477ea9;
+}
+
+#primary-links li ul li{
+  width: 200px;
+}
+
+#primary-links li ul li a {
+  font-size: 0.9em;
+  line-height: 30px;
+  width: 180px;
+}
+
+#primary-links li:hover li a {
+  color: #dddddd;
+  background: #477ea9;
+}
+
+#primary-links li ul li a:hover {
+  color: #ffffff;
+  background: #FB1800 url(../images/style3/menu-hover.png) top repeat-x;
+}
+
+#primary-links li:hover ul, #primary-links li.sfHover ul {
+  left: auto;
+}
+
+#primary-links li ul ul {
+  margin: -31px 0 0 200px;
+  border-top: 1px solid #1d262d;
+}
+
+#primary-links li:hover ul ul, #primary-links li.sfHover ul ul, #primary-links li:hover ul ul ul, #primary-links li.sfHover ul ul ul, #primary-links li:hover ul ul ul ul, #primary-links li.sfHover ul ul ul ul {
+  left: -999em;
+}
+
+#primary-links li li:hover ul, #primary-links li li.sfHover ul, #primary-links li li li:hover ul, #primary-links li li li.sfHover ul, #primary-links li li li li:hover ul, #primary-links li li li li.sfHover ul {
+  left:auto;
+}
+
+#primary-links ul li ul li.expanded {
+  background: url(../images/style3/arrow-single-right-green.png) no-repeat right;
+}
+
+/* Secondary Links */
+
+#secondary-links h2 {
+  display:none;
+}
+
+#secondary-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 30px;
+  z-index: 10;
+  background: #dddddd url(../images/style3/secondary-bg.png) top repeat-x;
+}
+
+#secondary-links li a {
+  display: block;
+  padding: 0 10px;
+  font-size: 1.0em;
+  color: #192f41;
+}
+
+#secondary-links li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  list-style: none;
+}
+
+#secondary-links li a:hover, #secondary-links li:hover a {
+  padding: 0 10px;
+  text-decoration: underline;
+}
+
+
+/* Side Menu 
+
+These styles control the appearance of the Navagation menu and any menu appearing in a left or right sidebar.
+
+*/
+
+.sideblock-inner ul.menu, .sideblock-inner ul.menu li {
+  position: relative; 
+  margin: 0;
+  padding: 0;
+  list-style-image: none;
+  list-style: none;
+  list-style-type: none;
+  border: 1px solid #241500;
+}
+
+.sideblock-inner ul.menu li a {
+  display: block;
+  padding: 2px 5px;
+  font-weight: bold;
+  height: 20px;
+  background: #aaaaaa url(../images/style3/secondary-bg.png) top repeat-x;
+}
+
+.sideblock-inner ul.menu li a:hover {
+  color: #ffffff;
+  font-weight: bold;
+  background: url(../images/style3/menu-hover.png) repeat-x;
+  text-decoration:none;
+}
+
+.sideblock-inner ul.menu ul, .sideblock-inner ul.menu ul li {
+  border: 0px;
+}
+
+.sideblock-inner ul.menu li ul li a {
+  color: #ffffff;
+  font-weight: normal;
+  background: #241500;
+}
+
+.sideblock-inner ul.menu li ul li a:hover {
+  padding-left: 10px;
+  background: #241500;
+}
+
+.sideblock-inner ul.menu li ul li a.active {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+.sideblock-inner ul.menu li ul li ul {
+  padding-left: 20px;
+  background: #241500;
+}
+
+/* Basic Node Styles */
+
+.teaser 
+{
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #ffaaaa;
+}
+
+.teaser a:hover {
+  color: #333333;
+  text-decoration: underline;
+}
+
+.teaser-title h2 {
+  font-size: 1.2em;
+  padding-top: 0;
+  color:#000066;
+}
+
+.teaser-submitted {
+  font-size: 0.8em;
+  color: #666666;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.teaser-content {
+  padding: 10px 0;
+  font-size: 1.0em;
+}
+
+.teaser-links {
+  float: right;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.teaser .comment_add a, .teaser .comment_comments {
+  padding: 0 0 0 20px;
+  background: url(../images/comment_small.png) 0% 50% no-repeat;
+  display:inline;
+}
+
+.teaser .node_read_more a {
+  padding: 0 0 0 20px;
+  background: url(../images/read-more.png) 0% 50% no-repeat;
+}
+
+/* Node */
+
+.node-title {
+  padding-bottom: 10px;
+  font-size:13px;
+}
+
+.submitted {
+  font-size: 0.9em;
+  color: #666666;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.terms {
+  padding: 0 5px;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  background: #f5f5f5;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.field-field-slide-text {
+  font-weight: bold;
+  color: #333333;
+  padding-bottom: 10px;
+}
+
+.field-field-image {
+  margin: 0;
+  float: left;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+.field-field-image img {
+  padding: 3px;
+  border: 1px solid #999999;
+  background: #ffffff;
+}
+
+.node .picture img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Comments */
+
+#comments {
+  clear: both;
+}
+
+.comment {
+  padding: 0px;
+  margin: 10px 0;
+  border: 0px solid #000000;
+  display:inline;
+}
+
+.comment .head {
+  padding: 0px;
+  background: #e8e8e8;
+   display:inline;
+}
+
+.comment .picture {
+  float: left;
+   display:inline;
+}
+
+.comment .picture img {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  float: left;
+  border: 0px solid #ffffff;
+   display:inline;
+}
+
+.comment .new {
+  padding: 0 0px;
+  margin-bottom: 5px;
+  color: #ff0000;
+  font-size: 10px;
+  font-weight: bold;
+  background: #dddddd;
+}
+
+.comment .content {
+  padding: 0px 0 0 0;
+   display:inline;
+}
+
+.user-signature {
+  padding-top: 10px;
+  font-size: 10px;
+  border-top: 1px dashed #cccccc;
+  border-bottom: 1px dashed #cccccc;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #666666;
+}
+
+.comment .links {
+  padding-top: 10px;
+  float: right;
+   display:inline;
+}
+
+li.comment_delete a {
+  padding-left: 1.3em;
+  background: url(../images/mini-trash.png) no-repeat left;
+}
+
+li.comment_edit a {
+  padding-left: 1.3em;
+  background: url(../images/mini-edit.png) no-repeat left;
+}
+
+li.comment_reply a {
+  padding-left: 20px;
+  background: url(../images/mini-comment.png) no-repeat left;
+}
+
+.comment a:hover {
+  color: #333333;
+}
+
+.profile .picture {
+  float:none;
+  margin:0 1em 1em 0;
+   display:inline;
+}
+
+
+/* Links, Lists & Icons */
+
+.block ul {
+  padding:0;
+  margin: 0;
+}
+
+.links {
+  padding: 0;
+  margin: 0;
+}
+
+ul.links li {
+  padding: 0 10px 0 0px;
+  margin: 0;
+}
+
+.item-list ul {
+  padding-bottom: 10px;
+}
+
+.item-list ul, .item-list ul li {
+  position: relative; 
+  margin: 0;
+  list-style-image: none;
+  list-style: none;
+  list-style-type: none;
+}
+
+.item-list h3 {
+  padding-top: 10px;
+  font-size: 1.0em;
+  color: #d5d5d5;
+  background: transparent;
+}
+
+.sideblock-inner .item-list ul li {
+  padding: 2px 0;
+}
+
+.more-link a:hover {
+  text-decoration: none;
+}
+
+a.comment_add {
+  padding-left: 22px;
+  background: url(../images/style3/mini-comment.png) no-repeat left;
+}
+
+a.node_read_more {
+  padding-left: 12px;
+  background: url(../images/style3/arrow-double-right-green.png) no-repeat left;
+}
+
+a.comment_add:hover, a.node_read_more:hover {
+  color: #fec00a;
+}
+
+.breadcrumb {
+  font-size: 0.8em;
+  border-bottom: 1px solid #dddddd;
+}
+
+.pager {
+  padding-top: 10px;
+}
+
+.item-list .pager li  {
+  padding:0;
+}
+
+.item-list .pager li a {
+  display:inline;
+  list-style-type:none;
+  padding:3px 5px;
+  font-size: 11px;
+  border: 1px solid #cccccc;
+  background: #eeeeee;
+  color: #666666;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.item-list .pager li.pager-current {
+  display:inline;
+  list-style-type:none;
+  padding:3px 5px;
+  font-size: 11px;
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+} 
+
+.item-list .pager li.pager-item a:hover, .item-list .pager li.pager-next a:hover, .item-list .pager li.pager-last a:hover, .item-list .pager li.pager-previous a:hover, .item-list .pager li.pager-first a:hover {
+  background: #ffffff;
+  color: #111111;
+} 
+
+/* Polls */
+
+.poll .title {
+  font-size: 1.0em;
+}
+
+.block-poll h2 {
+  padding-left: 40px;
+  margin-bottom: 10px;
+  background: url(../images/poll.png) 5px 50% no-repeat;
+}
+
+.poll .bar {
+  background: url(../images/poll-bg.png) repeat-x top;
+  border: 1px solid #000000;
+}
+
+.poll .foreground {
+  background: url(../images/poll-fg.png) repeat-x top;
+}
+
+.poll .title {
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Aggregator */
+  
+.feed-source {
+  padding-bottom: 10px;
+  font-size: 10px;
+}
+
+/* Table */
+
+table {
+  font-size: 11px;	
+}
+
+/*!
+ * Dynamic display block module template: galapagos - Cascading Style Sheet 
+ * Copyright(c) 2008 - 2009 P. Blaauw All rights reserved. 
+ * Version 1.1 (11-FEB-2009) 
+ * Licenced under GPL license 
+ * http://www.gnu.org/licenses/gpl.html 
+ */ 
+div.ddblock-cycle-galapagos div.container{}
+div.ddblock-cycle-galapagos div.container-inner{height:300px;position:relative;}
+div.ddblock-cycle-galapagos div.slider{float:left; width:420px;}
+div.ddblock-cycle-galapagos div.slider-inner{background:transparent url(../images/transparent_bg.png) repeat scroll 0 0!important;height:300px;overflow:hidden;position:relative;visibility:hidden; border: 1px solid #333333;}
+div.ddblock-cycle-galapagos div.slide{display:none;height:100%;left:0;position:absolute;top:0;}
+div.ddblock-cycle-galapagos div.slide-inner img{height:300px;margin:0 !important;padding:0 !important;width:420px;}
+div.ddblock-cycle-galapagos div.slide-text{background:transparent url(../images/transparent_bg.png) repeat scroll 0 0!important;position:absolute;}
+div.ddblock-cycle-galapagos div.slide-text-horizontal{height:150px;left:0;width:420px; margin: 0;}
+div.ddblock-cycle-galapagos div.slide-text-vertical{height:209px;width:140px;}
+div.ddblock-cycle-galapagos div.slide-text-top{top:0px;}
+div.ddblock-cycle-galapagos div.slide-text-right{bottom:0;right:30px;}
+div.ddblock-cycle-galapagos div.slide-text-bottom{bottom:0px;}
+div.ddblock-cycle-galapagos div.slide-text-left{bottom:0;left:30px;}
+div.ddblock-cycle-galapagos div.slide-text-inner{padding:10px;}
+div.ddblock-cycle-galapagos div.slide-title{}
+div.ddblock-cycle-galapagos div.slide-title-vertical{width:130px;}
+div.ddblock-cycle-galapagos div.slide-title-horizontal{width:410px;}
+div.ddblock-cycle-galapagos div.slide-title h2{ font-size: 12px; margin:0;padding:0; padding-bottom: 10px;}
+div.ddblock-cycle-galapagos div.slide-title-inner{font-weight:bold; color: #ffffff;}
+div.ddblock-cycle-galapagos div.slide-body-vertical{width:132px;}
+div.ddblock-cycle-galapagos div.slide-body-horizontal{width:410px;}
+div.ddblock-cycle-galapagos div.slide-body-inner{color: #ffffff; font-size: 11px;}
+div.ddblock-cycle-galapagos div.slide-body-inner p{margin:0 8px 0 0;padding:0;}
+div.ddblock-cycle-galapagos div.slide-read-more{}
+div.ddblock-cycle-galapagos div.slide-read-more p{padding:0;margin:0;}
+div.ddblock-cycle-galapagos div.slide-read-more a{background:#111111;border:none;bottom:5px;color:#fff;font-size:10px;margin:0;padding: 2px 5px;position:absolute;text-decoration:none;text-align:left;}
+div.ddblock-cycle-galapagos div.slide-read-more-horizontal a{right:10px;}
+div.ddblock-cycle-galapagos div.slide-read-more-vertical a{right:5px;}
+div.ddblock-cycle-galapagos div.slide-read-more a:hover{background:#ffffff; color: #111111;}
+div.ddblock-cycle-galapagos div.slide-read-more-horizontal a:hover{right: 10px;}
+div.ddblock-cycle-galapagos div.slide-read-more-vertical a:hover{right:5px;}
+
+/* Pager */
+
+div.ddblock-cycle-galapagos div.custom-pager {
+ float: left;
+ width: 100%;
+ margin-left: -420px;
+}
+
+div.ddblock-cycle-galapagos div.custom-pager-inner {
+  margin-left: 430px;
+  border: 0px solid #333333;
+}
+
+div.ddblock-cycle-galapagos div.custom-pager .custom-pager-item {
+}
+
+div.ddblock-cycle-galapagos div.custom-pager .custom-pager-item-inner{
+
+}
+
+div.ddblock-cycle-galapagos div.custom-pager a {
+  color:#000; 
+  float:left; 
+  font-size:10px;
+  height:50px;
+  line-height:50px;
+  text-align:left;
+  text-decoration:none; 
+  width: 100%;
+  background: #eeeeee url(../images/style3/pager-bg.png) repeat-x top;
+}
+
+div.ddblock-cycle-galapagos div.custom-pager a.activeSlide {
+  color: #ffffff;
+  background: #002848;
+}
+
+div.ddblock-cycle-galapagos div.custom-pager a:hover {
+  background: #cccccc;
+  color:#000000;
+  opacity:1;
+}
+
+div.ddblock-cycle-galapagos div.custom-pager a:focus {
+  outline:none;
+}
+
+div.ddblock-cycle-galapagos div.custom-pager img {
+  height:40px;
+  margin:0 10px !important; 
+  padding:0 !important;
+  vertical-align:middle;
+  width:40px;
+  border: 1px solid #000000;
+  _margin-top: 7px;
+}
+
+div.ddblock-cycle-galapagos div.custom-pager a.activeSlide img {
+  border: 1px solid #ffffff;
+}
+
+
+div.ddblock-cycle-galapagos div.spacer-vertical{
+  display:block;
+  float:left;
+  height:50px;
+  width:5px;
+  background-color:#ccc;
+}
+
+div.ddblock-cycle-galapagos div.spacer-horizontal{
+  clear:both;
+  height:5px;
+  background-color:#ccc;
+}
+
+/* Typography */
+
+p.alert {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #FEC201;
+  border-bottom: 1px dashed #FEC201;
+  background: #FFEDB5 url(../images/alert.png) 15px 50% no-repeat;
+}
+
+p.info {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #0173bd;
+  border-bottom: 1px dashed #0173bd;
+  background: #c6e9ff url(../images/info.png) 15px 50% no-repeat;
+}
+
+p.notice {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #999999;
+  border-bottom: 1px dashed #999999;
+  background: #eeeeee url(../images/notice.png) 15px 50% no-repeat;
+}
+
+p.download {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #5EAA1F;
+  border-bottom: 1px dashed #5EAA1F;
+  background: #DAFFBA url(../images/download.png) 15px 50% no-repeat;
+}
+
+p.mail {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #57a4ce;
+  border-bottom: 1px dashed #57a4ce;
+  background: #ecf8ff url(../images/mail.png) 15px 50% no-repeat;
+}
+
+p.package {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #574321;
+  border-bottom: 1px dashed #574321;
+  background: #f1e9dc url(../images/package.png) 15px 50% no-repeat;
+}
+
+p.security {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #999999;
+  border-bottom: 1px dashed #999999;
+  background: #eeeeee url(../images/security.png) 15px 50% no-repeat;
+}
+
+p.stop {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #fbd500;
+  border-bottom: 1px dashed #fbd500;
+  background: #fff09a url(../images/stop.png) 15px 50% no-repeat;
+}
+
+p.system {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #3b9acd;
+  border-bottom: 1px dashed #3b9acd;
+  background: #bdd4e0 url(../images/system.png) 15px 50% no-repeat;
+}
+
+p.settings {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #ffffff;
+  border-top: 1px dashed #ffffff;
+  border-bottom: 1px dashed #ffffff;
+  background: #333333 url(../images/settings.png) 15px 50% no-repeat;
+}
+
+p.web {
+  margin: 10px 0;
+  padding: 10px 15px 10px 80px;
+  color: #333333;
+  border-top: 1px dashed #999999;
+  border-bottom: 1px dashed #999999;
+  background: #eeeeee url(../images/web.png) 15px 50% no-repeat;
+}
+
+
+li.check {
+  padding-left: 30px;
+  padding-bottom: 10px;
+  list-style-position: outside;
+  list-style-type: none;
+  font-size: 1.0em;
+  font-weight: bold;
+  color: #333333;
+  background: url(../images/checkmark.png) 0px 10% no-repeat;
+}
+
+.block ul {
+  margin:0;
+  padding:0 0 0 0;
+}
+
+blockquote {
+  margin: 0px;
+  padding-left: 58px;
+  color: #666666;
+  background: url(../images/openquote.png) top left no-repeat;
+} 
+
+blockquote p {
+  padding-right: 35px;
+  background:  url(../images/closequote.png) bottom right no-repeat;
+} 
+
+pre {
+  padding: 10px;
+  margin: 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.0em;
+  border: 1px solid #dddddd;
+  background: url(../images/pre.png);
+}
+
+/* Forum */
+
+#forum tr td.forum {
+  background-image:url(../images/forum-default.png);
+  background-position: 10px 50%;
+  background-repeat:no-repeat;
+  padding-left:60px;
+}
+
+
+
+
+
+
+
+
